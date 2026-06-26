@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "a ",
+    " b"
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:gunpoint"
+    },
+    "b": {
+      "item": "pointblank:mp5_classic"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:mp5_classic_sd"
+  }
+}

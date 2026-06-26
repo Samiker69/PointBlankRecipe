@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "a  ",
+    " bc",
+    " cc"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:glass"
+    },
+    "b": {
+      "item": "minecraft:diamond"
+    },
+    "c": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank_recipe:snipescope"
+  }
+}

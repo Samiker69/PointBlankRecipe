@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "metro"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "a  ",
+    " ba",
+    "  c"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "pointblank_recipe:frameofpreved"
+    },
+    "c": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:preved"
+  }
+}

@@ -1,0 +1,163 @@
+plugins {
+    id 'fabric-loom' version '1.15-SNAPSHOT'
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+loom {
+    splitEnvironmentSourceSets()
+
+    mods {
+        "pointblank_recipe" {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+}
+
+def convertedResources = layout.buildDirectory.dir("converted_resources").get().asFile
+
+import groovy.json.*
+
+import groovy.json.*
+
+tasks.register('prepareResources', Copy) {
+    from("../shared_resources")
+    into(convertedResources)
+
+    if (project.minecraft_version.startsWith("1.21")) {
+        doLast {
+            def convertIngredient
+            convertIngredient = { obj ->
+                if (obj instanceof Map) {
+                    if (obj.containsKey("item")) {
+                        return obj.get("item")
+                    } else if (obj.containsKey("tag")) {
+                        return "#" + obj.get("tag")
+                    } else {
+                        def newMap = [:]
+                        obj.each { k, v -> newMap[k] = convertIngredient(v) }
+                        return newMap
+                    }
+                } else if (obj instanceof List) {
+                    return obj.collect { convertIngredient(it) }
+                }
+                return obj
+            }
+
+            fileTree(convertedResources).matching {
+                include "data/**/recipe/*.json"
+            }.each { file ->
+                def json = new JsonSlurper().parse(file)
+                if (json.result instanceof Map) {
+                    if (json.result.containsKey("item")) {
+                        json.result.id = json.result.remove("item")
+                    }
+                }
+                if (json.key instanceof Map) {
+                    json.key.keySet().each { k ->
+                        json.key[k] = convertIngredient(json.key[k])
+                    }
+                }
+                if (json.ingredients instanceof List) {
+                    json.ingredients = json.ingredients.collect { convertIngredient(it) }
+                }
+                if (json.ingredient != null) {
+                    json.ingredient = convertIngredient(json.ingredient)
+                }
+
+                file.text = JsonOutput.prettyPrint(JsonOutput.toJson(json))
+            }
+        }
+    }
+}
+
+tasks.register('generateItemDefinitions') {
+    onlyIf { project.minecraft_version.startsWith("1.21") }
+    dependsOn prepareResources
+
+    doLast {
+        def modelsDir = new File(convertedResources, "assets/pointblank_recipe/models/item")
+        def itemsDir = new File(convertedResources, "assets/pointblank_recipe/items")
+        itemsDir.mkdirs()
+
+        modelsDir.listFiles().each { file ->
+            def name = file.name.replace(".json", "")
+            def linker = new File(itemsDir, file.name)
+            linker.text = """{
+  "model": {
+    "type": "minecraft:model",
+    "model": "pointblank_recipe:item/${name}"
+  }
+}"""
+        }
+    }
+    def modelsDir = file("${convertedResources}/assets/pointblank_recipe/models/item")
+    if (modelsDir.exists()) {
+        project.delete(modelsDir)
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs += ['../sharedConstants/src/main/java']
+        }
+        resources {
+            srcDirs += ['src/main/resources']
+            srcDirs += [convertedResources]
+        }
+    }
+}
+
+processResources {
+    dependsOn generateItemDefinitions
+
+    inputs.property "version", project.version
+    inputs.property "minecraft_version", project.minecraft_version
+    inputs.property "loader_version", project.loader_version
+    inputs.property "fabric_version", project.fabric_api_version
+    filteringCharset "UTF-8"
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version,
+                "minecraft_version": project.minecraft_version,
+                "loader_version": project.loader_version,
+                "fabric_version": project.fabric_api_version
+    }
+}
+
+def targetJavaVersion =  25
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.encoding = "UTF-8"
+    if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
+        it.options.release.set(targetJavaVersion)
+    }
+}
+
+java {
+    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
+    if (JavaVersion.current() < javaVersion) {
+        toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
+    }
+}
+
+jar {
+    from("LICENSE") {
+        rename { "${it}_${project.base.archivesName.get()}" }
+    }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "ab ",
+    " cd",
+    "e  "
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:muzzleofsniperrifle"
+    },
+    "b": {
+      "item": "pointblank_recipe:snipescope"
+    },
+    "c": {
+      "item": "pointblank_recipe:energycube"
+    },
+    "d": {
+      "item": "pointblank_recipe:frameofsniperifle"
+    },
+    "e": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:cp2077_techtronika_spt32_grad"
+  }
+}

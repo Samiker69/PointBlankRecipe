@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "bcb",
+    "cac"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "minecraft:copper_ingot"
+    },
+    "c": {
+      "item": "minecraft:gunpowder"
+    }
+  },
+  "result": {
+    "count": 4,
+    "id": "pointblank:grenade40mm"
+  }
+}

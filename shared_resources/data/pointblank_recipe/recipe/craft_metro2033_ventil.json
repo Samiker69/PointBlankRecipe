@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "metro"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "a b",
+    " c ",
+    "ab "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "minecraft:iron_nugget"
+    },
+    "c": {
+      "item": "pointblank_recipe:frame_of_ventil"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:ventil"
+  }
+}

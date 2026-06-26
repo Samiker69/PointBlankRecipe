@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "pointblank_recipe:item/budget_arms_carnage_guts.icon"
+  }
+}

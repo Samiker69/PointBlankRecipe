@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "ab"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:gunpowder"
+    },
+    "b": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "result": {
+    "count": 8,
+    "id": "pointblank:ammo50actionexpress"
+  }
+}

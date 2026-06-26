@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "abc",
+    "c  "
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:thebarreloftherifle"
+    },
+    "b": {
+      "item": "pointblank_recipe:framemktype"
+    },
+    "c": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:rpd762"
+  }
+}

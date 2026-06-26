@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "ab ",
+    "cad",
+    "d  "
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:energycube"
+    },
+    "b": {
+      "item": "pointblank_recipe:snipescope"
+    },
+    "c": {
+      "item": "pointblank_recipe:framecyberpunkenergygun"
+    },
+    "d": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:cp2077_tsunami_rasetsu"
+  }
+}

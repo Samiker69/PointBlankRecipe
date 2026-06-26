@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "trauma"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "a b",
+    "cd ",
+    "  e"
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:thebarreloftherifle"
+    },
+    "b": {
+      "item": "minecraft:iron_nugget"
+    },
+    "c": {
+      "item": "pointblank_recipe:sniperrifleloadingmechanism"
+    },
+    "d": {
+      "item": "pointblank_recipe:sniperriflebillettrauma"
+    },
+    "e": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:mp18"
+  }
+}

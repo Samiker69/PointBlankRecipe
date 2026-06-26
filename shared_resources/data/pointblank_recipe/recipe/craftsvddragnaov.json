@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "trauma"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "ab ",
+    " c ",
+    " de"
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:thebarreloftherifle"
+    },
+    "b": {
+      "item": "pointblank_recipe:snipescope"
+    },
+    "c": {
+      "item": "pointblank_recipe:sniperriflebillettrauma"
+    },
+    "d": {
+      "item": "pointblank_recipe:riflemagazine"
+    },
+    "e": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:svd_dragnaov"
+  }
+}

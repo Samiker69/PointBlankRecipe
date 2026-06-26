@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "metro"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "ab ",
+    " cd",
+    " de"
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:thebarreloftherifleup"
+    },
+    "b": {
+      "item": "minecraft:iron_ingot"
+    },
+    "c": {
+      "item": "pointblank_recipe:frameoftherifle"
+    },
+    "d": {
+      "item": "minecraft:iron_nugget"
+    },
+    "e": {
+      "item": "pointblank_recipe:ironbutt"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:kalash"
+  }
+}

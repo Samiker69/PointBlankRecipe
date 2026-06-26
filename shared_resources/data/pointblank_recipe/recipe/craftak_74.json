@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "ab ",
+    " cd",
+    " e "
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:thebarreloftherifle"
+    },
+    "b": {
+      "item": "minecraft:iron_nugget"
+    },
+    "c": {
+      "item": "pointblank_recipe:frameoftherifle"
+    },
+    "d": {
+      "item": "pointblank_recipe:theriflebutt"
+    },
+    "e": {
+      "item": "pointblank_recipe:riflemagazine"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:ak74"
+  }
+}

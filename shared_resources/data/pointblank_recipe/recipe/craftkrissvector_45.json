@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "ab ",
+    " cd"
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:magazineofsubmachinegun"
+    },
+    "b": {
+      "item": "pointblank_recipe:frameofsubmachinegun"
+    },
+    "c": {
+      "item": "pointblank_recipe:handleofsubmachinegun"
+    },
+    "d": {
+      "item": "pointblank_recipe:buttforvector"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:kriss_vector45"
+  }
+}

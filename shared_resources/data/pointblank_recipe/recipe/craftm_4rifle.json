@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "a  ",
+    "bc ",
+    " de"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_nugget"
+    },
+    "b": {
+      "item": "minecraft:iron_ingot"
+    },
+    "c": {
+      "item": "pointblank_recipe:framem4a1type"
+    },
+    "d": {
+      "item": "pointblank_recipe:riflemagazine"
+    },
+    "e": {
+      "item": "pointblank_recipe:buttform4a1type"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:m4_rifle"
+  }
+}

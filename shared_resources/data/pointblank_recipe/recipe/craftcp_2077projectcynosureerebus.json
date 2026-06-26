@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "cyberpunk"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "ab ",
+    " ca",
+    "ad "
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:energycube"
+    },
+    "b": {
+      "item": "pointblank_recipe:collimatorscope"
+    },
+    "c": {
+      "item": "pointblank_recipe:framecyberpunkgun"
+    },
+    "d": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:cp2077_project_cynosure_erebus"
+  }
+}

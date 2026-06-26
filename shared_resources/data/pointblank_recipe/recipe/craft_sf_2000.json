@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "ab ",
+    " cb",
+    " d "
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:gunpoint"
+    },
+    "b": {
+      "item": "minecraft:iron_ingot"
+    },
+    "c": {
+      "item": "pointblank_recipe:framep90"
+    },
+    "d": {
+      "item": "pointblank_recipe:magazineofsubmachinegun"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:s_f2000"
+  }
+}

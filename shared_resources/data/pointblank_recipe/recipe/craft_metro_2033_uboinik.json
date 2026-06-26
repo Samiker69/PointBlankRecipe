@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "metro"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "bc ",
+    "  d"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "minecraft:iron_nugget"
+    },
+    "c": {
+      "item": "pointblank_recipe:frameofuboinik"
+    },
+    "d": {
+      "item": "pointblank_recipe:theriflebutt"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:uboinik"
+  }
+}

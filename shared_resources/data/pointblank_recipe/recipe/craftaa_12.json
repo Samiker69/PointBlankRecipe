@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "ab ",
+    " cd",
+    " ef"
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:thebarreloftherifle"
+    },
+    "b": {
+      "item": "pointblank_recipe:scopeforrifle"
+    },
+    "c": {
+      "item": "pointblank_recipe:frameofshotgun"
+    },
+    "d": {
+      "item": "pointblank_recipe:shotgunreloader"
+    },
+    "e": {
+      "item": "minecraft:iron_nugget"
+    },
+    "f": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:aa12"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    " a",
+    "bc",
+    "de"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "minecraft:yellow_dye"
+    },
+    "c": {
+      "item": "pointblank_recipe:theframeofthegun"
+    },
+    "d": {
+      "item": "pointblank_recipe:energycube"
+    },
+    "e": {
+      "item": "pointblank_recipe:riflemagazine"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:cp2077_arasaka_hjke11_yukimura_skippy"
+  }
+}

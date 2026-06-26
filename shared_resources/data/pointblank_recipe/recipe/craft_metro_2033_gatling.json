@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "metro"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "a ",
+    "bc",
+    " d"
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:muzzleofminigun"
+    },
+    "b": {
+      "item": "pointblank_recipe:sniperrifleloadingmechanism"
+    },
+    "c": {
+      "item": "minecraft:iron_block"
+    },
+    "d": {
+      "item": "pointblank_recipe:magazineformachinegun"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:gatling"
+  }
+}

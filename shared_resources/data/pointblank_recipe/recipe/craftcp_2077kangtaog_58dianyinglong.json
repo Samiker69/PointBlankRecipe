@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "abc",
+    "de "
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:energycube"
+    },
+    "b": {
+      "item": "pointblank_recipe:frameofsubmachinegun"
+    },
+    "c": {
+      "item": "pointblank_recipe:buttofsubmachinegun"
+    },
+    "d": {
+      "item": "pointblank_recipe:handleofsubmachinegun"
+    },
+    "e": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:cp2077_kang_tao_g58_dian_yinglong"
+  }
+}

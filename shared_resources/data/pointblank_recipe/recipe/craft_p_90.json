@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "ab",
+    "cd"
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:gunpoint"
+    },
+    "b": {
+      "item": "minecraft:iron_nugget"
+    },
+    "c": {
+      "item": "pointblank_recipe:magazineofsubmachinegun"
+    },
+    "d": {
+      "item": "pointblank_recipe:framep90"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:p90"
+  }
+}

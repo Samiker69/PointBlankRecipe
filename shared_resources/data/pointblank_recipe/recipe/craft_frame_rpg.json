@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "stalker"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "a  ",
+    "bac",
+    " cd"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_block"
+    },
+    "b": {
+      "tag": "minecraft:logs"
+    },
+    "c": {
+      "item": "minecraft:iron_ingot"
+    },
+    "d": {
+      "item": "pointblank_recipe:triggermechanism"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank_recipe:framerpg"
+  }
+}

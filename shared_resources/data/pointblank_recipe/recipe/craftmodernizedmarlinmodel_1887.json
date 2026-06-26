@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "ab ",
+    " cd"
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:shotgunbarrel"
+    },
+    "b": {
+      "item": "pointblank_recipe:frameofshotgun"
+    },
+    "c": {
+      "item": "minecraft:iron_ingot"
+    },
+    "d": {
+      "item": "pointblank_recipe:buttofshotggun"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:modernized_marlin_model1887"
+  }
+}

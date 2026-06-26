@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "abc",
+    "bde",
+    " f "
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:thebarreloftherifleup"
+    },
+    "b": {
+      "item": "minecraft:redstone_block"
+    },
+    "c": {
+      "item": "pointblank_recipe:scopeforrifle"
+    },
+    "d": {
+      "item": "pointblank_recipe:framemktype"
+    },
+    "e": {
+      "item": "pointblank_recipe:buttump"
+    },
+    "f": {
+      "item": "pointblank_recipe:magazineformachinegun"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:s_gauss"
+  }
+}

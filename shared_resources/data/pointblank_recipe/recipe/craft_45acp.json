@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "ab",
+    "bb"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:gunpowder"
+    },
+    "b": {
+      "item": "pointblank_recipe:coppernugget"
+    }
+  },
+  "result": {
+    "count": 16,
+    "id": "pointblank:ammo45acp"
+  }
+}

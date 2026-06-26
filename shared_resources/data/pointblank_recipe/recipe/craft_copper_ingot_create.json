@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:coppernugget"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "create:copper_ingot"
+  }
+}

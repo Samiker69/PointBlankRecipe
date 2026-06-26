@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "a  ",
+    " bc",
+    "de "
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:thebarreloftherifleup"
+    },
+    "b": {
+      "item": "pointblank_recipe:framemktype"
+    },
+    "c": {
+      "item": "pointblank_recipe:buttform4a1type"
+    },
+    "d": {
+      "item": "pointblank_recipe:magazineformachinegun"
+    },
+    "e": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:lamg"
+  }
+}

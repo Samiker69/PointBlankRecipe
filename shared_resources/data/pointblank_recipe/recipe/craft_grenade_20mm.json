@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "bca",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:coppernugget"
+    },
+    "b": {
+      "item": "minecraft:iron_ingot"
+    },
+    "c": {
+      "item": "minecraft:tnt"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:grenade20mm"
+  }
+}

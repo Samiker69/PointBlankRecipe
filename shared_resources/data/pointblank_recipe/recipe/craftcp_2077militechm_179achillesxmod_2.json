@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "  a",
+    "bcd",
+    " b "
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:collimatorscope"
+    },
+    "b": {
+      "item": "minecraft:iron_ingot"
+    },
+    "c": {
+      "item": "pointblank_recipe:framecyberpunkenergygun"
+    },
+    "d": {
+      "item": "pointblank_recipe:energycube"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:cp2077_militech_m179_achilles_xmod2"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "trauma"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "ab ",
+    "bcd",
+    " de"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "tag": "minecraft:planks"
+    },
+    "c": {
+      "item": "minecraft:iron_block"
+    },
+    "d": {
+      "tag": "minecraft:logs"
+    },
+    "e": {
+      "item": "pointblank_recipe:theriflebutt"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank_recipe:sniperriflebillettrauma"
+  }
+}

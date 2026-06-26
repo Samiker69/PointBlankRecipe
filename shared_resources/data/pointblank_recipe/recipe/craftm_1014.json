@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "bcd"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_nugget"
+    },
+    "b": {
+      "item": "pointblank_recipe:shotgunbarrel"
+    },
+    "c": {
+      "item": "pointblank_recipe:frameofshotgun"
+    },
+    "d": {
+      "item": "pointblank_recipe:shotgunreloader"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:m1014"
+  }
+}

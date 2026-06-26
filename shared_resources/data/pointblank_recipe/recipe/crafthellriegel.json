@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "a  ",
+    "bcd",
+    "  e"
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:rifleflamearrester"
+    },
+    "b": {
+      "item": "minecraft:iron_block"
+    },
+    "c": {
+      "item": "minecraft:oak_wood"
+    },
+    "d": {
+      "item": "pointblank_recipe:sniperrifleloadingmechanism"
+    },
+    "e": {
+      "item": "pointblank_recipe:theriflebutt"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:hellriegel"
+  }
+}

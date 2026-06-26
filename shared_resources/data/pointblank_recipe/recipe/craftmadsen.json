@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "trauma"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "ab ",
+    " c ",
+    " dd"
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:rifleflamearrester"
+    },
+    "b": {
+      "item": "pointblank_recipe:riflemagazine"
+    },
+    "c": {
+      "item": "pointblank_recipe:sniperriflebillettrauma"
+    },
+    "d": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:madsen"
+  }
+}

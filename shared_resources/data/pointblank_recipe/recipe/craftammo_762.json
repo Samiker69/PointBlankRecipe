@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "abc",
+    " c "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:copper_ingot"
+    },
+    "b": {
+      "item": "minecraft:gunpowder"
+    },
+    "c": {
+      "item": "pointblank_recipe:coppernugget"
+    }
+  },
+  "result": {
+    "count": 16,
+    "id": "pointblank:ammo762"
+  }
+}

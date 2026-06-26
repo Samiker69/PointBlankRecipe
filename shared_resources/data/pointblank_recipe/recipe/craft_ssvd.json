@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "ab ",
+    "cd ",
+    "e f"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_nugget"
+    },
+    "b": {
+      "item": "pointblank_recipe:snipescope"
+    },
+    "c": {
+      "item": "pointblank_recipe:muzzleofsniperrifle"
+    },
+    "d": {
+      "item": "pointblank_recipe:frameofsniperifle"
+    },
+    "e": {
+      "item": "minecraft:iron_ingot"
+    },
+    "f": {
+      "item": "pointblank_recipe:ironbutt"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:s_svd"
+  }
+}

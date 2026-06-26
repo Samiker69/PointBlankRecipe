@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "cyberpunk"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "  a",
+    "bcd",
+    "bb "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:redstone"
+    },
+    "b": {
+      "item": "minecraft:iron_ingot"
+    },
+    "c": {
+      "item": "pointblank_recipe:framecyberpunkgun"
+    },
+    "d": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:cp2077_militech_m179_achilles"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "trauma"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "a  ",
+    " bc",
+    " de"
+  ],
+  "key": {
+    "a": {
+      "item": "pointblank_recipe:thebarreloftherifle"
+    },
+    "b": {
+      "item": "pointblank_recipe:rifleflamearrester"
+    },
+    "c": {
+      "item": "minecraft:iron_nugget"
+    },
+    "d": {
+      "tag": "minecraft:planks"
+    },
+    "e": {
+      "item": "pointblank_recipe:sniperriflebillettrauma"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:gewehr98"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "metro"
+    }
+  ],
+  "category": "misc",
+  "pattern": [
+    "ab ",
+    " cd"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "minecraft:iron_block"
+    },
+    "c": {
+      "item": "minecraft:iron_nugget"
+    },
+    "d": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank_recipe:frameofhelsing"
+  }
+}
