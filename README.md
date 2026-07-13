@@ -43,6 +43,9 @@ If you require surgical control, such as changing specific ingredients for a sin
 }
 ```
 
+### KubeJS
+See documentation here: [kubejs.docs.md](https://github.com/Samiker69/PointBlankRecipe/blob/main/kubejs.docs.md)
+
 ### Comparison
 | Method | Best For | Requirement |
 | :--- | :--- | :--- |
