@@ -1,0 +1,35 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="pointblank_recipe"
+version="0.8.0"
+displayName="Point Blank: Recipe"
+displayURL="https://modrinth.com/mod/point-blank-recipe"
+logoFile="icon.png"
+authors="Samiker"
+description='''
+Add alternative recipes for PointBlank and weapon packs
+'''
+
+[[dependencies.pointblank_recipe]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.200,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.pointblank_recipe]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.pointblank_recipe]]
+modId="pointblank"
+type="required"
+versionRange="[1.10.0,)"
+ordering="NONE"
+side="BOTH"

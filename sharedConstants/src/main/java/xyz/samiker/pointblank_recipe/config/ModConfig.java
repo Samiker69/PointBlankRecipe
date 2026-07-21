@@ -2,7 +2,6 @@ package xyz.samiker.pointblank_recipe.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import net.fabricmc.loader.api.FabricLoader;
 
 import java.io.File;
 import java.io.FileReader;
@@ -13,11 +12,15 @@ import java.util.List;
 
 public class ModConfig {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
-    private static final File CONFIG_FILE = FabricLoader.getInstance().getConfigDir().resolve("pointblank_recipe.json").toFile();
-
+    private static final File CONFIG_FILE = new File("config", "pointblank_recipe.json");
     public List<String> disabledModules = new ArrayList<>(List.of("e.g: base, trauma, metro, stalker, handguns_galore, cyberpunk"));
 
     public static ModConfig load() {
+        File parent = CONFIG_FILE.getParentFile();
+        if (parent != null && !parent.exists()) {
+            parent.mkdirs();
+        }
+
         if (CONFIG_FILE.exists()) {
             try (FileReader reader = new FileReader(CONFIG_FILE)) {
                 return GSON.fromJson(reader, ModConfig.class);

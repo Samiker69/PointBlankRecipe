@@ -1,0 +1,191 @@
+plugins {
+    id 'java'
+    id 'net.minecraftforge.gradle' version '[7.0, 8.0)'
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = "${project.archives_base_name}-forge"
+}
+
+repositories {
+    minecraft.mavenizer(it)
+    maven fg.forgeMaven
+    maven fg.minecraftLibsMaven
+    mavenCentral()
+}
+
+def convertedResourcesProvider = layout.buildDirectory.dir("converted_resources")
+def convertedResources = convertedResourcesProvider.get().asFile
+
+sourceSets {
+    main {
+        java {
+            srcDirs += ['../../sharedConstants/src/main/java']
+        }
+        resources {
+            srcDirs += ['src/main/resources']
+            srcDirs += [convertedResources]
+        }
+    }
+}
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+
+    runs {
+        client {
+            workingDir = project.file('run')
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            systemProperty 'forge.logging.console.level', 'debug'
+
+            mods {
+                pointblank_recipe {
+                    source sourceSets.main
+                }
+            }
+        }
+        server {
+            workingDir = project.file('run')
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            systemProperty 'forge.logging.console.level', 'debug'
+
+            mods {
+                pointblank_recipe {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation minecraft.dependency("net.minecraftforge:forge:1.20.1-47.4.10")
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    if (System.getProperty("idea.sync.active") == "true") {
+        annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    }
+}
+
+import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+
+tasks.register('prepareResources', Copy) {
+    from("../../shared_resources")
+    into(convertedResources)
+
+    doLast {
+        def convertTo120Ingredient
+        convertTo120Ingredient = { obj ->
+            if (obj instanceof String) {
+                if (obj.startsWith("#")) {
+                    return [tag: obj.substring(1)]
+                } else {
+                    return [item: obj]
+                }
+            } else if (obj instanceof List) {
+                def res = []
+                for (item in obj) {
+                    res.add(convertTo120Ingredient(item))
+                }
+                return res
+            } else if (obj instanceof Map) {
+                if (obj.containsKey("item") || obj.containsKey("tag")) {
+                    return obj
+                } else {
+                    def newMap = [:]
+                    obj.each { k, v -> newMap[k] = convertTo120Ingredient(v) }
+                    return newMap
+                }
+            }
+            return obj
+        }
+
+        fileTree(convertedResources).each { file ->
+            if (file.name.endsWith(".json")) {
+                def json = new JsonSlurper().parse(file)
+                def changed = false
+
+                if (json instanceof Map && json.containsKey("fabric:load_conditions")) {
+                    def conds = json.remove("fabric:load_conditions")
+                    conds.each { cond ->
+                        if (cond.containsKey("condition")) {
+                            cond.type = cond.remove("condition")
+                        }
+                    }
+                    json["forge:conditions"] = conds
+                    changed = true
+                }
+
+                if (json instanceof Map) {
+                    if (json.result instanceof Map) {
+                        if (json.result.containsKey("id")) {
+                            json.result.item = json.result.remove("id")
+                            changed = true
+                        }
+                    }
+                    if (json.key instanceof Map) {
+                        json.key.keySet().each { k ->
+                            json.key[k] = convertTo120Ingredient(json.key[k])
+                        }
+                        changed = true
+                    }
+                    if (json.ingredients instanceof List) {
+                        def res = []
+                        for (item in json.ingredients) {
+                            res.add(convertTo120Ingredient(item))
+                        }
+                        json.ingredients = res
+                        changed = true
+                    }
+                    if (json.ingredient != null) {
+                        json.ingredient = convertTo120Ingredient(json.ingredient)
+                        changed = true
+                    }
+                }
+
+                if (changed) {
+                    file.text = JsonOutput.prettyPrint(JsonOutput.toJson(json))
+                }
+            }
+        }
+    }
+}
+
+processResources.dependsOn prepareResources
+classes.dependsOn prepareResources
+
+def targetJavaVersion = 17
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.encoding = "UTF-8"
+    if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
+        it.options.release.set(targetJavaVersion)
+    }
+}
+
+java {
+    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
+    if (JavaVersion.current() < javaVersion) {
+        toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
+    }
+}
+
+jar {
+    manifest {
+        attributes([
+                "Specification-Title"     : "pointblank_recipe",
+                "Specification-Vendor"    : "samiker",
+                "Specification-Version"   : "1",
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : project.jar.archiveVersion,
+                "Implementation-Vendor"   : "samiker",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+}

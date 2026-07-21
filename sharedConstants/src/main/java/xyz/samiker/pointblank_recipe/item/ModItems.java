@@ -1,107 +1,103 @@
 package xyz.samiker.pointblank_recipe.item;
 
-import net.minecraft.item.Item;
-import xyz.samiker.pointblank_recipe.utils.ItemRegistry;
-
-import java.util.Collection;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.List;
 
 public final class ModItems {
-    private static final Map<String, Item> ITEMS = new LinkedHashMap<>();
-
     // --- RIFLE ---
-    public static final Item FRAME_OF_RIFLE_MAGAZINE = register("frameoftheriflemagazine");
-    public static final Item RIFLE_MAGAZINE = register("riflemagazine");
-    public static final Item FRAME_OF_RIFLE = register("frameoftherifle");
-    public static final Item RIFLE_BUTTSTOCK = register("theriflebutt");
-    public static final Item BARREL_OF_RIFLE = register("thebarreloftherifle");
-    public static final Item IRON_BUTTSTOCK = register("ironbutt");
-    public static final Item THE_BARREL_OF_THE_RIFLE_UP = register("thebarreloftherifleup");
-    public static final Item FRAME_M4_TYPE = register("framem4a1type");
-    public static final Item BUTT_FOR_M4_TYPE = register("buttform4a1type");
-    public static final Item HANDLE_RIFLE = register("handlerifle");
-    public static final Item SILENCER_FOR_RIFLE = register("silencerforrifle");
-    public static final Item SCOPE_FOR_RIFLE = register("scopeforrifle");
+    public static final String FRAME_OF_RIFLE_MAGAZINE = "frameoftheriflemagazine";
+    public static final String RIFLE_MAGAZINE = "riflemagazine";
+    public static final String FRAME_OF_RIFLE = "frameoftherifle";
+    public static final String RIFLE_BUTTSTOCK = "theriflebutt";
+    public static final String BARREL_OF_RIFLE = "thebarreloftherifle";
+    public static final String IRON_BUTTSTOCK = "ironbutt";
+    public static final String THE_BARREL_OF_THE_RIFLE_UP = "thebarreloftherifleup";
+    public static final String FRAME_M4_TYPE = "framem4a1type";
+    public static final String BUTT_FOR_M4_TYPE = "buttform4a1type";
+    public static final String HANDLE_RIFLE = "handlerifle";
+    public static final String SILENCER_FOR_RIFLE = "silencerforrifle";
+    public static final String SCOPE_FOR_RIFLE = "scopeforrifle";
 
     // --- MACHINEGUN ---
-    public static final Item FRAME_MK_TYPE = register("framemktype");
-    public static final Item MAGAZINE_FOR_MACHINEGUN = register("magazineformachinegun");
+    public static final String FRAME_MK_TYPE = "framemktype";
+    public static final String MAGAZINE_FOR_MACHINEGUN = "magazineformachinegun";
 
     // --- OTHER ---
-    public static final Item COPPER_NUGGET = register("coppernugget");
-    public static final Item BASIS_FOR_THE_ROCKET = register("basisfortherocket");
+    public static final String COPPER_NUGGET = "coppernugget";
+    public static final String BASIS_FOR_THE_ROCKET = "basisfortherocket";
 
     // --- PISTOLS ---
-    public static final Item GUN_MAGAZINE = register("gunmagazine");
-    public static final Item GUN_POINT = register("gunpoint");
-    public static final Item THE_FRAME_OF_THE_GUN = register("theframeofthegun");
-    public static final Item FRAME_GUN_MAGAZINE = register("framegunmagazine");
+    public static final String GUN_MAGAZINE = "gunmagazine";
+    public static final String GUN_POINT = "gunpoint";
+    public static final String THE_FRAME_OF_THE_GUN = "theframeofthegun";
+    public static final String FRAME_GUN_MAGAZINE = "framegunmagazine";
 
     // --- RPG & MINIGUNS ---
-    public static final Item MUZZLE_OF_MINIGUN = register("muzzleofminigun");
-    public static final Item FRAME_OF_MINIGUN = register("frameofminigun");
-    public static final Item FRAME_OF_AT4 = register("frameofat4");
-    public static final Item TRIGGER_MECHANISM = register("triggermechanism");
-    public static final Item AUTOGUIDANCE_MODULE = register("autoguidancemodule");
-    public static final Item FRAME_OF_M32_MGL = register("frameofm32mgl");
+    public static final String MUZZLE_OF_MINIGUN = "muzzleofminigun";
+    public static final String FRAME_OF_MINIGUN = "frameofminigun";
+    public static final String FRAME_OF_AT4 = "frameofat4";
+    public static final String TRIGGER_MECHANISM = "triggermechanism";
+    public static final String AUTOGUIDANCE_MODULE = "autoguidancemodule";
+    public static final String FRAME_OF_M32_MGL = "frameofm32mgl";
 
     // --- SHOTGUN ---
-    public static final Item FRAME_OF_SHOTGUN = register("frameofshotgun");
-    public static final Item BUTT_OF_SHOTGUN = register("buttofshotggun");
-    public static final Item SHOTGUN_RELOADER = register("shotgunreloader");
-    public static final Item SHOTGUN_BARREL = register("shotgunbarrel");
+    public static final String FRAME_OF_SHOTGUN = "frameofshotgun";
+    public static final String BUTT_OF_SHOTGUN = "buttofshotggun";
+    public static final String SHOTGUN_RELOADER = "shotgunreloader";
+    public static final String SHOTGUN_BARREL = "shotgunbarrel";
 
     // --- SNIPER RIFLES ---
-    public static final Item FRAME_OF_SNIPER_RIFLE = register("frameofsniperifle");
-    public static final Item SNIPE_SCOPE = register("snipescope");
-    public static final Item MUZZLE_OF_SNIPER_RIFLE = register("muzzleofsniperrifle");
+    public static final String FRAME_OF_SNIPER_RIFLE = "frameofsniperifle";
+    public static final String SNIPE_SCOPE = "snipescope";
+    public static final String MUZZLE_OF_SNIPER_RIFLE = "muzzleofsniperrifle";
 
     // --- SUBMACHINE GUNS ---
-    public static final Item FRAME_OF_SUBMACHINE_GUN = register("frameofsubmachinegun");
-    public static final Item BUTT_OF_SUBMACHINE_GUN = register("buttofsubmachinegun");
-    public static final Item MAGAZINE_OF_SUBMACHINE_GUN = register("magazineofsubmachinegun");
-    public static final Item HANDLE_OF_SUBMACHINE_GUN = register("handleofsubmachinegun");
-    public static final Item BUTT_UMP = register("buttump");
-    public static final Item FRAME_P90 = register("framep90");
-    public static final Item BUTT_FOR_VECTOR = register("buttforvector");
+    public static final String FRAME_OF_SUBMACHINE_GUN = "frameofsubmachinegun";
+    public static final String BUTT_OF_SUBMACHINE_GUN = "buttofsubmachinegun";
+    public static final String MAGAZINE_OF_SUBMACHINE_GUN = "magazineofsubmachinegun";
+    public static final String HANDLE_OF_SUBMACHINE_GUN = "handleofsubmachinegun";
+    public static final String BUTT_UMP = "buttump";
+    public static final String FRAME_P90 = "framep90";
+    public static final String BUTT_FOR_VECTOR = "buttforvector";
 
     // --- WEAPON PACKS ---
-    public static final Item ENERGY_CUBE = register("energycube");
-    public static final Item FRAME_CYBERPUNK_GUN = register("framecyberpunkgun");
-    public static final Item FRAME_CYBERPUNK_ENERGY_GUN = register("framecyberpunkenergygun");
-    public static final Item COLLIMATOR_SCOPE = register("collimatorscope");
-    public static final Item M79 = register("m79");
-    public static final Item SNIPER_RIFLE_BILLET_TRAUMA = register("sniperriflebillettrauma");
-    public static final Item SNIPER_RIFLE_LOADING_MECHANISM = register("sniperrifleloadingmechanism");
-    public static final Item RIFLE_FLAME_ARRESTER = register("rifleflamearrester");
-    public static final Item FRAME_RPG = register("framerpg");
-    public static final Item SHOTGUN_RELOADER_BRUM = register("shotgunreloaderbrum");
-    public static final Item FRAME_OF_OBREZ = register("frameofobrez");
+    public static final String ENERGY_CUBE = "energycube";
+    public static final String FRAME_CYBERPUNK_GUN = "framecyberpunkgun";
+    public static final String FRAME_CYBERPUNK_ENERGY_GUN = "framecyberpunkenergygun";
+    public static final String COLLIMATOR_SCOPE = "collimatorscope";
+    public static final String M79 = "m79";
+    public static final String SNIPER_RIFLE_BILLET_TRAUMA = "sniperriflebillettrauma";
+    public static final String SNIPER_RIFLE_LOADING_MECHANISM = "sniperrifleloadingmechanism";
+    public static final String RIFLE_FLAME_ARRESTER = "rifleflamearrester";
+    public static final String FRAME_RPG = "framerpg";
+    public static final String SHOTGUN_RELOADER_BRUM = "shotgunreloaderbrum";
+    public static final String FRAME_OF_OBREZ = "frameofobrez";
 
     // --- METRO 2033 ---
-    public static final Item FRAME_OF_2012 = register("frameof2012");
-    public static final Item FRAME_OF_ABZATS = register("frameofabzats");
-    public static final Item FRAME_OF_ASHOT = register("frameofashot");
-    public static final Item FRAME_OF_BIGUN = register("frameofbigun");
-    public static final Item HORIZONTAL_GUN_MAGAZINE = register("horizontalgunmagazine");
-    public static final Item FRAME_OF_HELSING = register("frameofhelsing");
-    public static final Item FRAME_OF_MEDVED = register("frameofmedved");
-    public static final Item FRAME_OF_PREVED = register("frameofpreved");
-    public static final Item FRAME_OF_TIKAR = register("frameoftikar");
-    public static final Item FRAME_OF_VSV = register("frameofvsv");
-    public static final Item FRAME_OF_UBOINIK = register("frameofuboinik");
+    public static final String FRAME_OF_2012 = "frameof2012";
+    public static final String FRAME_OF_ABZATS = "frameofabzats";
+    public static final String FRAME_OF_ASHOT = "frameofashot";
+    public static final String FRAME_OF_BIGUN = "frameofbigun";
+    public static final String HORIZONTAL_GUN_MAGAZINE = "horizontalgunmagazine";
+    public static final String FRAME_OF_HELSING = "frameofhelsing";
+    public static final String FRAME_OF_MEDVED = "frameofmedved";
+    public static final String FRAME_OF_PREVED = "frameofpreved";
+    public static final String FRAME_OF_TIKAR = "frameoftikar";
+    public static final String FRAME_OF_VSV = "frameofvsv";
+    public static final String FRAME_OF_UBOINIK = "frameofuboinik";
 
-    private static Item register(String id) {
-        Item item = ItemRegistry.simple(id);
-        ITEMS.put(id, item);
-        return item;
-    }
-
-    public static void registerAll() {
-    }
-
-    public static Collection<Item> getItems() {
-        return ITEMS.values();
-    }
+    public static final List<String> ALL_ITEMS = List.of(
+            FRAME_OF_RIFLE_MAGAZINE, RIFLE_MAGAZINE, FRAME_OF_RIFLE, RIFLE_BUTTSTOCK, BARREL_OF_RIFLE,
+            IRON_BUTTSTOCK, THE_BARREL_OF_THE_RIFLE_UP, FRAME_M4_TYPE, BUTT_FOR_M4_TYPE, HANDLE_RIFLE,
+            SILENCER_FOR_RIFLE, SCOPE_FOR_RIFLE, FRAME_MK_TYPE, MAGAZINE_FOR_MACHINEGUN, COPPER_NUGGET,
+            BASIS_FOR_THE_ROCKET, GUN_MAGAZINE, GUN_POINT, THE_FRAME_OF_THE_GUN, FRAME_GUN_MAGAZINE,
+            MUZZLE_OF_MINIGUN, FRAME_OF_MINIGUN, FRAME_OF_AT4, TRIGGER_MECHANISM, AUTOGUIDANCE_MODULE,
+            FRAME_OF_M32_MGL, FRAME_OF_SHOTGUN, BUTT_OF_SHOTGUN, SHOTGUN_RELOADER, SHOTGUN_BARREL,
+            FRAME_OF_SNIPER_RIFLE, SNIPE_SCOPE, MUZZLE_OF_SNIPER_RIFLE, FRAME_OF_SUBMACHINE_GUN,
+            BUTT_OF_SUBMACHINE_GUN, MAGAZINE_OF_SUBMACHINE_GUN, HANDLE_OF_SUBMACHINE_GUN, BUTT_UMP,
+            FRAME_P90, BUTT_FOR_VECTOR, ENERGY_CUBE, FRAME_CYBERPUNK_GUN, FRAME_CYBERPUNK_ENERGY_GUN,
+            COLLIMATOR_SCOPE, M79, SNIPER_RIFLE_BILLET_TRAUMA, SNIPER_RIFLE_LOADING_MECHANISM,
+            RIFLE_FLAME_ARRESTER, FRAME_RPG, SHOTGUN_RELOADER_BRUM, FRAME_OF_OBREZ, FRAME_OF_2012,
+            FRAME_OF_ABZATS, FRAME_OF_ASHOT, FRAME_OF_BIGUN, HORIZONTAL_GUN_MAGAZINE, FRAME_OF_HELSING,
+            FRAME_OF_MEDVED, FRAME_OF_PREVED, FRAME_OF_TIKAR, FRAME_OF_VSV, FRAME_OF_UBOINIK
+    );
 }
