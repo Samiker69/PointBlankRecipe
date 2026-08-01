@@ -12,15 +12,16 @@ import org.jetbrains.annotations.NotNull;
 import xyz.samiker.pointblank_recipe.PointblankRecipe;
 
 import java.io.InputStreamReader;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ModuleLoader extends SimplePreparableReloadListener<Map<String, Boolean>> {
-    private static final Map<String, Boolean> DATAPACK_MODULE_STATES = new HashMap<>();
+    public static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath(PointblankRecipe.MOD_ID, "module_loader");
+    private static final Map<String, Boolean> DATAPACK_MODULE_STATES = new ConcurrentHashMap<>();
 
     @Override
     protected @NotNull Map<String, Boolean> prepare(ResourceManager manager, @NotNull ProfilerFiller profiler) {
-        Map<String, Boolean> states = new HashMap<>();
+        Map<String, Boolean> states = new ConcurrentHashMap<>();
         Map<ResourceLocation, Resource> resources = manager.listResources(
                 "pointblank_modules",
                 path -> path.getPath().endsWith(".json")
@@ -38,22 +39,23 @@ public class ModuleLoader extends SimplePreparableReloadListener<Map<String, Boo
                 if (json.isJsonObject()) {
                     JsonObject obj = json.getAsJsonObject();
                     if (obj.has("enabled")) {
-                        boolean enabled = obj.get("enabled").getAsBoolean();
-                        states.put(moduleName, enabled);
+                        states.put(moduleName, obj.get("enabled").getAsBoolean());
                     }
                 }
             } catch (Exception e) {
                 PointblankRecipe.LOGGER.error("Failed to read module datapack file: {} -> {}", id, e.getMessage());
             }
         }
+
+        DATAPACK_MODULE_STATES.clear();
+        DATAPACK_MODULE_STATES.putAll(states);
+
         return states;
     }
 
     @Override
     protected void apply(@NotNull Map<String, Boolean> object, @NotNull ResourceManager manager, @NotNull ProfilerFiller profiler) {
-        DATAPACK_MODULE_STATES.clear();
-        DATAPACK_MODULE_STATES.putAll(object);
-        PointblankRecipe.LOGGER.info("ModuleLoader reloaded on Forge/NeoForge!");
+        PointblankRecipe.LOGGER.info("ModuleLoader reloaded on NeoForge!");
     }
 
     public static boolean isModuleEnabled(String moduleName) {

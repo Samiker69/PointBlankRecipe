@@ -61,5 +61,6 @@ public class PointblankRecipe {
 
     private void onAddReloadListeners(AddReloadListenerEvent event) {
         event.addListener(new ModuleLoader());
+        //event.addDependency(ResourceLocation.withDefaultNamespace("recipes"), ModuleLoader.ID);
     }
 }
