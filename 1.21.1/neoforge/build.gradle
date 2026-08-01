@@ -4,9 +4,6 @@ plugins {
     id 'maven-publish'
 }
 
-version = project.mod_version
-group = project.maven_group
-
 base {
     archivesName = "${project.archives_base_name}-neoforge"
 }
@@ -30,7 +27,7 @@ sourceSets {
 }
 
 neoForge {
-    version = "21.1.235"
+    version = project.neoforge_version
 
     runs {
         client {
@@ -80,7 +77,28 @@ tasks.register('prepareResources', Copy) {
     }
 }
 
-processResources.dependsOn prepareResources
+processResources {
+    dependsOn prepareResources
+
+    var replaceProperties = [
+            minecraft_version: minecraft_version,
+            neoforge_version: neoforge_version,
+            mod_id: mod_id,
+            mod_name: mod_name,
+            mod_license: mod_license,
+            mod_version: mod_version,
+            mod_authors: mod_authors,
+            mod_description: mod_description,
+            mod_display_url: mod_display_url
+    ]
+
+    inputs.properties replaceProperties
+
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand replaceProperties
+    }
+}
+
 classes.dependsOn prepareResources
 neoForge.ideSyncTask prepareResources as Task
 
@@ -101,12 +119,12 @@ java {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "pointblank_recipe",
-                "Specification-Vendor"    : "samiker",
+                "Specification-Title"     : mod_id,
+                "Specification-Vendor"    : mod_authors,
                 "Specification-Version"   : "1",
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "samiker",
+                "Implementation-Vendor"   : mod_authors,
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }

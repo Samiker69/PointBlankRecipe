@@ -1,21 +1,18 @@
-plugins {
-    id 'java'
-    id 'net.minecraftforge.gradle' version '[7.0, 8.0)'
-    id 'maven-publish'
-}
+import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
 
-version = project.mod_version
-group = project.maven_group
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
+}
 
 base {
     archivesName = "${project.archives_base_name}-forge"
 }
 
-repositories {
-    minecraft.mavenizer(it)
-    maven fg.forgeMaven
-    maven fg.minecraftLibsMaven
-    mavenCentral()
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
 }
 
 def convertedResourcesProvider = layout.buildDirectory.dir("converted_resources")
@@ -29,51 +26,57 @@ sourceSets {
         resources {
             srcDirs += ['src/main/resources']
             srcDirs += [convertedResources]
+            srcDirs += ['src/generated/resources']
         }
     }
 }
 
 minecraft {
-    mappings channel: 'official', version: '1.20.1'
+    mappings channel: mapping_channel, version: mapping_version
+
+    copyIdeResources = true
 
     runs {
-        client {
-            workingDir = project.file('run')
-            systemProperty 'forge.logging.markers', 'REGISTRIES'
-            systemProperty 'forge.logging.console.level', 'debug'
+        configureEach {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
 
             mods {
-                pointblank_recipe {
+                "${mod_id}" {
                     source sourceSets.main
                 }
             }
         }
-        server {
-            workingDir = project.file('run')
-            systemProperty 'forge.logging.markers', 'REGISTRIES'
-            systemProperty 'forge.logging.console.level', 'debug'
 
-            mods {
-                pointblank_recipe {
-                    source sourceSets.main
-                }
-            }
+        client {
+            property 'forge.enabledGameTestNamespaces', mod_id
+        }
+
+        server {
+            property 'forge.enabledGameTestNamespaces', mod_id
+            args '--nogui'
+        }
+
+        gameTestServer {
+            property 'forge.enabledGameTestNamespaces', mod_id
+        }
+
+        data {
+            workingDirectory project.file('run-data')
+            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
         }
     }
+}
+
+repositories {
+    mavenCentral()
 }
 
 dependencies {
-    implementation minecraft.dependency("net.minecraftforge:forge:1.20.1-47.4.10")
-
-    implementation 'com.google.code.gson:gson:2.10.1'
-
-    if (System.getProperty("idea.sync.active") == "true") {
-        annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-    }
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 }
-
-import groovy.json.JsonSlurper
-import groovy.json.JsonOutput
 
 tasks.register('prepareResources', Copy) {
     from("../../shared_resources")
@@ -157,35 +160,42 @@ tasks.register('prepareResources', Copy) {
     }
 }
 
-processResources.dependsOn prepareResources
+tasks.named('processResources', ProcessResources).configure {
+    dependsOn prepareResources
+
+    var replaceProperties = [
+            minecraft_version: minecraft_version, minecraft_version_range: minecraft_version_range,
+            forge_version: forge_version, forge_version_range: forge_version_range,
+            loader_version_range: loader_version_range,
+            mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
+            mod_authors: mod_authors, mod_description: mod_description,
+    ]
+
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
+        expand replaceProperties + [project: project]
+    }
+}
+
 classes.dependsOn prepareResources
 
-def targetJavaVersion = 17
-
-tasks.withType(JavaCompile).configureEach {
-    it.options.encoding = "UTF-8"
-    if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
-        it.options.release.set(targetJavaVersion)
-    }
-}
-
-java {
-    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
-    if (JavaVersion.current() < javaVersion) {
-        toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
-    }
-}
-
-jar {
+tasks.named('jar', Jar).configure {
     manifest {
         attributes([
-                "Specification-Title"     : "pointblank_recipe",
-                "Specification-Vendor"    : "samiker",
+                "Specification-Title"     : mod_id,
+                "Specification-Vendor"    : mod_authors,
                 "Specification-Version"   : "1",
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "samiker",
+                "Implementation-Vendor"   : mod_authors,
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
+
+    finalizedBy 'reobfJar'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
 }

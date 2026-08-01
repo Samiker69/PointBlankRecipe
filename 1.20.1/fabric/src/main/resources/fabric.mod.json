@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "id": "pointblank_recipe",
+  "id": "${mod_id}",
   "version": "${version}",
-  "name": "PointBlank:Recipe",
-  "description": "Add alternative recipes for PointBlank and weapon packs",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
   "authors": [
-    "Samiker"
+    "${mod_authors}"
   ],
-  "license": "All-Rights-Reserved",
+  "license": "${mod_license}",
   "icon": "assets/pointblank_recipe/icon.png",
   "environment": "*",
   "entrypoints": {

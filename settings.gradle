@@ -4,10 +4,10 @@ pluginManagement {
             name = 'Fabric'
             url = 'https://maven.fabricmc.net/'
         }
-        maven {
-            name = 'Forge'
-            url = 'https://maven.minecraftforge.net/'
-        }
+//        maven {
+//            name = 'Forge'
+//            url = 'https://maven.minecraftforge.net/'
+//        }
         maven {
             name = 'NeoForge'
             url = 'https://maven.neoforged.net/releases/'
@@ -18,6 +18,6 @@ pluginManagement {
 
 rootProject.name = 'PointBlankRecipe'
 
-include '1.20.1:fabric', '1.20.1:forge'
+include '1.20.1:fabric' // '1.20.1:forge' deprecated. i wont support this crap of ...forge:sob:   please use neoforge instead or contribute to do it works
 include '1.21.1:fabric', '1.21.1:neoforge'
 include '1.21.11:fabric'

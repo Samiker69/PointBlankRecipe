@@ -3,11 +3,8 @@ plugins {
     id 'maven-publish'
 }
 
-version = project.mod_version
-group = project.maven_group
-
 base {
-    archivesName = project.archives_base_name
+    archivesName = "${project.archives_base_name}-fabric"
 }
 
 loom {
@@ -29,8 +26,6 @@ dependencies {
 }
 
 def convertedResources = layout.buildDirectory.dir("converted_resources").get().asFile
-
-import groovy.json.*
 
 import groovy.json.*
 
@@ -130,17 +125,27 @@ processResources {
     inputs.property "minecraft_version", project.minecraft_version
     inputs.property "loader_version", project.loader_version
     inputs.property "fabric_version", project.fabric_api_version
+    inputs.property "mod_id", project.mod_id
+    inputs.property "mod_name", project.mod_name
+    inputs.property "mod_description", project.mod_description
+    inputs.property "mod_authors", project.mod_authors
+    inputs.property "mod_license", project.mod_license
     filteringCharset "UTF-8"
 
     filesMatching("fabric.mod.json") {
         expand "version": project.version,
                 "minecraft_version": project.minecraft_version,
                 "loader_version": project.loader_version,
-                "fabric_version": project.fabric_api_version
+                "fabric_version": project.fabric_api_version,
+                "mod_id": project.mod_id,
+                "mod_name": project.mod_name,
+                "mod_description": project.mod_description,
+                "mod_authors": project.mod_authors,
+                "mod_license": project.mod_license
     }
 }
 
-def targetJavaVersion =  25
+def targetJavaVersion = 21
 
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = "UTF-8"
