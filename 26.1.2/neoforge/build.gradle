@@ -1,0 +1,131 @@
+plugins {
+    id 'java'
+    id 'net.neoforged.moddev' version '2.0.146'
+    id 'maven-publish'
+}
+
+base {
+    archivesName = "${project.archives_base_name}-neoforge"
+}
+
+repositories {
+    mavenCentral()
+}
+
+def convertedResources = layout.buildDirectory.dir("converted_resources").get().asFile
+
+sourceSets {
+    main {
+        java {
+            srcDirs += ['../../sharedConstants/src/main/java']
+        }
+        resources {
+            srcDirs += ['src/main/resources']
+            srcDirs += [convertedResources]
+        }
+    }
+}
+
+neoForge {
+    version = project.neoforge_version
+
+    runs {
+        client {
+            client()
+        }
+        server {
+            server()
+        }
+    }
+
+    mods {
+        pointblank_recipe {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+
+tasks.register('prepareResources', Copy) {
+    from("../../shared_resources")
+    into(convertedResources)
+
+    doLast {
+        fileTree(convertedResources).each { file ->
+            if (file.name.endsWith(".json")) {
+                def json = new JsonSlurper().parse(file)
+                def changed = false
+
+                if (json instanceof Map && json.containsKey("fabric:load_conditions")) {
+                    def conds = json.remove("fabric:load_conditions")
+                    conds.each { cond ->
+                        if (cond.containsKey("condition")) {
+                            cond.type = cond.remove("condition")
+                        }
+                    }
+                    json["neoforge:conditions"] = conds
+                    changed = true
+                }
+
+                if (changed) {
+                    file.text = JsonOutput.prettyPrint(JsonOutput.toJson(json))
+                }
+            }
+        }
+    }
+}
+
+processResources {
+    dependsOn prepareResources
+
+    var replaceProperties = [
+            minecraft_version: minecraft_version,
+            neoforge_version: neoforge_version,
+            mod_id: mod_id,
+            mod_name: mod_name,
+            mod_license: mod_license,
+            mod_version: mod_version,
+            mod_authors: mod_authors,
+            mod_description: mod_description,
+            mod_display_url: mod_display_url
+    ]
+
+    inputs.properties replaceProperties
+
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand replaceProperties
+    }
+}
+
+classes.dependsOn prepareResources
+neoForge.ideSyncTask prepareResources as Task
+
+def targetJavaVersion = 25
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.encoding = "UTF-8"
+    it.options.release.set(targetJavaVersion)
+}
+
+java {
+    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
+    if (JavaVersion.current() < javaVersion) {
+        toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
+    }
+}
+
+jar {
+    manifest {
+        attributes([
+                "Specification-Title"     : mod_id,
+                "Specification-Vendor"    : mod_authors,
+                "Specification-Version"   : "1",
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : project.jar.archiveVersion,
+                "Implementation-Vendor"   : mod_authors,
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+}

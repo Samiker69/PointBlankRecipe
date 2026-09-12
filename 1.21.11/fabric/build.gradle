@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.15-SNAPSHOT'
+    id 'fabric-loom' version '1.17-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -99,9 +99,6 @@ tasks.register('generateItemDefinitions') {
   }
 }"""
         }
-    }
-    def modelsDir = file("${convertedResources}/assets/pointblank_recipe/models/item")
-    if (modelsDir.exists()) {
         project.delete(modelsDir)
     }
 }
@@ -145,7 +142,7 @@ processResources {
     }
 }
 
-def targetJavaVersion = 21
+def targetJavaVersion = 25
 
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = "UTF-8"

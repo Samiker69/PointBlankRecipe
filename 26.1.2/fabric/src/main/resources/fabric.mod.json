@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    "${mod_authors}"
+  ],
+  "license": "${mod_license}",
+  "icon": "assets/pointblank_recipe/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "xyz.samiker.pointblank_recipe.client.Pointblank_recipeClient"
+    ],
+    "main": [
+      "xyz.samiker.pointblank_recipe.PointblankRecipe"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=25",
+    "pointblank": ">=1.9.0",
+    "fabric-api": ">=${fabric_version}"
+  }
+}

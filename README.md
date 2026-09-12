@@ -28,7 +28,7 @@ The configuration file is the quickest way to disable entire categories of conte
   ]
 }
 ```
-*Available default modules: base, trauma, metro, stalker, handguns_galore, cyberpunk.*
+*Available default modules: base, trauma, metro, stalker, handguns_galore, cyberpunk, taiwan.*
 
 ### 2. Datapacks (Dynamic and Precise Control)
 If you require surgical control, such as changing specific ingredients for a single item, deleting individual recipes, or overriding module states dynamically without a restart, use a standard Minecraft datapack.
@@ -55,17 +55,18 @@ See documentation here: [kubejs.docs.md](https://github.com/Samiker69/PointBlank
 ## Dependencies
 *   **Vic's Point Blank (-jelly):** Required dependency.
 *   **JEI (Just Enough Items):** Highly recommended for viewing recipes.
-*   **Polymorph:** Highly recommended if you are using external weapon packs to avoid recipe conflicts.
+*   **Polymorph:** Highly recommended to avoid recipe conflicts.
 
 ## Build Instructions
 
 This project is built using Gradle. Depending on which version you are compiling, you must have the corresponding Java Development Kit (JDK) installed:
 
 | Minecraft Version | Required Java Version |
-| :--- | :--- |
-| 1.20.1 | Java 17 |
-| 1.21.1 | Java 21 |
-| 1.21.11 | Java 25 |
+| :--- |:----------------------|
+| 1.20.1 | Java 17               |
+| 1.21.1 | Java 21               |
+| 1.21.11 | Java 25               |
+| 26.1.2 | Java 25               |
 
 To compile the mod, run the following command in the terminal from the root directory:
 

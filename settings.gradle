@@ -20,4 +20,5 @@ rootProject.name = 'PointBlankRecipe'
 
 include '1.20.1:fabric' // '1.20.1:forge' deprecated. i wont support this crap of ...forge:sob:   please use neoforge instead or contribute to do it works
 include '1.21.1:fabric', '1.21.1:neoforge'
-include '1.21.11:fabric'
+include '1.21.11:fabric', '1.21.11:neoforge'
+include '26.1.2:fabric', '26.1.2:neoforge'
