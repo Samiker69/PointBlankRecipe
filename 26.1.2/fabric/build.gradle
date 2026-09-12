@@ -98,7 +98,6 @@ tasks.register('generateItemDefinitions') {
   }
 }"""
         }
-        project.delete(modelsDir)
     }
 }
 

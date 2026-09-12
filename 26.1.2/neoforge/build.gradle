@@ -74,11 +74,75 @@ tasks.register('prepareResources', Copy) {
                 }
             }
         }
+
+        def convertIngredient
+        convertIngredient = { obj ->
+            if (obj instanceof Map) {
+                if (obj.containsKey("item")) {
+                    return obj.get("item")
+                } else if (obj.containsKey("tag")) {
+                    return "#" + obj.get("tag")
+                } else {
+                    def newMap = [:]
+                    obj.each { k, v -> newMap[k] = convertIngredient(v) }
+                    return newMap
+                }
+            } else if (obj instanceof List) {
+                return obj.collect { convertIngredient(it) }
+            }
+            return obj
+        }
+
+        fileTree(convertedResources).matching {
+            include "data/**/recipe/*.json"
+        }.each { file ->
+            def json = new JsonSlurper().parse(file)
+            if (json.result instanceof Map) {
+                if (json.result.containsKey("item")) {
+                    json.result.id = json.result.remove("item")
+                }
+            }
+            if (json.key instanceof Map) {
+                json.key.keySet().each { k ->
+                    json.key[k] = convertIngredient(json.key[k])
+                }
+            }
+            if (json.ingredients instanceof List) {
+                json.ingredients = json.ingredients.collect { convertIngredient(it) }
+            }
+            if (json.ingredient != null) {
+                json.ingredient = convertIngredient(json.ingredient)
+            }
+
+            file.text = JsonOutput.prettyPrint(JsonOutput.toJson(json))
+        }
+    }
+}
+
+tasks.register('generateItemDefinitions') {
+    dependsOn prepareResources
+
+    doLast {
+        def modelsDir = new File(convertedResources, "assets/pointblank_recipe/models/item")
+        def itemsDir = new File(convertedResources, "assets/pointblank_recipe/items")
+        itemsDir.mkdirs()
+
+        modelsDir.listFiles().each { file ->
+            def name = file.name.replace(".json", "")
+            def linker = new File(itemsDir, file.name)
+            linker.text = """{
+  "model": {
+    "type": "minecraft:model",
+    "model": "pointblank_recipe:item/${name}"
+  }
+}"""
+        }
     }
 }
 
 processResources {
     dependsOn prepareResources
+    dependsOn generateItemDefinitions
 
     var replaceProperties = [
             minecraft_version: minecraft_version,

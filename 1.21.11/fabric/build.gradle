@@ -30,7 +30,7 @@ def convertedResources = layout.buildDirectory.dir("converted_resources").get().
 import groovy.json.*
 
 tasks.register('prepareResources', Copy) {
-    from("../shared_resources")
+    from("../../shared_resources")
     into(convertedResources)
 
     if (project.minecraft_version.startsWith("1.21")) {
@@ -99,7 +99,6 @@ tasks.register('generateItemDefinitions') {
   }
 }"""
         }
-        project.delete(modelsDir)
     }
 }
 

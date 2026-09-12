@@ -1,6 +1,8 @@
 package xyz.samiker.pointblank_recipe.utils;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.RegisterEvent;
 import xyz.samiker.pointblank_recipe.PointblankRecipe;
@@ -11,9 +13,13 @@ public final class ItemRegistry {
     private ItemRegistry() {}
 
     public static Item simple(String id) {
-        Item item = new Item(new Item.Properties());
+        ResourceKey<Item> key = ResourceKey.create(
+                Registries.ITEM,
+                Identifier.fromNamespaceAndPath(PointblankRecipe.MOD_ID, id)
+        );
+        Item item = new Item(new Item.Properties().setId(key));
         if (helper != null) {
-            helper.register(Identifier.tryBuild(PointblankRecipe.MOD_ID, id), item);
+            helper.register(key, item);
         }
         return item;
     }
