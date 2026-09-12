@@ -16,7 +16,7 @@
       "item": "minecraft:copper_ingot"
     },
     "b": {
-      "item": "pointblank_recipe:coppernugget"
+      "tag": "c:nuggets/copper"
     },
     "c": {
       "item": "minecraft:gunpowder"

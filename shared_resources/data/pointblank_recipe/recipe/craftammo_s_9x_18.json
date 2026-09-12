@@ -15,7 +15,7 @@
       "item": "minecraft:gunpowder"
     },
     "b": {
-      "item": "pointblank_recipe:coppernugget"
+      "tag": "c:nuggets/copper"
     }
   },
   "result": {

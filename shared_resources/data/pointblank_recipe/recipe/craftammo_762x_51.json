@@ -19,7 +19,7 @@
       "item": "pointblank:ammo762"
     },
     "c": {
-      "item": "pointblank_recipe:coppernugget"
+      "tag": "c:nuggets/copper"
     }
   },
   "result": {

@@ -19,7 +19,7 @@
       "item": "minecraft:iron_nugget"
     },
     "c": {
-      "item": "pointblank_recipe:coppernugget"
+      "tag": "c:nuggets/copper"
     }
   },
   "result": {

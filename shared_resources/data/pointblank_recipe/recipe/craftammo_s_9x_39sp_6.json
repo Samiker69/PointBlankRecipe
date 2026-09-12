@@ -16,7 +16,7 @@
       "item": "pointblank:s_9x39"
     },
     "b": {
-      "item": "pointblank_recipe:coppernugget"
+      "tag": "c:nuggets/copper"
     }
   },
   "result": {

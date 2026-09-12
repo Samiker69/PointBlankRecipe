@@ -14,7 +14,7 @@
   ],
   "key": {
     "a": {
-      "item": "pointblank_recipe:coppernugget"
+      "tag": "c:nuggets/copper"
     },
     "b": {
       "item": "minecraft:iron_ingot"

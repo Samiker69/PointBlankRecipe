@@ -15,7 +15,7 @@
       "item": "pointblank:s_9x18_ammo"
     },
     "b": {
-      "item": "pointblank_recipe:coppernugget"
+      "tag": "c:nuggets/copper"
     }
   },
   "result": {
