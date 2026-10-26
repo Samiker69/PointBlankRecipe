@@ -1,0 +1,36 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:sniper",
+  "parts": {
+    "sight": {
+      "item": "pointblank_recipe:snipescope"
+    },
+    "barrel": {
+      "item": "pointblank_recipe:muzzleofsniperrifle"
+    },
+    "frame": {
+      "item": "pointblank_recipe:frameofsniperifle"
+    },
+    "stock": {
+      "item": "pointblank_recipe:ironbutt"
+    }
+  },
+  "materials": [
+    {
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:s_svd"
+  }
+}

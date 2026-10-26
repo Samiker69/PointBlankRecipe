@@ -1,0 +1,30 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:pistol",
+  "parts": {
+    "mechanism": {
+      "item": "pointblank_recipe:sniperrifleloadingmechanism"
+    },
+    "frame": {
+      "item": "pointblank_recipe:theframeofthegun"
+    }
+  },
+  "materials": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "tag": "minecraft:logs"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:cp2077_malorian_arms_overture_kerry"
+  }
+}

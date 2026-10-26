@@ -1,0 +1,33 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "trauma"
+    }
+  ],
+  "template": "pointblank_recipe:sniper",
+  "parts": {
+    "barrel": {
+      "item": "pointblank_recipe:thebarreloftherifle"
+    },
+    "mechanism": {
+      "item": "pointblank_recipe:sniperrifleloadingmechanism"
+    },
+    "frame": {
+      "item": "pointblank_recipe:sniperriflebillettrauma"
+    }
+  },
+  "materials": [
+    {
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "tag": "minecraft:logs"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:mp18"
+  }
+}

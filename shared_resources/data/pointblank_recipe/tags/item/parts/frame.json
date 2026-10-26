@@ -1,0 +1,32 @@
+{
+  "replace": false,
+  "values": [
+    "pointblank_recipe:framecyberpunkenergygun",
+    "pointblank_recipe:framecyberpunkgun",
+    "pointblank_recipe:framem4a1type",
+    "pointblank_recipe:framemktype",
+    "pointblank_recipe:frameof2012",
+    "pointblank_recipe:frameofabzats",
+    "pointblank_recipe:frameofashot",
+    "pointblank_recipe:frameofat4",
+    "pointblank_recipe:frameofbigun",
+    "pointblank_recipe:frameofhelsing",
+    "pointblank_recipe:frameofm32mgl",
+    "pointblank_recipe:frameofmedved",
+    "pointblank_recipe:frameofminigun",
+    "pointblank_recipe:frameofobrez",
+    "pointblank_recipe:frameofpreved",
+    "pointblank_recipe:frameofshotgun",
+    "pointblank_recipe:frameofsniperifle",
+    "pointblank_recipe:frameofsubmachinegun",
+    "pointblank_recipe:frameoftherifle",
+    "pointblank_recipe:frameoftikar",
+    "pointblank_recipe:frameofuboinik",
+    "pointblank_recipe:frameofvsv",
+    "pointblank_recipe:framep90",
+    "pointblank_recipe:framerpg",
+    "pointblank_recipe:m79",
+    "pointblank_recipe:sniperriflebillettrauma",
+    "pointblank_recipe:theframeofthegun"
+  ]
+}

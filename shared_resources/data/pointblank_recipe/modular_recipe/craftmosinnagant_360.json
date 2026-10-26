@@ -1,0 +1,30 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "trauma"
+    }
+  ],
+  "template": "pointblank_recipe:sniper",
+  "parts": {
+    "frame": {
+      "item": "pointblank_recipe:sniperriflebillettrauma"
+    },
+    "stock": {
+      "item": "pointblank_recipe:theriflebutt"
+    }
+  },
+  "materials": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "tag": "minecraft:planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:mosin_nagant360"
+  }
+}

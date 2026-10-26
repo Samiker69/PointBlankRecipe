@@ -1,0 +1,31 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "cyberpunk"
+    }
+  ],
+  "template": "pointblank_recipe:cyberpunk",
+  "parts": {
+    "frame": {
+      "item": "pointblank_recipe:framecyberpunkgun"
+    }
+  },
+  "materials": [
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 3
+    },
+    {
+      "item": "minecraft:iron_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:cp2077_militech_m179_achilles"
+  }
+}

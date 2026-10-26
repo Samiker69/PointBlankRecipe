@@ -1,0 +1,31 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:cyberpunk",
+  "parts": {
+    "sight": {
+      "item": "pointblank_recipe:collimatorscope"
+    },
+    "frame": {
+      "item": "pointblank_recipe:framecyberpunkenergygun"
+    },
+    "special": {
+      "item": "pointblank_recipe:energycube"
+    }
+  },
+  "materials": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 2
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:cp2077_militech_m179_achilles_xmod2"
+  }
+}

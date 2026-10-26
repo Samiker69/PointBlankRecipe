@@ -1,0 +1,33 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:machinegun",
+  "parts": {
+    "barrel": {
+      "item": "pointblank_recipe:thebarreloftherifleup"
+    },
+    "sight": {
+      "item": "pointblank_recipe:scopeforrifle"
+    },
+    "frame": {
+      "item": "pointblank_recipe:framemktype"
+    },
+    "magazine": {
+      "item": "pointblank_recipe:magazineformachinegun"
+    }
+  },
+  "materials": [
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:m249"
+  }
+}

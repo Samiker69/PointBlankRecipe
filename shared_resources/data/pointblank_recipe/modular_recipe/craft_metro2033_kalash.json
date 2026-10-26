@@ -1,0 +1,34 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "metro"
+    }
+  ],
+  "template": "pointblank_recipe:rifle",
+  "parts": {
+    "barrel": {
+      "item": "pointblank_recipe:thebarreloftherifleup"
+    },
+    "frame": {
+      "item": "pointblank_recipe:frameoftherifle"
+    },
+    "stock": {
+      "item": "pointblank_recipe:ironbutt"
+    }
+  },
+  "materials": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_nugget",
+      "count": 2
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:kalash"
+  }
+}

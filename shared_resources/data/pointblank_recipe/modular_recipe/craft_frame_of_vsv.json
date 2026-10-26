@@ -1,0 +1,29 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "metro"
+    }
+  ],
+  "template": "pointblank_recipe:component",
+  "parts": {},
+  "materials": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "item": "minecraft:iron_block"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "pointblank_recipe:buttofshotggun"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank_recipe:frameofvsv"
+  }
+}

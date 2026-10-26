@@ -1,0 +1,32 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:rifle",
+  "parts": {
+    "barrel": {
+      "item": "pointblank_recipe:thebarreloftherifle"
+    },
+    "grip": {
+      "item": "pointblank_recipe:handlerifle"
+    },
+    "frame": {
+      "item": "pointblank_recipe:framem4a1type"
+    },
+    "stock": {
+      "item": "pointblank_recipe:buttform4a1type"
+    },
+    "magazine": {
+      "item": "pointblank_recipe:riflemagazine"
+    }
+  },
+  "materials": [],
+  "result": {
+    "count": 1,
+    "id": "pointblank:hk416"
+  }
+}

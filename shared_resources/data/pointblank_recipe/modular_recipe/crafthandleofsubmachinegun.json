@@ -1,0 +1,25 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:component",
+  "parts": {},
+  "materials": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 3
+    },
+    {
+      "item": "minecraft:iron_nugget",
+      "count": 2
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank_recipe:handleofsubmachinegun"
+  }
+}

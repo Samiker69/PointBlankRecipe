@@ -1,0 +1,33 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "trauma"
+    }
+  ],
+  "template": "pointblank_recipe:sniper",
+  "parts": {
+    "barrel": {
+      "item": "pointblank_recipe:thebarreloftherifle"
+    },
+    "sight": {
+      "item": "pointblank_recipe:snipescope"
+    },
+    "frame": {
+      "item": "pointblank_recipe:sniperriflebillettrauma"
+    },
+    "magazine": {
+      "item": "pointblank_recipe:riflemagazine"
+    }
+  },
+  "materials": [
+    {
+      "tag": "minecraft:logs"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:svd_dragnaov"
+  }
+}

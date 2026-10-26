@@ -1,0 +1,32 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:cyberpunk",
+  "parts": {
+    "special": {
+      "item": "pointblank_recipe:energycube",
+      "count": 2
+    },
+    "sight": {
+      "item": "pointblank_recipe:snipescope"
+    },
+    "frame": {
+      "item": "pointblank_recipe:framecyberpunkenergygun"
+    }
+  },
+  "materials": [
+    {
+      "item": "minecraft:iron_block",
+      "count": 2
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:cp2077_tsunami_rasetsu"
+  }
+}

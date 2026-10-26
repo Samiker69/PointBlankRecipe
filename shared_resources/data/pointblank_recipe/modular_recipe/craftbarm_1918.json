@@ -1,0 +1,33 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "trauma"
+    }
+  ],
+  "template": "pointblank_recipe:sniper",
+  "parts": {
+    "barrel": {
+      "item": "pointblank_recipe:thebarreloftherifleup"
+    },
+    "frame": {
+      "item": "pointblank_recipe:sniperriflebillettrauma"
+    },
+    "magazine": {
+      "item": "pointblank_recipe:riflemagazine"
+    }
+  },
+  "materials": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "tag": "minecraft:planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:barm1918"
+  }
+}

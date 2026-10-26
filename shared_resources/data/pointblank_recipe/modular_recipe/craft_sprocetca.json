@@ -1,0 +1,29 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:shotgun",
+  "parts": {
+    "barrel": {
+      "item": "pointblank_recipe:thebarreloftherifle"
+    },
+    "mechanism": {
+      "item": "pointblank_recipe:shotgunreloaderbrum"
+    },
+    "frame": {
+      "item": "pointblank_recipe:frameofshotgun"
+    },
+    "stock": {
+      "item": "pointblank_recipe:buttofsubmachinegun"
+    }
+  },
+  "materials": [],
+  "result": {
+    "count": 1,
+    "id": "pointblank:s_protecta"
+  }
+}

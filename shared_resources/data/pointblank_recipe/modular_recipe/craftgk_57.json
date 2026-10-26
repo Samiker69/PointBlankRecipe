@@ -1,0 +1,35 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:rifle",
+  "parts": {
+    "barrel": {
+      "item": "pointblank_recipe:thebarreloftherifle"
+    },
+    "sight": {
+      "item": "pointblank_recipe:collimatorscope"
+    },
+    "frame": {
+      "item": "pointblank_recipe:frameoftherifle"
+    },
+    "grip": {
+      "item": "pointblank_recipe:handlerifle"
+    },
+    "magazine": {
+      "item": "pointblank_recipe:riflemagazine"
+    },
+    "stock": {
+      "item": "pointblank_recipe:buttofshotggun"
+    }
+  },
+  "materials": [],
+  "result": {
+    "count": 1,
+    "id": "pointblank:gk57"
+  }
+}

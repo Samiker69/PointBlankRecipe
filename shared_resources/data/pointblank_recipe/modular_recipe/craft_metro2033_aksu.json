@@ -1,0 +1,31 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "metro"
+    }
+  ],
+  "template": "pointblank_recipe:rifle",
+  "parts": {
+    "frame": {
+      "item": "pointblank_recipe:frameoftherifle"
+    },
+    "magazine": {
+      "item": "pointblank_recipe:riflemagazine"
+    },
+    "stock": {
+      "item": "pointblank_recipe:buttump"
+    }
+  },
+  "materials": [
+    {
+      "item": "minecraft:iron_nugget",
+      "count": 2
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:aksu"
+  }
+}

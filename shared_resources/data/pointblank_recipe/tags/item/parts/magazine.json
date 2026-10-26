@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "pointblank_recipe:framegunmagazine",
+    "pointblank_recipe:frameoftheriflemagazine",
+    "pointblank_recipe:gunmagazine",
+    "pointblank_recipe:horizontalgunmagazine",
+    "pointblank_recipe:magazineformachinegun",
+    "pointblank_recipe:magazineofsubmachinegun",
+    "pointblank_recipe:riflemagazine"
+  ]
+}

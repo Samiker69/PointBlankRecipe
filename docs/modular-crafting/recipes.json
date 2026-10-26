@@ -1,0 +1,7532 @@
+{
+  "recipes": [
+    {
+      "file": "crafhkusp_45.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:hkusp45",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        " c"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craft_357ammo.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ammo357",
+      "count": 16,
+      "kind": "ammo",
+      "pattern": [
+        "aa",
+        "bc"
+      ],
+      "ingredients": {
+        "#c:nuggets/copper": 2,
+        "minecraft:copper_ingot": 1,
+        "minecraft:gunpowder": 1
+      }
+    },
+    {
+      "file": "craft_40graned.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:grenade40mm",
+      "count": 4,
+      "kind": "ammo",
+      "pattern": [
+        " a ",
+        "bcb",
+        "cac"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 2,
+        "minecraft:copper_ingot": 2,
+        "minecraft:gunpowder": 3
+      }
+    },
+    {
+      "file": "craft_40sw.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ammo40sw",
+      "count": 16,
+      "kind": "ammo",
+      "pattern": [
+        "a",
+        "b",
+        "b"
+      ],
+      "ingredients": {
+        "minecraft:gunpowder": 1,
+        "#c:nuggets/copper": 2
+      }
+    },
+    {
+      "file": "craft_45acp.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ammo45acp",
+      "count": 16,
+      "kind": "ammo",
+      "pattern": [
+        "ab",
+        "bb"
+      ],
+      "ingredients": {
+        "minecraft:gunpowder": 1,
+        "#c:nuggets/copper": 3
+      }
+    },
+    {
+      "file": "craft_46mm.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ammo46",
+      "count": 16,
+      "kind": "ammo",
+      "pattern": [
+        "ab",
+        "ac"
+      ],
+      "ingredients": {
+        "#c:nuggets/copper": 2,
+        "minecraft:copper_ingot": 1,
+        "minecraft:gunpowder": 1
+      }
+    },
+    {
+      "file": "craft_50_ae_ammo.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ammo50ae",
+      "count": 16,
+      "kind": "ammo",
+      "pattern": [
+        "ab",
+        "c "
+      ],
+      "ingredients": {
+        "minecraft:copper_ingot": 1,
+        "minecraft:gunpowder": 1,
+        "#c:nuggets/copper": 1
+      }
+    },
+    {
+      "file": "craft_545.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ammo545",
+      "count": 16,
+      "kind": "ammo",
+      "pattern": [
+        "aa",
+        " b"
+      ],
+      "ingredients": {
+        "minecraft:copper_ingot": 2,
+        "minecraft:gunpowder": 1
+      }
+    },
+    {
+      "file": "craft_556ammo.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ammo556",
+      "count": 16,
+      "kind": "ammo",
+      "pattern": [
+        "aa",
+        "bc"
+      ],
+      "ingredients": {
+        "minecraft:copper_ingot": 2,
+        "#c:nuggets/copper": 1,
+        "minecraft:gunpowder": 1
+      }
+    },
+    {
+      "file": "craft_57ammo.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ammo57",
+      "count": 16,
+      "kind": "ammo",
+      "pattern": [
+        "abb",
+        "ca "
+      ],
+      "ingredients": {
+        "minecraft:copper_ingot": 2,
+        "#c:nuggets/copper": 2,
+        "minecraft:gunpowder": 1
+      }
+    },
+    {
+      "file": "craft_9mmammo.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ammo9mm",
+      "count": 16,
+      "kind": "ammo",
+      "pattern": [
+        "aa",
+        "ab"
+      ],
+      "ingredients": {
+        "#c:nuggets/copper": 3,
+        "minecraft:gunpowder": 1
+      }
+    },
+    {
+      "file": "craft_ar57.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ar57",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a b",
+        " c ",
+        "d e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:framemktype": 1,
+        "pointblank_recipe:magazineformachinegun": 1,
+        "minecraft:iron_block": 1
+      }
+    },
+    {
+      "file": "craft_chiangkaishekrifle.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:chiangkaishekrifle",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        "d e"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "#minecraft:planks": 1,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craft_collimator_scope.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "handguns_galore"
+      ],
+      "result": "pointblank_recipe:collimatorscope",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        " a ",
+        "aba",
+        " a "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 4,
+        "minecraft:glass": 1
+      }
+    },
+    {
+      "file": "craft_copper_ingot.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "minecraft:copper_ingot",
+      "count": 1,
+      "kind": "material",
+      "pattern": [
+        "aaa",
+        "aaa",
+        "aaa"
+      ],
+      "ingredients": {
+        "#c:nuggets/copper": 9
+      }
+    },
+    {
+      "file": "craft_copper_ingot_create.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "create:copper_ingot",
+      "count": 1,
+      "kind": "material",
+      "pattern": [
+        "aaa",
+        "aaa",
+        "aaa"
+      ],
+      "ingredients": {
+        "#c:nuggets/copper": 9
+      }
+    },
+    {
+      "file": "craft_copper_nugget.json",
+      "type": "crafting_shapeless",
+      "modules": [],
+      "result": "pointblank_recipe:coppernugget",
+      "count": 9,
+      "kind": "component",
+      "pattern": null,
+      "ingredients": {
+        "minecraft:copper_ingot": 1
+      }
+    },
+    {
+      "file": "craft_copper_nugget_create.json",
+      "type": "crafting_shapeless",
+      "modules": [],
+      "result": "pointblank_recipe:coppernugget",
+      "count": 9,
+      "kind": "component",
+      "pattern": null,
+      "ingredients": {
+        "create:copper_ingot": 1
+      }
+    },
+    {
+      "file": "craft_cp_eg.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:framecyberpunkenergygun",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "abc",
+        "dd "
+      ],
+      "ingredients": {
+        "minecraft:iron_block": 1,
+        "pointblank_recipe:energycube": 1,
+        "minecraft:iron_ingot": 1,
+        "minecraft:diamond_block": 2
+      }
+    },
+    {
+      "file": "craft_deserteagle.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:deserteagle",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a ",
+        " b",
+        "cd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craft_energycube.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "cyberpunk"
+      ],
+      "result": "pointblank_recipe:energycube",
+      "count": 2,
+      "kind": "component",
+      "pattern": [
+        "aba",
+        "cdc",
+        "aba"
+      ],
+      "ingredients": {
+        "minecraft:diamond": 4,
+        "minecraft:redstone": 2,
+        "minecraft:iron_ingot": 2,
+        "minecraft:comparator": 1
+      }
+    },
+    {
+      "file": "craft_frame_of_abzats.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank_recipe:frameofabzats",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        "bcd",
+        " dd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "#minecraft:planks": 1,
+        "#minecraft:logs": 1,
+        "minecraft:iron_block": 3
+      }
+    },
+    {
+      "file": "craft_frame_of_ashot.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank_recipe:frameofashot",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " b ",
+        "c a"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 2,
+        "minecraft:iron_block": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craft_frame_of_bigun.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank_recipe:frameofbigun",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "aa ",
+        "ab ",
+        " aa"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 5,
+        "minecraft:iron_block": 1
+      }
+    },
+    {
+      "file": "craft_frame_of_helsing.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank_recipe:frameofhelsing",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "ab ",
+        " cd"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "minecraft:iron_block": 1,
+        "minecraft:iron_nugget": 1,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craft_frame_of_medved.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank_recipe:frameofmedved",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "aa ",
+        "ab ",
+        "  c"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 3,
+        "minecraft:iron_block": 1,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craft_frame_of_preved.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank_recipe:frameofpreved",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " b ",
+        " cc"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_block": 1,
+        "minecraft:iron_ingot": 2
+      }
+    },
+    {
+      "file": "craft_frame_of_tikar.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank_recipe:frameoftikar",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        "bca",
+        " de"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 2,
+        "minecraft:iron_ingot": 1,
+        "minecraft:iron_block": 1,
+        "#minecraft:planks": 1,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craft_frame_of_uboinik.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank_recipe:frameofuboinik",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a ",
+        "bc",
+        " d"
+      ],
+      "ingredients": {
+        "minecraft:iron_block": 1,
+        "pointblank_recipe:sniperrifleloadingmechanism": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craft_frame_of_ventil.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:frameofventil",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " b ",
+        " cd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "minecraft:iron_block": 1,
+        "#minecraft:logs": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craft_frame_of_vsv.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank_recipe:frameofvsv",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " b ",
+        "c d"
+      ],
+      "ingredients": {
+        "#minecraft:logs": 1,
+        "minecraft:iron_block": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:buttofshotggun": 1
+      }
+    },
+    {
+      "file": "craft_frame_p_90.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:framep90",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        " ab",
+        "cc ",
+        " ac"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 2,
+        "#minecraft:planks": 1,
+        "minecraft:iron_ingot": 3
+      }
+    },
+    {
+      "file": "craft_frame_rpg.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "stalker"
+      ],
+      "result": "pointblank_recipe:framerpg",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        "bac",
+        " cd"
+      ],
+      "ingredients": {
+        "minecraft:iron_block": 2,
+        "#minecraft:logs": 1,
+        "minecraft:iron_ingot": 2,
+        "pointblank_recipe:triggermechanism": 1
+      }
+    },
+    {
+      "file": "craft_g3.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:g3",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        "d e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:ironbutt": 1
+      }
+    },
+    {
+      "file": "craft_generalliurifle.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:generalliurifle",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a ",
+        "bc ",
+        "b d"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "#minecraft:planks": 2,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craft_glock_18.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:glock18",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        " c"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craft_grenade_20mm.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:grenade20mm",
+      "count": 1,
+      "kind": "ammo",
+      "pattern": [
+        " a ",
+        "bca",
+        " a "
+      ],
+      "ingredients": {
+        "#c:nuggets/copper": 3,
+        "minecraft:iron_ingot": 1,
+        "minecraft:tnt": 1
+      }
+    },
+    {
+      "file": "craft_horizontal_gun_magazine.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank_recipe:horizontalgunmagazine",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        " aa",
+        "aba",
+        "aa "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 6,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craft_m_79.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "taiwan"
+      ],
+      "result": "pointblank_recipe:m79",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "aa ",
+        "abc",
+        " cc"
+      ],
+      "ingredients": {
+        "#minecraft:logs": 3,
+        "#minecraft:planks": 1,
+        "minecraft:iron_ingot": 3
+      }
+    },
+    {
+      "file": "craft_metro2033_2012.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:2012",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " b ",
+        "c d"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:frameof2012": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "minecraft:iron_block": 1
+      }
+    },
+    {
+      "file": "craft_metro2033_aksu.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:aksu",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " ba",
+        "c d"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 2,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:buttump": 1
+      }
+    },
+    {
+      "file": "craft_metro2033_ashot.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:ashot",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "  a",
+        "bc "
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:sniperrifleloadingmechanism": 1,
+        "pointblank_recipe:frameofashot": 1
+      }
+    },
+    {
+      "file": "craft_metro2033_bigun.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:bigun",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " b ",
+        "a c"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 2,
+        "pointblank_recipe:frameofbigun": 1,
+        "pointblank_recipe:buttofsubmachinegun": 1
+      }
+    },
+    {
+      "file": "craft_metro2033_duplet.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:duplet",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " b ",
+        "  c"
+      ],
+      "ingredients": {
+        "pointblank_recipe:shotgunbarrel": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craft_metro2033_helsing.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:helsing",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a b",
+        "bc ",
+        "  d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofminigun": 1,
+        "minecraft:iron_nugget": 2,
+        "pointblank_recipe:frameofhelsing": 1,
+        "minecraft:iron_block": 1
+      }
+    },
+    {
+      "file": "craft_metro2033_kalash.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:kalash",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "minecraft:iron_nugget": 2,
+        "pointblank_recipe:ironbutt": 1
+      }
+    },
+    {
+      "file": "craft_metro2033_lolife.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:lolife",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a ",
+        "bc",
+        "d "
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "pointblank_recipe:gunmagazine": 1,
+        "pointblank_recipe:frameofashot": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craft_metro2033_preved.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:preved",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " ba",
+        "  c"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 2,
+        "pointblank_recipe:frameofpreved": 1,
+        "minecraft:iron_block": 1
+      }
+    },
+    {
+      "file": "craft_metro2033_revolver.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:revolver",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "abc",
+        " cd"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:frameofashot": 1,
+        "minecraft:iron_nugget": 2,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craft_metro2033_rpk.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointbank:rpk",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bc ",
+        "def"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "#minecraft:planks": 1,
+        "pointblank_recipe:theriflebutt": 1
+      }
+    },
+    {
+      "file": "craft_metro2033_saiga.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:saiga",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        "def"
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "#minecraft:logs": 1,
+        "pointblank_recipe:buttofshotggun": 1
+      }
+    },
+    {
+      "file": "craft_metro2033_tikar.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:tikar",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bc ",
+        "  d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:frameoftikar": 1,
+        "minecraft:iron_block": 1
+      }
+    },
+    {
+      "file": "craft_metro2033_ventil.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:ventil",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a b",
+        " c ",
+        "ab "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 2,
+        "minecraft:iron_nugget": 2,
+        "pointblank_recipe:frame_of_ventil": 1
+      }
+    },
+    {
+      "file": "craft_metro_2033_abzats.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:abzats",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a",
+        "b ",
+        "cd"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:frameofabzats": 1,
+        "pointblank_recipe:magazineformachinegun": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craft_metro_2033_gatling.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:gatling",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a ",
+        "bc",
+        " d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofminigun": 1,
+        "pointblank_recipe:sniperrifleloadingmechanism": 1,
+        "minecraft:iron_block": 1,
+        "pointblank_recipe:magazineformachinegun": 1
+      }
+    },
+    {
+      "file": "craft_metro_2033_medved.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:medved",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        "bc ",
+        "  d"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "minecraft:iron_ingot": 2,
+        "pointblank_recipe:frameofmedved": 1,
+        "#minecraft:planks": 1
+      }
+    },
+    {
+      "file": "craft_metro_2033_stallion.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:stallion",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bcb"
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "minecraft:iron_nugget": 2,
+        "pointblank_recipe:theframeofthegun": 1
+      }
+    },
+    {
+      "file": "craft_metro_2033_uboinik.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:uboinik",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a a",
+        "bc ",
+        "  d"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 2,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:frameofuboinik": 1,
+        "pointblank_recipe:theriflebutt": 1
+      }
+    },
+    {
+      "file": "craft_metro_2033_vsv.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank:vsv",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        "d e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "pointblank_recipe:frameofvsv": 1,
+        "minecraft:iron_nugget": 1,
+        "minecraft:iron_block": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craft_metro_2033frame_of_2012.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "metro"
+      ],
+      "result": "pointblank_recipe:frameof2012",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " bc",
+        "d b"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_block": 2,
+        "#minecraft:planks": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craft_p_90.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:p90",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        "cd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:magazineofsubmachinegun": 1,
+        "pointblank_recipe:framep90": 1
+      }
+    },
+    {
+      "file": "craft_ro_635.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ro635",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:buttform4a1type": 1
+      }
+    },
+    {
+      "file": "craft_rpg.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_rpg",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " b ",
+        "c a"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 2,
+        "pointblank_recipe:framerpg": 1,
+        "pointblank_recipe:handlerifle": 1
+      }
+    },
+    {
+      "file": "craft_sabakan.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_abakan",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bcd",
+        " e "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:theriflebutt": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "craft_sakm.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_akm",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        "d e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:ironbutt": 1
+      }
+    },
+    {
+      "file": "craft_saksu.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_aksu",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        "e b"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 2,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:buttump": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "craft_sasval.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_as_val",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bcd",
+        " e "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "pointblank_recipe:handlerifle": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:buttump": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "craft_sbatterygauss.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_gausa",
+      "count": 1,
+      "kind": "ammo",
+      "pattern": [
+        " a ",
+        "aba",
+        "ca "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 4,
+        "minecraft:redstone_block": 1,
+        "minecraft:quartz": 1
+      }
+    },
+    {
+      "file": "craft_sf_2000.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_f2000",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cb",
+        " d "
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "minecraft:iron_ingot": 2,
+        "pointblank_recipe:framep90": 1,
+        "pointblank_recipe:magazineofsubmachinegun": 1
+      }
+    },
+    {
+      "file": "craft_sfora.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_fora",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a",
+        "bc"
+      ],
+      "ingredients": {
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craft_sgauss.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_gauss",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "abc",
+        "bde",
+        " f "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "minecraft:redstone_block": 2,
+        "pointblank_recipe:scopeforrifle": 1,
+        "pointblank_recipe:framemktype": 1,
+        "pointblank_recipe:buttump": 1,
+        "pointblank_recipe:magazineformachinegun": 1
+      }
+    },
+    {
+      "file": "craft_sgroza.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_groza",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        "cd ",
+        "  e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:handlerifle": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craft_shotgun_reloaderup.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "stalker"
+      ],
+      "result": "pointblank_recipe:shotgunreloaderbrum",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        " a ",
+        "aba",
+        " a "
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 4,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craft_sil_86.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_il86",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bcd",
+        " e "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "craft_skora_919.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_kora919",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        " c"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craft_sniper_rifle_billet.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank_recipe:sniperriflebillettrauma",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "ab ",
+        "bcd",
+        " de"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "#minecraft:planks": 2,
+        "minecraft:iron_block": 1,
+        "#minecraft:logs": 2,
+        "pointblank_recipe:theriflebutt": 1
+      }
+    },
+    {
+      "file": "craft_sniper_rifle_loading_mechanism.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank_recipe:sniperrifleloadingmechanism",
+      "count": 2,
+      "kind": "component",
+      "pattern": [
+        " a ",
+        "aba",
+        " ab"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 4,
+        "minecraft:iron_nugget": 2
+      }
+    },
+    {
+      "file": "craft_sobrez.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_obrez",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        " c"
+      ],
+      "ingredients": {
+        "pointblank_recipe:frameofobrez": 1,
+        "minecraft:iron_ingot": 1,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craft_spb.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_pb",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        " c",
+        " d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craft_spkm.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_pkm",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        " e "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:framemktype": 1,
+        "pointblank_recipe:buttofshotggun": 1,
+        "pointblank_recipe:magazineformachinegun": 1
+      }
+    },
+    {
+      "file": "craft_spm.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_pm",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        "c "
+      ],
+      "ingredients": {
+        "pointblank_recipe:theframeofthegun": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craft_sprocetca.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_protecta",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bcd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:shotgunreloaderbrum": 1,
+        "pointblank_recipe:frameofshotgun": 1,
+        "pointblank_recipe:buttofsubmachinegun": 1
+      }
+    },
+    {
+      "file": "craft_srocket.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_rpgrocket",
+      "count": 1,
+      "kind": "ammo",
+      "pattern": [
+        "aa ",
+        "ab ",
+        "  c"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 3,
+        "minecraft:tnt": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craft_ssgi.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_sgi",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        " e "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "pointblank_recipe:buttform4a1type": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "craft_ssvd.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_svd",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        "cd ",
+        "e f"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:ironbutt": 1
+      }
+    },
+    {
+      "file": "craft_susp.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_usp",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a ",
+        " b",
+        " c"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craft_svss.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_vss",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        "d e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:buttofshotggun": 1
+      }
+    },
+    {
+      "file": "craft_swin_1300.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_win1300",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bcd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:shotgunbarrel": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:frameofshotgun": 1,
+        "pointblank_recipe:shotgunreloader": 1
+      }
+    },
+    {
+      "file": "craft_thebasisforrocket.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:basisfortherocket",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " ba",
+        " aa"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 4,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craft_tpc.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_lr300",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        " e "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "pointblank_recipe:buttform4a1type": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "craft_vector.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:vector",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bcd",
+        "  e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "pointblank_recipe:magazineofsubmachinegun": 1,
+        "pointblank_recipe:frameofsubmachinegun": 1,
+        "pointblank_recipe:buttforvector": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craft_vector_butt.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:buttforvector",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " ba",
+        "  a"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 3,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craft_vetterlivitalim_187087.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank:vetterlivitalim187087",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a ",
+        " bc",
+        "d d"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:sniperriflebillettrauma": 1,
+        "minecraft:iron_ingot": 1,
+        "#minecraft:planks": 2
+      }
+    },
+    {
+      "file": "craft_werdl.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank:werdl",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "  a",
+        " b ",
+        "c d"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:sniperriflebillettrauma": 1,
+        "minecraft:iron_ingot": 1,
+        "#minecraft:planks": 1
+      }
+    },
+    {
+      "file": "craftaa_12.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:aa12",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        " ef"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:scopeforrifle": 1,
+        "pointblank_recipe:frameofshotgun": 1,
+        "pointblank_recipe:shotgunreloader": 1,
+        "minecraft:iron_nugget": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craftak_12.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ak12",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        " e "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:scopeforrifle": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:ironbutt": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "craftak_12x.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ak12x",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        " ef"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "pointblank_recipe:collimatorscope": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:theriflebutt": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "#minecraft:planks": 1
+      }
+    },
+    {
+      "file": "craftak_15x.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ak15x",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        "d e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "minecraft:lime_dye": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:ironbutt": 1
+      }
+    },
+    {
+      "file": "craftak_22.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ak22",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        "def"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:scopeforrifle": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:ironbutt": 1
+      }
+    },
+    {
+      "file": "craftak_47.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ak47",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bc ",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:theriflebutt": 1
+      }
+    },
+    {
+      "file": "craftak_47x.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ak47x",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        "d e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "#minecraft:logs": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:theriflebutt": 1
+      }
+    },
+    {
+      "file": "craftak_74.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ak74",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        " e "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:theriflebutt": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "craftak_74x.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ak74x",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " b ",
+        "cde"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "#minecraft:planks": 1,
+        "pointblank_recipe:ironbutt": 1
+      }
+    },
+    {
+      "file": "craftammo_12gauge.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ammo12gauge",
+      "count": 8,
+      "kind": "ammo",
+      "pattern": [
+        "ab",
+        "b "
+      ],
+      "ingredients": {
+        "#c:nuggets/copper": 1,
+        "minecraft:gunpowder": 2
+      }
+    },
+    {
+      "file": "craftammo_338lapua.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ammo338lapua",
+      "count": 8,
+      "kind": "ammo",
+      "pattern": [
+        " a ",
+        "aba"
+      ],
+      "ingredients": {
+        "minecraft:copper_ingot": 3,
+        "minecraft:gunpowder": 1
+      }
+    },
+    {
+      "file": "craftammo_50actionexpress.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ammo50actionexpress",
+      "count": 8,
+      "kind": "ammo",
+      "pattern": [
+        "ab"
+      ],
+      "ingredients": {
+        "minecraft:gunpowder": 1,
+        "minecraft:copper_ingot": 1
+      }
+    },
+    {
+      "file": "craftammo_50bmg.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ammo50bmg",
+      "count": 6,
+      "kind": "ammo",
+      "pattern": [
+        " a ",
+        "bcb"
+      ],
+      "ingredients": {
+        "minecraft:copper_ingot": 1,
+        "minecraft:iron_ingot": 2,
+        "minecraft:gunpowder": 1
+      }
+    },
+    {
+      "file": "craftammo_57x_28.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ammo57x28",
+      "count": 8,
+      "kind": "ammo",
+      "pattern": [
+        "ab",
+        "c "
+      ],
+      "ingredients": {
+        "minecraft:gunpowder": 1,
+        "minecraft:iron_nugget": 1,
+        "#c:nuggets/copper": 1
+      }
+    },
+    {
+      "file": "craftammo_68.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ammo68",
+      "count": 16,
+      "kind": "ammo",
+      "pattern": [
+        "ab",
+        "cb"
+      ],
+      "ingredients": {
+        "#c:nuggets/copper": 1,
+        "minecraft:copper_ingot": 2,
+        "minecraft:gunpowder": 1
+      }
+    },
+    {
+      "file": "craftammo_762.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ammo762",
+      "count": 16,
+      "kind": "ammo",
+      "pattern": [
+        " a ",
+        "abc",
+        " c "
+      ],
+      "ingredients": {
+        "minecraft:copper_ingot": 2,
+        "minecraft:gunpowder": 1,
+        "#c:nuggets/copper": 2
+      }
+    },
+    {
+      "file": "craftammo_762x_51.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ammo762x51",
+      "count": 2,
+      "kind": "ammo",
+      "pattern": [
+        " a",
+        "bc"
+      ],
+      "ingredients": {
+        "minecraft:copper_ingot": 1,
+        "pointblank:ammo762": 1,
+        "#c:nuggets/copper": 1
+      }
+    },
+    {
+      "file": "craftammo_9x_39sp_6.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_9x39",
+      "count": 16,
+      "kind": "ammo",
+      "pattern": [
+        "ab",
+        "cc"
+      ],
+      "ingredients": {
+        "minecraft:gunpowder": 1,
+        "minecraft:copper_ingot": 1,
+        "#c:nuggets/copper": 2
+      }
+    },
+    {
+      "file": "craftammo_s_12x_70buckshotammo.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_12x70_buckshot_ammo",
+      "count": 8,
+      "kind": "ammo",
+      "pattern": [
+        "ab",
+        "bb"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "minecraft:gunpowder": 3
+      }
+    },
+    {
+      "file": "craftammo_s_12x_70dartammo.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_12x70_dart_ammo",
+      "count": 1,
+      "kind": "ammo",
+      "pattern": [
+        "ab"
+      ],
+      "ingredients": {
+        "pointblank:s_12x70_buckshot_ammo": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craftammo_s_12x_70slugammo.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_12x70_slug_ammo",
+      "count": 1,
+      "kind": "ammo",
+      "pattern": [
+        "ab",
+        "b "
+      ],
+      "ingredients": {
+        "pointblank:s_12x70_buckshot_ammo": 1,
+        "minecraft:iron_nugget": 2
+      }
+    },
+    {
+      "file": "craftammo_s_45acp.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_45acp",
+      "count": 16,
+      "kind": "ammo",
+      "pattern": [
+        "ab",
+        " b"
+      ],
+      "ingredients": {
+        "minecraft:gunpowder": 1,
+        "#c:nuggets/copper": 2
+      }
+    },
+    {
+      "file": "craftammo_s_45acphydrshock.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_45acp_hydrashok",
+      "count": 1,
+      "kind": "ammo",
+      "pattern": [
+        "ab"
+      ],
+      "ingredients": {
+        "pointblank:s_45acp": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craftammo_s_545x_39.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_545x39",
+      "count": 16,
+      "kind": "ammo",
+      "pattern": [
+        "ab",
+        "cc"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "minecraft:gunpowder": 1,
+        "minecraft:copper_ingot": 2
+      }
+    },
+    {
+      "file": "craftammo_s_545x_39ap.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_545x39_ap",
+      "count": 1,
+      "kind": "ammo",
+      "pattern": [
+        "ab"
+      ],
+      "ingredients": {
+        "pointblank:s_556x45": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craftammo_s_556x_45.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_556x45",
+      "count": 16,
+      "kind": "ammo",
+      "pattern": [
+        "ab",
+        "cb"
+      ],
+      "ingredients": {
+        "minecraft:gunpowder": 1,
+        "minecraft:copper_ingot": 2,
+        "#c:nuggets/copper": 1
+      }
+    },
+    {
+      "file": "craftammo_s_556x_45ap.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_556x45_ap",
+      "count": 1,
+      "kind": "ammo",
+      "pattern": [
+        "ab"
+      ],
+      "ingredients": {
+        "pointblank:s_556x45": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craftammo_s_762x_54.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_762x54",
+      "count": 16,
+      "kind": "ammo",
+      "pattern": [
+        "ab",
+        "cc"
+      ],
+      "ingredients": {
+        "minecraft:gunpowder": 1,
+        "#c:nuggets/copper": 1,
+        "minecraft:copper_ingot": 2
+      }
+    },
+    {
+      "file": "craftammo_s_762x_54ap.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_762x54ap",
+      "count": 1,
+      "kind": "ammo",
+      "pattern": [
+        "ab"
+      ],
+      "ingredients": {
+        "pointblank:s_762x54": 1,
+        "#c:nuggets/copper": 1
+      }
+    },
+    {
+      "file": "craftammo_s_762x_54r.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_762x54r",
+      "count": 1,
+      "kind": "ammo",
+      "pattern": [
+        "ab",
+        "b "
+      ],
+      "ingredients": {
+        "pointblank:s_762x54": 1,
+        "#c:nuggets/copper": 2
+      }
+    },
+    {
+      "file": "craftammo_s_9x_18.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_9x18_ammo",
+      "count": 16,
+      "kind": "ammo",
+      "pattern": [
+        "ab"
+      ],
+      "ingredients": {
+        "minecraft:gunpowder": 1,
+        "#c:nuggets/copper": 1
+      }
+    },
+    {
+      "file": "craftammo_s_9x_18p.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_9x18p_ammo",
+      "count": 1,
+      "kind": "ammo",
+      "pattern": [
+        "ab"
+      ],
+      "ingredients": {
+        "pointblank:s_9x18_ammo": 1,
+        "#c:nuggets/copper": 1
+      }
+    },
+    {
+      "file": "craftammo_s_9x_39sp_5.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_9x39sp5",
+      "count": 1,
+      "kind": "ammo",
+      "pattern": [
+        "ab"
+      ],
+      "ingredients": {
+        "pointblank:s_9x39": 1,
+        "#c:nuggets/copper": 1
+      }
+    },
+    {
+      "file": "craftammo_s_9x_39sp_6.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:s_9x39sp6",
+      "count": 1,
+      "kind": "ammo",
+      "pattern": [
+        "ab",
+        "b "
+      ],
+      "ingredients": {
+        "pointblank:s_9x39": 1,
+        "#c:nuggets/copper": 2
+      }
+    },
+    {
+      "file": "craftan_94.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:an94",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bc ",
+        "dbe"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "minecraft:iron_nugget": 2,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:ironbutt": 1
+      }
+    },
+    {
+      "file": "craftat_4.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:at4",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a ",
+        "ab ",
+        " cc"
+      ],
+      "ingredients": {
+        "minecraft:diamond": 2,
+        "pointblank_recipe:frameofat4": 1,
+        "minecraft:iron_nugget": 2
+      }
+    },
+    {
+      "file": "craftat_4rocket.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:at4_rocket",
+      "count": 2,
+      "kind": "ammo",
+      "pattern": [
+        "a  ",
+        " bc",
+        " cd"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:basisfortherocket": 1,
+        "minecraft:gunpowder": 2,
+        "minecraft:tnt": 1
+      }
+    },
+    {
+      "file": "craftaug.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:aug",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        "cde",
+        " f "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:scopeforrifle": 1,
+        "pointblank_recipe:handlerifle": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "pointblank_recipe:buttform4a1type": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "craftaughbar.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:aughbar",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        " c",
+        " d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank:aug": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craftautoguidancemodule.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:autoguidancemodule",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        " ab",
+        "aca",
+        " d "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 3,
+        "minecraft:gold_ingot": 1,
+        "minecraft:comparator": 1,
+        "minecraft:copper_ingot": 1
+      }
+    },
+    {
+      "file": "craftaxval.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:axval",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        "d e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:buttofshotggun": 1
+      }
+    },
+    {
+      "file": "craftbarm_1918.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank:barm1918",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a b",
+        " c ",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:sniperriflebillettrauma": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "#minecraft:planks": 1
+      }
+    },
+    {
+      "file": "craftbenxllim_4.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:benxlli_m4",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " b ",
+        " cd"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:frameofshotgun": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:shotgunreloader": 1
+      }
+    },
+    {
+      "file": "craftbuttform_4a_1type.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:buttform4a1type",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " ab",
+        " b "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 2,
+        "minecraft:iron_nugget": 2
+      }
+    },
+    {
+      "file": "craftbuttofsubmachinegun.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:buttofsubmachinegun",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " aa",
+        "  a"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 4
+      }
+    },
+    {
+      "file": "craftbuttump.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:buttump",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "ab"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:buttofsubmachinegun": 1
+      }
+    },
+    {
+      "file": "craftc_14.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:c14",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "minecraft:iron_ingot": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craftcarcano_1891.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank:carcano1891",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a b",
+        " c ",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:sniperriflebillettrauma": 1,
+        "minecraft:iron_nugget": 1,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craftcitoricxs.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:citoricxs",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "abc",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:shotgunbarrel": 1,
+        "pointblank_recipe:frameofshotgun": 1,
+        "pointblank_recipe:theriflebutt": 1,
+        "minecraft:oak_planks": 1,
+        "pointblank_recipe:shotgunreloader": 1
+      }
+    },
+    {
+      "file": "craftcoltm_1911x_1.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:colt_m1911x1",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        " d "
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craftcp_2077arasakahjke_11yukimura.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_arasaka_hjke11_yukimura",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a",
+        "bc",
+        " d"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:energycube": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craftcp_2077arasakahjke_11yukimuraskippy.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_arasaka_hjke11_yukimura_skippy",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a",
+        "bc",
+        "de"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "minecraft:yellow_dye": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:energycube": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "craftcp_2077arasakahjsh_18masamune.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "cyberpunk"
+      ],
+      "result": "pointblank:cp2077_arasaka_hjsh18_masamune",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "  a",
+        "ab ",
+        "aa "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 4,
+        "pointblank_recipe:framecyberpunkgun": 1
+      }
+    },
+    {
+      "file": "craftcp_2077arasakanowaki.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "cyberpunk"
+      ],
+      "result": "pointblank:cp2077_arasaka_nowaki",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "  a",
+        "bc ",
+        "bb "
+      ],
+      "ingredients": {
+        "pointblank_recipe:collimatorscope": 1,
+        "minecraft:iron_ingot": 3,
+        "pointblank_recipe:framecyberpunkgun": 1
+      }
+    },
+    {
+      "file": "craftcp_2077budgetarmscarnage.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_budget_arms_carnage",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "  a",
+        "ab ",
+        " a "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 3,
+        "pointblank_recipe:framecyberpunkenergygun": 1
+      }
+    },
+    {
+      "file": "craftcp_2077budgetarmscarnageguts.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_budget_arms_carnage_guts",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "abc",
+        "aa "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 3,
+        "pointblank_recipe:framecyberpunkenergygun": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craftcp_2077caliberty.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_ca_liberty",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        " c"
+      ],
+      "ingredients": {
+        "pointblank_recipe:energycube": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craftcp_2077caunity.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_ca_unity",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " ab",
+        "cd "
+      ],
+      "ingredients": {
+        "pointblank_recipe:theframeofthegun": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:energycube": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craftcp_2077caunityiconic.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_ca_unity_iconic",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a ",
+        "bc",
+        " d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craftcp_2077kangtaog_58dian.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_kang_tao_g58_dian",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "abc",
+        "de "
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:frameofsubmachinegun": 1,
+        "pointblank_recipe:buttofsubmachinegun": 1,
+        "pointblank_recipe:handleofsubmachinegun": 1,
+        "pointblank_recipe:energycube": 1
+      }
+    },
+    {
+      "file": "craftcp_2077kangtaog_58dianyinglong.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_kang_tao_g58_dian_yinglong",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "abc",
+        "de "
+      ],
+      "ingredients": {
+        "pointblank_recipe:energycube": 1,
+        "pointblank_recipe:frameofsubmachinegun": 1,
+        "pointblank_recipe:buttofsubmachinegun": 1,
+        "pointblank_recipe:handleofsubmachinegun": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craftcp_2077malorianarms_3516.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_malorian_arms_3516",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        "cd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:energycube": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craftcp_2077malorianarmsoverture.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_malorian_arms_overture",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        " c"
+      ],
+      "ingredients": {
+        "pointblank_recipe:sniperrifleloadingmechanism": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craftcp_2077malorianarmsoverturecassidy.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_malorian_arms_overture_cassidy",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        " c"
+      ],
+      "ingredients": {
+        "pointblank_recipe:sniperrifleloadingmechanism": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:energycube": 1
+      }
+    },
+    {
+      "file": "craftcp_2077malorianarmsoverturedante.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_malorian_arms_overture_dante",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a",
+        "bc",
+        "d "
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:sniperrifleloadingmechanism": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:energycube": 1
+      }
+    },
+    {
+      "file": "craftcp_2077malorianarmsoverturekerry.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_malorian_arms_overture_kerry",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        "cd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:sniperrifleloadingmechanism": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "minecraft:iron_ingot": 1,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craftcp_2077militecharlexington.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_militech_ar_lexington",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a ",
+        "bcd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1,
+        "pointblank_recipe:energycube": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craftcp_2077militechm_10aflexington.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_militech_m10af_lexington",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        "cd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:energycube": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craftcp_2077militechm_179achilles.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "cyberpunk"
+      ],
+      "result": "pointblank:cp2077_militech_m179_achilles",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "  a",
+        "bcd",
+        "bb "
+      ],
+      "ingredients": {
+        "minecraft:redstone": 1,
+        "minecraft:iron_ingot": 3,
+        "pointblank_recipe:framecyberpunkgun": 1,
+        "minecraft:iron_block": 1
+      }
+    },
+    {
+      "file": "craftcp_2077militechm_179achillesxmod_2.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_militech_m179_achilles_xmod2",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "  a",
+        "bcd",
+        " b "
+      ],
+      "ingredients": {
+        "pointblank_recipe:collimatorscope": 1,
+        "minecraft:iron_ingot": 2,
+        "pointblank_recipe:framecyberpunkenergygun": 1,
+        "pointblank_recipe:energycube": 1
+      }
+    },
+    {
+      "file": "craftcp_2077militechm_251sajax.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_militech_m251s_ajax",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a ",
+        " bc",
+        "d e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:collimatorscope": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:energycube": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:ironbutt": 1
+      }
+    },
+    {
+      "file": "craftcp_2077militechm_251sajaxbarghest.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_militech_m251s_ajax_barghest",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        "e f"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:lime_dye": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:energycube": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:buttform4a1type": 1
+      }
+    },
+    {
+      "file": "craftcp_2077projectcynosureerebus.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "cyberpunk"
+      ],
+      "result": "pointblank:cp2077_project_cynosure_erebus",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " ca",
+        "ad "
+      ],
+      "ingredients": {
+        "pointblank_recipe:energycube": 3,
+        "pointblank_recipe:collimatorscope": 1,
+        "pointblank_recipe:framecyberpunkgun": 1,
+        "minecraft:iron_block": 1
+      }
+    },
+    {
+      "file": "craftcp_2077techtronikaspt_32grad.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_techtronika_spt32_grad",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        "e  "
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:energycube": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craftcp_2077techtronikaspt_32gradpanam.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_techtronika_spt32_grad_panam",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a b",
+        "cd ",
+        "  e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:energycube": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craftcp_2077tsunaminekomata.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_tsunami_nekomata",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a ",
+        " b ",
+        "c d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "pointblank_recipe:energycube": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craftcp_2077tsunamirasetsu.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:cp2077_tsunami_rasetsu",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        "cad",
+        "d  "
+      ],
+      "ingredients": {
+        "pointblank_recipe:energycube": 2,
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:framecyberpunkenergygun": 1,
+        "minecraft:iron_block": 2
+      }
+    },
+    {
+      "file": "craftdeagle_36.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:deagle36",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        " d "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craftdualglock_19x.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:dual_glock19x",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        " dc"
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:theframeofthegun": 2,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craftewm.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ewm",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        " c",
+        " d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craftframe_c_pg.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "cyberpunk"
+      ],
+      "result": "pointblank_recipe:framecyberpunkgun",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "abc",
+        " d "
+      ],
+      "ingredients": {
+        "minecraft:iron_block": 1,
+        "pointblank_recipe:energycube": 1,
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craftframeform_4a_1type.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:framem4a1type",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a ",
+        "bc",
+        " d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:frameoftheriflemagazine": 1
+      }
+    },
+    {
+      "file": "craftframeforobrez.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "stalker"
+      ],
+      "result": "pointblank_recipe:frameofobrez",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "ab ",
+        "bcb",
+        " d "
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "minecraft:iron_ingot": 3,
+        "minecraft:iron_block": 1,
+        "#minecraft:planks": 1
+      }
+    },
+    {
+      "file": "craftframegunagazine.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:framegunmagazine",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "aaa",
+        "aba",
+        " a "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 6,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craftframemktype.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:framemktype",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        "bb ",
+        " cc"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_ingot": 2,
+        "minecraft:iron_block": 2
+      }
+    },
+    {
+      "file": "craftframeofat_4.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:frameofat4",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "ab ",
+        "bab",
+        " bc"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 2,
+        "minecraft:iron_block": 4,
+        "pointblank_recipe:triggermechanism": 1
+      }
+    },
+    {
+      "file": "craftframeofm_32mgl.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:frameofm32mgl",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        "bcd",
+        " d "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:handlerifle": 1,
+        "minecraft:iron_block": 1,
+        "minecraft:iron_nugget": 2
+      }
+    },
+    {
+      "file": "craftframeofminigun.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:frameofminigun",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " ab",
+        " cc"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 2,
+        "pointblank_recipe:handlerifle": 1,
+        "minecraft:iron_block": 2
+      }
+    },
+    {
+      "file": "craftframeofsniperifle.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:frameofsniperifle",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "ab ",
+        "bcc",
+        " cd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "minecraft:iron_nugget": 2,
+        "minecraft:iron_ingot": 3,
+        "minecraft:iron_block": 1
+      }
+    },
+    {
+      "file": "craftframeofsubmachinegun.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:frameofsubmachinegun",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a ",
+        " b",
+        " c"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:magazineofsubmachinegun": 1
+      }
+    },
+    {
+      "file": "craftframeoftherifle.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:frameoftherifle",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "ab",
+        " c",
+        " d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:frameoftheriflemagazine": 1
+      }
+    },
+    {
+      "file": "craftframeoftheriflemagazine.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:frameoftheriflemagazine",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        " a ",
+        "aba",
+        "aa "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 5,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craftframeoftheun.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:theframeofthegun",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "ab ",
+        "b b",
+        " cb"
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "minecraft:iron_ingot": 4,
+        "pointblank_recipe:framegunmagazine": 1
+      }
+    },
+    {
+      "file": "craftg_36c.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:g36c",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "abc",
+        " d "
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:ironbutt": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "craftg_36k.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:g36k",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bcd",
+        " e "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:ironbutt": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "craftg_41.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:g41",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bcd",
+        " e "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:ironbutt": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "craftgewehr_98.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank:gewehr98",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:rifleflamearrester": 1,
+        "minecraft:iron_nugget": 1,
+        "#minecraft:planks": 1,
+        "pointblank_recipe:sniperriflebillettrauma": 1
+      }
+    },
+    {
+      "file": "craftgk_57.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:gk57",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        "def"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:collimatorscope": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:handlerifle": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:buttofshotggun": 1
+      }
+    },
+    {
+      "file": "craftglock_17.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:glock17",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a",
+        "b",
+        "c"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craftglock_19x.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:glock19x",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a",
+        "bc"
+      ],
+      "ingredients": {
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craftgm_6lynx.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:gm6lynx",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a b",
+        " cd",
+        "  e"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "minecraft:iron_block": 1
+      }
+    },
+    {
+      "file": "craftgunmagazine.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:gunmagazine",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        " a ",
+        "aba",
+        " a "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 4,
+        "pointblank_recipe:framegunmagazine": 1
+      }
+    },
+    {
+      "file": "craftgunpoint.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:gunpoint",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        " ab",
+        "a a",
+        "ba "
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 4,
+        "minecraft:iron_ingot": 2
+      }
+    },
+    {
+      "file": "crafthandleforrifle.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:handlerifle",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        " ab",
+        " aa",
+        "a  "
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 4,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "crafthandleofsubmachinegun.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:handleofsubmachinegun",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "  a",
+        "ba ",
+        "ab "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 3,
+        "minecraft:iron_nugget": 2
+      }
+    },
+    {
+      "file": "crafthellriegel.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:hellriegel",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bcd",
+        "  e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:rifleflamearrester": 1,
+        "minecraft:iron_block": 1,
+        "minecraft:oak_wood": 1,
+        "pointblank_recipe:sniperrifleloadingmechanism": 1,
+        "pointblank_recipe:theriflebutt": 1
+      }
+    },
+    {
+      "file": "crafthenrymartini.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank:henrymartini",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " ba",
+        "c c"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 2,
+        "pointblank_recipe:sniperriflebillettrauma": 1,
+        "#minecraft:planks": 2
+      }
+    },
+    {
+      "file": "crafthggberettapx_4storm.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:hgg_beretta_px4storm",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        " d "
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "crafthggfnfiveseven.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:hgg_fn_fiveseven",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a ",
+        "bc",
+        " d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "crafthggfnfnp_40.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:hgg_fn_fnp40",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " b ",
+        " cd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "crafthggfnhpda.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:hgg_fn_hpda",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " b ",
+        " cd"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "crafthgghkp_30.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:hgg_hk_p30",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "  a",
+        "bc ",
+        " d "
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "crafthgghkusp.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:hgg_hk_usp",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        " d "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "crafthgghkuspsilenced.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:hgg_hk_usp_silenced",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        " c",
+        " d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "crafthggmrdeserteagle.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:hgg_mr_deserteagle",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a ",
+        "bc",
+        " d"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "crafthggnfmmakarov.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:hgg_nfm_makarov",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "abc",
+        " d "
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "crafthggr_6rg_15.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:hgg_r6_rg15",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        " e "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:collimatorscope": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "crafthggtauruspt_145.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:hgg_taurus_pt145",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        "c "
+      ],
+      "ingredients": {
+        "pointblank_recipe:theframeofthegun": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "crafthggwaltherppk.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:hgg_walther_ppk",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " ba",
+        "c  "
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 2,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "crafthk_416.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:hk416",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bcd",
+        " e "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:handlerifle": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "pointblank_recipe:buttform4a1type": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "crafths_12.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:hs12",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        "  d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:shotgunbarrel": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:frameofshotgun": 1,
+        "pointblank_recipe:buttofshotggun": 1
+      }
+    },
+    {
+      "file": "craftironbutt.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:ironbutt",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " bb",
+        " b "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "minecraft:iron_nugget": 3
+      }
+    },
+    {
+      "file": "craftjavelin.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:javelin",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        " c",
+        "d "
+      ],
+      "ingredients": {
+        "pointblank_recipe:autoguidancemodule": 1,
+        "minecraft:diamond": 1,
+        "pointblank_recipe:frameofat4": 1,
+        "pointblank_recipe:handlerifle": 1
+      }
+    },
+    {
+      "file": "craftjavelinrocket.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:javelin_rocket",
+      "count": 2,
+      "kind": "ammo",
+      "pattern": [
+        "a  ",
+        " bc",
+        " cd"
+      ],
+      "ingredients": {
+        "minecraft:redstone": 1,
+        "pointblank_recipe:basisfortherocket": 1,
+        "minecraft:tnt": 2,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craftkar_98k.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank:kar98k",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        "  d"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:sniperriflebillettrauma": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:theriflebutt": 1
+      }
+    },
+    {
+      "file": "craftkrissvector_45.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:kriss_vector45",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:magazineofsubmachinegun": 1,
+        "pointblank_recipe:frameofsubmachinegun": 1,
+        "pointblank_recipe:handleofsubmachinegun": 1,
+        "pointblank_recipe:buttforvector": 1
+      }
+    },
+    {
+      "file": "craftl_96a_1.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:l96a1",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        " dd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "minecraft:iron_ingot": 3
+      }
+    },
+    {
+      "file": "craftlamg.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:lamg",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        "de "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "pointblank_recipe:framemktype": 1,
+        "pointblank_recipe:buttform4a1type": 1,
+        "pointblank_recipe:magazineformachinegun": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craftlebel.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank:lebel",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        "cd ",
+        " ef"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "minecraft:iron_nugget": 1,
+        "#minecraft:planks": 1,
+        "pointblank_recipe:sniperriflebillettrauma": 1,
+        "minecraft:iron_ingot": 1,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craftleeenfield.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank:lee_enfield",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a b",
+        " c ",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:rifleflamearrester": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:sniperriflebillettrauma": 1,
+        "minecraft:iron_nugget": 1,
+        "#minecraft:planks": 1
+      }
+    },
+    {
+      "file": "craftlne_19.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:lne19",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:buttofshotggun": 1
+      }
+    },
+    {
+      "file": "craftm_1014.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m1014",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a ",
+        "bcd"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:shotgunbarrel": 1,
+        "pointblank_recipe:frameofshotgun": 1,
+        "pointblank_recipe:shotgunreloader": 1
+      }
+    },
+    {
+      "file": "craftm_16a_1.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m16a1",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        " e "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "pointblank_recipe:buttform4a1type": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "craftm_16x_4.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m16x4",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:buttform4a1type": 1
+      }
+    },
+    {
+      "file": "craftm_1903.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank:m1903",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a b",
+        " c ",
+        "d  "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:sniperriflebillettrauma": 1,
+        "#minecraft:planks": 1
+      }
+    },
+    {
+      "file": "craftm_1903springfield.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m1903_springfield",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        "d e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "#minecraft:planks": 1,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craftm_1911a_1.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m1911a1",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        " d "
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craftm_1garand.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m1_garand",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bca",
+        "  d"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 2,
+        "#minecraft:planks": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craftm_1gxrand.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank:m1_gxrand",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        "  d"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:sniperriflebillettrauma": 1,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craftm_249.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m249",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        " e "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "pointblank_recipe:scopeforrifle": 1,
+        "pointblank_recipe:framemktype": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:magazineformachinegun": 1
+      }
+    },
+    {
+      "file": "craftm_249x.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m249x",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a b",
+        " c ",
+        "de "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:framemktype": 1,
+        "pointblank_recipe:handlerifle": 1,
+        "pointblank_recipe:magazineformachinegun": 1
+      }
+    },
+    {
+      "file": "craftm_32mgl.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m32mgl",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a ",
+        "bc ",
+        " de"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:handlerifle": 1,
+        "pointblank_recipe:frameofm32mgl": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:buttform4a1type": 1
+      }
+    },
+    {
+      "file": "craftm_49mm.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m4_9mm",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:buttform4a1type": 1
+      }
+    },
+    {
+      "file": "craftm_4a_1.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m4a1",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bcd",
+        " e "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "pointblank_recipe:buttform4a1type": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "craftm_4a_1mod_1.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m4a1mod1",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "pointblank_recipe:buttform4a1type": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craftm_4rifle.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m4_rifle",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bc ",
+        " de"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:buttform4a1type": 1
+      }
+    },
+    {
+      "file": "craftm_4sopmodii.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m4sopmodii",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        " e "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "pointblank_recipe:buttform4a1type": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "craftm_4x_1.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m4x1",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        "d e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:buttform4a1type": 1
+      }
+    },
+    {
+      "file": "craftm_590.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m590",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bcd",
+        " e "
+      ],
+      "ingredients": {
+        "pointblank_recipe:shotgunbarrel": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:frameofshotgun": 1,
+        "pointblank_recipe:buttofshotggun": 1,
+        "pointblank_recipe:shotgunreloader": 1
+      }
+    },
+    {
+      "file": "craftm_79grenadelauncher.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m79_grenade_launcher",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a b",
+        " c ",
+        " d "
+      ],
+      "ingredients": {
+        "#minecraft:planks": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:m79": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craftm_870.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m870",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        "d  "
+      ],
+      "ingredients": {
+        "pointblank_recipe:shotgunbarrel": 1,
+        "pointblank_recipe:frameofshotgun": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:shotgunreloader": 1
+      }
+    },
+    {
+      "file": "craftm_9.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m9",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "abc",
+        " d "
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craftm_950.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m950",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "abc",
+        " d "
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "minecraft:iron_nugget": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:theframeofthegun": 1
+      }
+    },
+    {
+      "file": "craftmadsen.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank:madsen",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        " dd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:rifleflamearrester": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:sniperriflebillettrauma": 1,
+        "#minecraft:planks": 2
+      }
+    },
+    {
+      "file": "craftmagnum_500.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:magnum500",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a ",
+        "bc"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:sniperrifleloadingmechanism": 1
+      }
+    },
+    {
+      "file": "craftmannlicherm_1895.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank:mannlicherm1895",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        "d e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "#minecraft:logs": 1,
+        "minecraft:iron_ingot": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:sniperriflebillettrauma": 1
+      }
+    },
+    {
+      "file": "craftmgx_338.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:mgx338",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        " de"
+      ],
+      "ingredients": {
+        "minecraft:iron_block": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:magazineformachinegun": 1,
+        "pointblank_recipe:framemktype": 1
+      }
+    },
+    {
+      "file": "craftmk_14ebr.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:mk14ebr",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " b ",
+        "cde"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "pointblank_recipe:framemktype": 1,
+        "pointblank_recipe:handlerifle": 1,
+        "pointblank_recipe:magazineformachinegun": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craftmk_23.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:mk23",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a ",
+        "bc",
+        " d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craftmk_48.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:mk48",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a ",
+        "bc",
+        " d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:framemktype": 1,
+        "pointblank_recipe:magazineformachinegun": 1
+      }
+    },
+    {
+      "file": "craftmodel_500.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:model500",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a ",
+        "bc"
+      ],
+      "ingredients": {
+        "pointblank_recipe:shotgunbarrel": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:frameofshotgun": 1
+      }
+    },
+    {
+      "file": "craftmodernizedmarlinmodel_1887.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:modernized_marlin_model1887",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:shotgunbarrel": 1,
+        "pointblank_recipe:frameofshotgun": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:buttofshotggun": 1
+      }
+    },
+    {
+      "file": "craftmosinnagant_360.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank:mosin_nagant360",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " b ",
+        " cd"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:sniperriflebillettrauma": 1,
+        "#minecraft:planks": 1,
+        "pointblank_recipe:theriflebutt": 1
+      }
+    },
+    {
+      "file": "craftmp_18.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank:mp18",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a b",
+        "cd ",
+        "  e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:sniperrifleloadingmechanism": 1,
+        "pointblank_recipe:sniperriflebillettrauma": 1,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craftmp_5.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:mp5",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "abc",
+        "de "
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:frameofsubmachinegun": 1,
+        "pointblank_recipe:buttofsubmachinegun": 1,
+        "pointblank_recipe:handleofsubmachinegun": 1,
+        "pointblank_recipe:magazineofsubmachinegun": 1
+      }
+    },
+    {
+      "file": "craftmp_5classic.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:mp5_classic",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "abc",
+        "de "
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:frameofsubmachinegun": 1,
+        "pointblank_recipe:ironbutt": 1,
+        "pointblank_recipe:handleofsubmachinegun": 1,
+        "pointblank_recipe:magazineofsubmachinegun": 1
+      }
+    },
+    {
+      "file": "craftmp_5classicsd.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:mp5_classic_sd",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a ",
+        " b"
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "pointblank:mp5_classic": 1
+      }
+    },
+    {
+      "file": "craftmp_7.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:mp7",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bcd",
+        " e "
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:handleofsubmachinegun": 1,
+        "pointblank_recipe:frameofsubmachinegun": 1,
+        "pointblank_recipe:buttofsubmachinegun": 1,
+        "pointblank_recipe:magazineofsubmachinegun": 1
+      }
+    },
+    {
+      "file": "craftmuzzleofminigun.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:muzzleofminigun",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "aa ",
+        "ab ",
+        "  b"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 3,
+        "minecraft:iron_ingot": 2
+      }
+    },
+    {
+      "file": "craftmuzzlofsniperrifle.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:muzzleofsniperrifle",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "ab ",
+        "ba ",
+        "  a"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 3,
+        "minecraft:iron_nugget": 2
+      }
+    },
+    {
+      "file": "craftofbuttshotgun.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:buttofshotggun",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " aa",
+        " ab"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 4,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craftofframeshotgun.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:frameofshotgun",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " bb",
+        "b c"
+      ],
+      "ingredients": {
+        "pointblank_recipe:shotgunbarrel": 1,
+        "minecraft:iron_ingot": 3,
+        "minecraft:iron_block": 1
+      }
+    },
+    {
+      "file": "craftofmagazineformachinegun.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:magazineformachinegun",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "  a",
+        "ba ",
+        "cb "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 2,
+        "minecraft:iron_nugget": 2,
+        "minecraft:iron_block": 1
+      }
+    },
+    {
+      "file": "craftofmagazinesubmachinegun.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:magazineofsubmachinegun",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        " aa",
+        " ba",
+        "b  "
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 3,
+        "minecraft:iron_ingot": 2
+      }
+    },
+    {
+      "file": "craftofminigun.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:m134minigun",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        "cd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofminigun": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:magazineformachinegun": 1,
+        "pointblank_recipe:frameofminigun": 1
+      }
+    },
+    {
+      "file": "craftofshotgunreloader.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:shotgunreloader",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "ab ",
+        " ab",
+        " bb"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 2,
+        "minecraft:iron_ingot": 4
+      }
+    },
+    {
+      "file": "craftofsnipescope.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:snipescope",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " bc",
+        " cc"
+      ],
+      "ingredients": {
+        "minecraft:glass": 1,
+        "minecraft:diamond": 1,
+        "minecraft:iron_ingot": 3
+      }
+    },
+    {
+      "file": "craftoftriggermechanism.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:triggermechanism",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " bc",
+        " cd"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "minecraft:iron_ingot": 1,
+        "minecraft:iron_block": 2,
+        "minecraft:coal_block": 1
+      }
+    },
+    {
+      "file": "craftp_30l.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:p30l",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        " c",
+        " d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craftpkpx.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:pkpx",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:framemktype": 1,
+        "pointblank_recipe:magazineformachinegun": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craftrhino.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:rhino",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a ",
+        "bc",
+        " d"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:gunpoint": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "craftribeyrolles.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank:ribeyrolles",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a b",
+        " c ",
+        "d e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:sniperriflebillettrauma": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:theriflebutt": 1
+      }
+    },
+    {
+      "file": "craftriflemagazine.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:riflemagazine",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        " a ",
+        "bca",
+        " a "
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 3,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:frameoftheriflemagazine": 1
+      }
+    },
+    {
+      "file": "craftro_635remake.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ro635_remake",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        "e f"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:buttform4a1type": 1
+      }
+    },
+    {
+      "file": "craftrocafm_1garand.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:rocaf_m1_garand",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        "d e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craftrpd_762.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:rpd762",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "abc",
+        "c  "
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:framemktype": 1,
+        "minecraft:iron_ingot": 2
+      }
+    },
+    {
+      "file": "craftrpk_16x.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:rpk16x",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " b ",
+        "cde"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:frameoftherifle": 1,
+        "pointblank_recipe:sniperrifleloadingmechanism": 1,
+        "minecraft:iron_block": 1,
+        "pointblank_recipe:buttofshotggun": 1
+      }
+    },
+    {
+      "file": "craftrpx_20.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:rpx20",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "minecraft:iron_block": 1,
+        "pointblank_recipe:buttump": 1
+      }
+    },
+    {
+      "file": "craftscar_18.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:scar18",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        "cd ",
+        " ef"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:handlerifle": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:buttform4a1type": 1
+      }
+    },
+    {
+      "file": "craftscopeforrifle.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:scopeforrifle",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " b ",
+        "  a"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 2,
+        "minecraft:glass": 1
+      }
+    },
+    {
+      "file": "craftscrarl.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:scarl",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:silencerforrifle": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "pointblank_recipe:buttform4a1type": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "minecraft:iron_nugget": 1
+      }
+    },
+    {
+      "file": "craftshotgunbarrel.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:shotgunbarrel",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        " a ",
+        "ab ",
+        "  b"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 2,
+        "minecraft:iron_ingot": 2
+      }
+    },
+    {
+      "file": "craftsilencerforriflr.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:silencerforrifle",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        " a",
+        "b "
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craftsl_8.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:sl8",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        "d e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "minecraft:iron_nugget": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craftsmaw.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:smaw",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a",
+        "bc"
+      ],
+      "ingredients": {
+        "minecraft:diamond": 1,
+        "pointblank_recipe:handlerifle": 1,
+        "pointblank_recipe:frameofat4": 1
+      }
+    },
+    {
+      "file": "craftsmawrocket.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:smaw_rocket",
+      "count": 2,
+      "kind": "ammo",
+      "pattern": [
+        "ab",
+        "bc"
+      ],
+      "ingredients": {
+        "pointblank_recipe:basisfortherocket": 1,
+        "minecraft:iron_nugget": 2,
+        "minecraft:tnt": 1
+      }
+    },
+    {
+      "file": "craftspas_12.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:spas12",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        "d e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:shotgunbarrel": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:frameofshotgun": 1,
+        "pointblank_recipe:shotgunreloader": 1,
+        "pointblank_recipe:buttofshotggun": 1
+      }
+    },
+    {
+      "file": "craftstar_15.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:star15",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " cd",
+        " ef"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:buttofshotggun": 1
+      }
+    },
+    {
+      "file": "craftsvch_545.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:svch545",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "minecraft:iron_block": 1,
+        "pointblank_recipe:buttform4a1type": 1
+      }
+    },
+    {
+      "file": "craftsvch_545scoped.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:svch545_scoped",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        "d e"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:ironbutt": 1
+      }
+    },
+    {
+      "file": "craftsvddragnaov.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "trauma"
+      ],
+      "result": "pointblank:svd_dragnaov",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        " de"
+      ],
+      "ingredients": {
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:sniperriflebillettrauma": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "#minecraft:logs": 1
+      }
+    },
+    {
+      "file": "craftt_57.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:t57",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        "bcd",
+        "e f"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:thebarreloftherifle": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "#minecraft:planks": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:theriflebutt": 1
+      }
+    },
+    {
+      "file": "craftt_91.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:t91",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        "d e"
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 1,
+        "pointblank_recipe:thebarreloftherifleup": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "pointblank_recipe:riflemagazine": 1,
+        "pointblank_recipe:buttform4a1type": 1
+      }
+    },
+    {
+      "file": "craftthebarreloftherifle.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:thebarreloftherifle",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " b ",
+        "  b"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "minecraft:iron_ingot": 2
+      }
+    },
+    {
+      "file": "craftthebarreloftherifleup.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:thebarreloftherifleup",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "ab"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:thebarreloftherifle": 1
+      }
+    },
+    {
+      "file": "craftthebutt.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank_recipe:theriflebutt",
+      "count": 1,
+      "kind": "component",
+      "pattern": [
+        "a  ",
+        " bb",
+        " b "
+      ],
+      "ingredients": {
+        "#minecraft:logs": 1,
+        "#minecraft:planks": 3
+      }
+    },
+    {
+      "file": "crafttiviper.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:tti_viper",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a ",
+        " b",
+        "cd"
+      ],
+      "ingredients": {
+        "pointblank_recipe:gunpoint": 1,
+        "pointblank_recipe:theframeofthegun": 1,
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:gunmagazine": 1
+      }
+    },
+    {
+      "file": "crafttmp.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:tmp",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab",
+        " c"
+      ],
+      "ingredients": {
+        "pointblank_recipe:handleofsubmachinegun": 1,
+        "pointblank_recipe:frameofsubmachinegun": 1,
+        "pointblank_recipe:magazineofsubmachinegun": 1
+      }
+    },
+    {
+      "file": "craftuar_10.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:uar10",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        "cd ",
+        "  c"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "pointblank_recipe:snipescope": 1,
+        "minecraft:iron_ingot": 2,
+        "pointblank_recipe:frameofsniperifle": 1
+      }
+    },
+    {
+      "file": "craftump_45.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:ump45",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "a  ",
+        " bc",
+        "de "
+      ],
+      "ingredients": {
+        "pointblank_recipe:silencerforrifle": 1,
+        "pointblank_recipe:frameofsubmachinegun": 1,
+        "pointblank_recipe:buttump": 1,
+        "pointblank_recipe:handlerifle": 1,
+        "pointblank_recipe:magazineofsubmachinegun": 1
+      }
+    },
+    {
+      "file": "craftwa_2000.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:wa2000",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        "  d"
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "file": "craftxm_27.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:xm29",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a ",
+        "bc ",
+        "d d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:shotgunreloaderbrum": 1,
+        "pointblank_recipe:frameofm32mgl": 1,
+        "minecraft:iron_ingot": 2
+      }
+    },
+    {
+      "file": "craftxm_29.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:xm29",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a ",
+        "bc ",
+        "d d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:shotgunreloaderbrum": 1,
+        "pointblank_recipe:frameofm32mgl": 1,
+        "minecraft:iron_ingot": 2
+      }
+    },
+    {
+      "file": "craftxm_3.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:xm3",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        "ab ",
+        " c ",
+        "d d"
+      ],
+      "ingredients": {
+        "pointblank_recipe:muzzleofsniperrifle": 1,
+        "pointblank_recipe:snipescope": 1,
+        "pointblank_recipe:frameofsniperifle": 1,
+        "minecraft:iron_ingot": 2
+      }
+    },
+    {
+      "file": "craftxm_7.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:xm7",
+      "count": 1,
+      "kind": "weapon",
+      "pattern": [
+        " a ",
+        "bcd",
+        " e "
+      ],
+      "ingredients": {
+        "minecraft:iron_nugget": 1,
+        "pointblank_recipe:silencerforrifle": 1,
+        "pointblank_recipe:framem4a1type": 1,
+        "pointblank_recipe:buttform4a1type": 1,
+        "pointblank_recipe:riflemagazine": 1
+      }
+    },
+    {
+      "file": "grenade.json",
+      "type": "crafting_shaped",
+      "modules": [
+        "base"
+      ],
+      "result": "pointblank:grenade",
+      "count": 1,
+      "kind": "ammo",
+      "pattern": [
+        " ab",
+        "aca",
+        " a "
+      ],
+      "ingredients": {
+        "minecraft:iron_ingot": 4,
+        "minecraft:iron_nugget": 1,
+        "minecraft:gunpowder": 1
+      }
+    }
+  ],
+  "components": {
+    "pointblank_recipe:collimatorscope": {
+      "category": "sight",
+      "modules": [
+        "handguns_galore"
+      ],
+      "recipe": "craft_collimator_scope.json",
+      "used_in": [
+        "pointblank:ak12x",
+        "pointblank:cp2077_arasaka_nowaki",
+        "pointblank:cp2077_militech_m179_achilles_xmod2",
+        "pointblank:cp2077_militech_m251s_ajax",
+        "pointblank:cp2077_project_cynosure_erebus",
+        "pointblank:gk57",
+        "pointblank:hgg_r6_rg15"
+      ]
+    },
+    "pointblank_recipe:coppernugget": {
+      "category": "material",
+      "modules": [],
+      "recipe": "craft_copper_nugget_create.json",
+      "used_in": []
+    },
+    "pointblank_recipe:framecyberpunkenergygun": {
+      "category": "frame",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craft_cp_eg.json",
+      "used_in": [
+        "pointblank:cp2077_budget_arms_carnage",
+        "pointblank:cp2077_budget_arms_carnage_guts",
+        "pointblank:cp2077_militech_m179_achilles_xmod2",
+        "pointblank:cp2077_tsunami_rasetsu"
+      ]
+    },
+    "pointblank_recipe:energycube": {
+      "category": "special",
+      "modules": [
+        "cyberpunk"
+      ],
+      "recipe": "craft_energycube.json",
+      "used_in": [
+        "pointblank:cp2077_arasaka_hjke11_yukimura",
+        "pointblank:cp2077_arasaka_hjke11_yukimura_skippy",
+        "pointblank:cp2077_ca_liberty",
+        "pointblank:cp2077_ca_unity",
+        "pointblank:cp2077_kang_tao_g58_dian",
+        "pointblank:cp2077_kang_tao_g58_dian_yinglong",
+        "pointblank:cp2077_malorian_arms_3516",
+        "pointblank:cp2077_malorian_arms_overture_cassidy",
+        "pointblank:cp2077_malorian_arms_overture_dante",
+        "pointblank:cp2077_militech_ar_lexington",
+        "pointblank:cp2077_militech_m10af_lexington",
+        "pointblank:cp2077_militech_m179_achilles_xmod2",
+        "pointblank:cp2077_militech_m251s_ajax",
+        "pointblank:cp2077_militech_m251s_ajax_barghest",
+        "pointblank:cp2077_project_cynosure_erebus",
+        "pointblank:cp2077_techtronika_spt32_grad",
+        "pointblank:cp2077_techtronika_spt32_grad_panam",
+        "pointblank:cp2077_tsunami_nekomata",
+        "pointblank:cp2077_tsunami_rasetsu",
+        "pointblank_recipe:framecyberpunkenergygun",
+        "pointblank_recipe:framecyberpunkgun"
+      ]
+    },
+    "pointblank_recipe:frameofabzats": {
+      "category": "frame",
+      "modules": [
+        "metro"
+      ],
+      "recipe": "craft_frame_of_abzats.json",
+      "used_in": [
+        "pointblank:abzats"
+      ]
+    },
+    "pointblank_recipe:frameofashot": {
+      "category": "frame",
+      "modules": [
+        "metro"
+      ],
+      "recipe": "craft_frame_of_ashot.json",
+      "used_in": [
+        "pointblank:ashot",
+        "pointblank:lolife",
+        "pointblank:revolver"
+      ]
+    },
+    "pointblank_recipe:frameofbigun": {
+      "category": "frame",
+      "modules": [
+        "metro"
+      ],
+      "recipe": "craft_frame_of_bigun.json",
+      "used_in": [
+        "pointblank:bigun"
+      ]
+    },
+    "pointblank_recipe:frameofhelsing": {
+      "category": "frame",
+      "modules": [
+        "metro"
+      ],
+      "recipe": "craft_frame_of_helsing.json",
+      "used_in": [
+        "pointblank:helsing"
+      ]
+    },
+    "pointblank_recipe:frameofmedved": {
+      "category": "frame",
+      "modules": [
+        "metro"
+      ],
+      "recipe": "craft_frame_of_medved.json",
+      "used_in": [
+        "pointblank:medved"
+      ]
+    },
+    "pointblank_recipe:frameofpreved": {
+      "category": "frame",
+      "modules": [
+        "metro"
+      ],
+      "recipe": "craft_frame_of_preved.json",
+      "used_in": [
+        "pointblank:preved"
+      ]
+    },
+    "pointblank_recipe:frameoftikar": {
+      "category": "frame",
+      "modules": [
+        "metro"
+      ],
+      "recipe": "craft_frame_of_tikar.json",
+      "used_in": [
+        "pointblank:tikar"
+      ]
+    },
+    "pointblank_recipe:frameofuboinik": {
+      "category": "frame",
+      "modules": [
+        "metro"
+      ],
+      "recipe": "craft_frame_of_uboinik.json",
+      "used_in": [
+        "pointblank:uboinik"
+      ]
+    },
+    "pointblank_recipe:frameofventil": {
+      "category": "frame",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craft_frame_of_ventil.json",
+      "used_in": []
+    },
+    "pointblank_recipe:frameofvsv": {
+      "category": "frame",
+      "modules": [
+        "metro"
+      ],
+      "recipe": "craft_frame_of_vsv.json",
+      "used_in": [
+        "pointblank:vsv"
+      ]
+    },
+    "pointblank_recipe:framep90": {
+      "category": "frame",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craft_frame_p_90.json",
+      "used_in": [
+        "pointblank:p90",
+        "pointblank:s_f2000"
+      ]
+    },
+    "pointblank_recipe:framerpg": {
+      "category": "frame",
+      "modules": [
+        "stalker"
+      ],
+      "recipe": "craft_frame_rpg.json",
+      "used_in": [
+        "pointblank:s_rpg"
+      ]
+    },
+    "pointblank_recipe:horizontalgunmagazine": {
+      "category": "magazine",
+      "modules": [
+        "metro"
+      ],
+      "recipe": "craft_horizontal_gun_magazine.json",
+      "used_in": []
+    },
+    "pointblank_recipe:m79": {
+      "category": "frame",
+      "modules": [
+        "taiwan"
+      ],
+      "recipe": "craft_m_79.json",
+      "used_in": [
+        "pointblank:m79_grenade_launcher"
+      ]
+    },
+    "pointblank_recipe:frameof2012": {
+      "category": "frame",
+      "modules": [
+        "metro"
+      ],
+      "recipe": "craft_metro_2033frame_of_2012.json",
+      "used_in": [
+        "pointblank:2012"
+      ]
+    },
+    "pointblank_recipe:shotgunreloaderbrum": {
+      "category": "mechanism",
+      "modules": [
+        "stalker"
+      ],
+      "recipe": "craft_shotgun_reloaderup.json",
+      "used_in": [
+        "pointblank:s_protecta",
+        "pointblank:xm29"
+      ]
+    },
+    "pointblank_recipe:sniperriflebillettrauma": {
+      "category": "frame",
+      "modules": [
+        "trauma"
+      ],
+      "recipe": "craft_sniper_rifle_billet.json",
+      "used_in": [
+        "pointblank:barm1918",
+        "pointblank:carcano1891",
+        "pointblank:gewehr98",
+        "pointblank:henrymartini",
+        "pointblank:kar98k",
+        "pointblank:lebel",
+        "pointblank:lee_enfield",
+        "pointblank:m1903",
+        "pointblank:m1_gxrand",
+        "pointblank:madsen",
+        "pointblank:mannlicherm1895",
+        "pointblank:mosin_nagant360",
+        "pointblank:mp18",
+        "pointblank:ribeyrolles",
+        "pointblank:svd_dragnaov",
+        "pointblank:vetterlivitalim187087",
+        "pointblank:werdl"
+      ]
+    },
+    "pointblank_recipe:sniperrifleloadingmechanism": {
+      "category": "mechanism",
+      "modules": [
+        "trauma"
+      ],
+      "recipe": "craft_sniper_rifle_loading_mechanism.json",
+      "used_in": [
+        "pointblank:ashot",
+        "pointblank:cp2077_malorian_arms_overture",
+        "pointblank:cp2077_malorian_arms_overture_cassidy",
+        "pointblank:cp2077_malorian_arms_overture_dante",
+        "pointblank:cp2077_malorian_arms_overture_kerry",
+        "pointblank:gatling",
+        "pointblank:hellriegel",
+        "pointblank:magnum500",
+        "pointblank:mp18",
+        "pointblank:rpk16x",
+        "pointblank_recipe:frameofuboinik"
+      ]
+    },
+    "pointblank_recipe:basisfortherocket": {
+      "category": "special",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craft_thebasisforrocket.json",
+      "used_in": [
+        "pointblank:at4_rocket",
+        "pointblank:javelin_rocket",
+        "pointblank:smaw_rocket"
+      ]
+    },
+    "pointblank_recipe:buttforvector": {
+      "category": "stock",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craft_vector_butt.json",
+      "used_in": [
+        "pointblank:kriss_vector45",
+        "pointblank:vector"
+      ]
+    },
+    "pointblank_recipe:autoguidancemodule": {
+      "category": "mechanism",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftautoguidancemodule.json",
+      "used_in": [
+        "pointblank:javelin"
+      ]
+    },
+    "pointblank_recipe:buttform4a1type": {
+      "category": "stock",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftbuttform_4a_1type.json",
+      "used_in": [
+        "pointblank:aug",
+        "pointblank:cp2077_militech_m251s_ajax_barghest",
+        "pointblank:hk416",
+        "pointblank:lamg",
+        "pointblank:m16a1",
+        "pointblank:m16x4",
+        "pointblank:m32mgl",
+        "pointblank:m4_9mm",
+        "pointblank:m4_rifle",
+        "pointblank:m4a1",
+        "pointblank:m4a1mod1",
+        "pointblank:m4sopmodii",
+        "pointblank:m4x1",
+        "pointblank:ro635",
+        "pointblank:ro635_remake",
+        "pointblank:s_lr300",
+        "pointblank:s_sgi",
+        "pointblank:scar18",
+        "pointblank:scarl",
+        "pointblank:svch545",
+        "pointblank:t91",
+        "pointblank:xm7"
+      ]
+    },
+    "pointblank_recipe:buttofsubmachinegun": {
+      "category": "stock",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftbuttofsubmachinegun.json",
+      "used_in": [
+        "pointblank:bigun",
+        "pointblank:cp2077_kang_tao_g58_dian",
+        "pointblank:cp2077_kang_tao_g58_dian_yinglong",
+        "pointblank:mp5",
+        "pointblank:mp7",
+        "pointblank:s_protecta",
+        "pointblank_recipe:buttump"
+      ]
+    },
+    "pointblank_recipe:buttump": {
+      "category": "stock",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftbuttump.json",
+      "used_in": [
+        "pointblank:aksu",
+        "pointblank:rpx20",
+        "pointblank:s_aksu",
+        "pointblank:s_as_val",
+        "pointblank:s_gauss",
+        "pointblank:ump45"
+      ]
+    },
+    "pointblank_recipe:framecyberpunkgun": {
+      "category": "frame",
+      "modules": [
+        "cyberpunk"
+      ],
+      "recipe": "craftframe_c_pg.json",
+      "used_in": [
+        "pointblank:cp2077_arasaka_hjsh18_masamune",
+        "pointblank:cp2077_arasaka_nowaki",
+        "pointblank:cp2077_militech_m179_achilles",
+        "pointblank:cp2077_project_cynosure_erebus"
+      ]
+    },
+    "pointblank_recipe:framem4a1type": {
+      "category": "frame",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftframeform_4a_1type.json",
+      "used_in": [
+        "pointblank:aug",
+        "pointblank:axval",
+        "pointblank:g3",
+        "pointblank:hk416",
+        "pointblank:m16a1",
+        "pointblank:m16x4",
+        "pointblank:m4_9mm",
+        "pointblank:m4_rifle",
+        "pointblank:m4a1",
+        "pointblank:m4a1mod1",
+        "pointblank:m4sopmodii",
+        "pointblank:m4x1",
+        "pointblank:ro635",
+        "pointblank:ro635_remake",
+        "pointblank:rpx20",
+        "pointblank:s_il86",
+        "pointblank:s_lr300",
+        "pointblank:s_sgi",
+        "pointblank:scar18",
+        "pointblank:scarl",
+        "pointblank:svch545",
+        "pointblank:t91",
+        "pointblank:xm7"
+      ]
+    },
+    "pointblank_recipe:frameofobrez": {
+      "category": "frame",
+      "modules": [
+        "stalker"
+      ],
+      "recipe": "craftframeforobrez.json",
+      "used_in": [
+        "pointblank:s_obrez"
+      ]
+    },
+    "pointblank_recipe:framegunmagazine": {
+      "category": "magazine",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftframegunagazine.json",
+      "used_in": [
+        "pointblank_recipe:gunmagazine",
+        "pointblank_recipe:theframeofthegun"
+      ]
+    },
+    "pointblank_recipe:framemktype": {
+      "category": "frame",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftframemktype.json",
+      "used_in": [
+        "pointblank:ar57",
+        "pointblank:lamg",
+        "pointblank:m249",
+        "pointblank:m249x",
+        "pointblank:mgx338",
+        "pointblank:mk14ebr",
+        "pointblank:mk48",
+        "pointblank:pkpx",
+        "pointblank:rpd762",
+        "pointblank:s_gauss",
+        "pointblank:s_pkm"
+      ]
+    },
+    "pointblank_recipe:frameofat4": {
+      "category": "frame",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftframeofat_4.json",
+      "used_in": [
+        "pointblank:at4",
+        "pointblank:javelin",
+        "pointblank:smaw"
+      ]
+    },
+    "pointblank_recipe:frameofm32mgl": {
+      "category": "frame",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftframeofm_32mgl.json",
+      "used_in": [
+        "pointblank:m32mgl",
+        "pointblank:xm29"
+      ]
+    },
+    "pointblank_recipe:frameofminigun": {
+      "category": "frame",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftframeofminigun.json",
+      "used_in": [
+        "pointblank:m134minigun"
+      ]
+    },
+    "pointblank_recipe:frameofsniperifle": {
+      "category": "frame",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftframeofsniperifle.json",
+      "used_in": [
+        "pointblank:c14",
+        "pointblank:chiangkaishekrifle",
+        "pointblank:cp2077_techtronika_spt32_grad",
+        "pointblank:cp2077_techtronika_spt32_grad_panam",
+        "pointblank:cp2077_tsunami_nekomata",
+        "pointblank:ewm",
+        "pointblank:generalliurifle",
+        "pointblank:gm6lynx",
+        "pointblank:l96a1",
+        "pointblank:lne19",
+        "pointblank:m1903_springfield",
+        "pointblank:m1_garand",
+        "pointblank:rocaf_m1_garand",
+        "pointblank:s_svd",
+        "pointblank:s_vss",
+        "pointblank:sl8",
+        "pointblank:star15",
+        "pointblank:svch545_scoped",
+        "pointblank:t57",
+        "pointblank:uar10",
+        "pointblank:wa2000",
+        "pointblank:xm3"
+      ]
+    },
+    "pointblank_recipe:frameofsubmachinegun": {
+      "category": "frame",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftframeofsubmachinegun.json",
+      "used_in": [
+        "pointblank:cp2077_kang_tao_g58_dian",
+        "pointblank:cp2077_kang_tao_g58_dian_yinglong",
+        "pointblank:kriss_vector45",
+        "pointblank:mp5",
+        "pointblank:mp5_classic",
+        "pointblank:mp7",
+        "pointblank:tmp",
+        "pointblank:ump45",
+        "pointblank:vector"
+      ]
+    },
+    "pointblank_recipe:frameoftherifle": {
+      "category": "frame",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftframeoftherifle.json",
+      "used_in": [
+        "pointbank:rpk",
+        "pointblank:ak12",
+        "pointblank:ak12x",
+        "pointblank:ak15x",
+        "pointblank:ak22",
+        "pointblank:ak47",
+        "pointblank:ak47x",
+        "pointblank:ak74",
+        "pointblank:ak74x",
+        "pointblank:aksu",
+        "pointblank:an94",
+        "pointblank:cp2077_militech_m251s_ajax",
+        "pointblank:cp2077_militech_m251s_ajax_barghest",
+        "pointblank:g36c",
+        "pointblank:g36k",
+        "pointblank:g41",
+        "pointblank:gk57",
+        "pointblank:kalash",
+        "pointblank:rpk16x",
+        "pointblank:s_abakan",
+        "pointblank:s_akm",
+        "pointblank:s_aksu",
+        "pointblank:s_as_val",
+        "pointblank:s_groza",
+        "pointblank:saiga"
+      ]
+    },
+    "pointblank_recipe:frameoftheriflemagazine": {
+      "category": "magazine",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftframeoftheriflemagazine.json",
+      "used_in": [
+        "pointblank_recipe:framem4a1type",
+        "pointblank_recipe:frameoftherifle",
+        "pointblank_recipe:riflemagazine"
+      ]
+    },
+    "pointblank_recipe:theframeofthegun": {
+      "category": "frame",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftframeoftheun.json",
+      "used_in": [
+        "pointblank:colt_m1911x1",
+        "pointblank:cp2077_arasaka_hjke11_yukimura",
+        "pointblank:cp2077_arasaka_hjke11_yukimura_skippy",
+        "pointblank:cp2077_ca_liberty",
+        "pointblank:cp2077_ca_unity",
+        "pointblank:cp2077_ca_unity_iconic",
+        "pointblank:cp2077_malorian_arms_3516",
+        "pointblank:cp2077_malorian_arms_overture",
+        "pointblank:cp2077_malorian_arms_overture_cassidy",
+        "pointblank:cp2077_malorian_arms_overture_dante",
+        "pointblank:cp2077_malorian_arms_overture_kerry",
+        "pointblank:cp2077_militech_ar_lexington",
+        "pointblank:cp2077_militech_m10af_lexington",
+        "pointblank:deagle36",
+        "pointblank:deserteagle",
+        "pointblank:dual_glock19x",
+        "pointblank:duplet",
+        "pointblank:glock17",
+        "pointblank:glock18",
+        "pointblank:glock19x",
+        "pointblank:hgg_beretta_px4storm",
+        "pointblank:hgg_fn_fiveseven",
+        "pointblank:hgg_fn_fnp40",
+        "pointblank:hgg_fn_hpda",
+        "pointblank:hgg_hk_p30",
+        "pointblank:hgg_hk_usp",
+        "pointblank:hgg_hk_usp_silenced",
+        "pointblank:hgg_mr_deserteagle",
+        "pointblank:hgg_nfm_makarov",
+        "pointblank:hgg_r6_rg15",
+        "pointblank:hgg_taurus_pt145",
+        "pointblank:hgg_walther_ppk",
+        "pointblank:hkusp45",
+        "pointblank:m1911a1",
+        "pointblank:m9",
+        "pointblank:m950",
+        "pointblank:magnum500",
+        "pointblank:mk23",
+        "pointblank:p30l",
+        "pointblank:rhino",
+        "pointblank:s_fora",
+        "pointblank:s_kora919",
+        "pointblank:s_pb",
+        "pointblank:s_pm",
+        "pointblank:s_usp",
+        "pointblank:stallion",
+        "pointblank:tti_viper",
+        "pointblank_recipe:frameofuboinik"
+      ]
+    },
+    "pointblank_recipe:gunmagazine": {
+      "category": "magazine",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftgunmagazine.json",
+      "used_in": [
+        "pointblank:colt_m1911x1",
+        "pointblank:cp2077_arasaka_hjke11_yukimura",
+        "pointblank:cp2077_ca_liberty",
+        "pointblank:cp2077_ca_unity",
+        "pointblank:cp2077_ca_unity_iconic",
+        "pointblank:cp2077_malorian_arms_3516",
+        "pointblank:cp2077_militech_ar_lexington",
+        "pointblank:cp2077_militech_m10af_lexington",
+        "pointblank:deagle36",
+        "pointblank:deserteagle",
+        "pointblank:dual_glock19x",
+        "pointblank:glock17",
+        "pointblank:glock18",
+        "pointblank:glock19x",
+        "pointblank:hgg_beretta_px4storm",
+        "pointblank:hgg_fn_fiveseven",
+        "pointblank:hgg_fn_fnp40",
+        "pointblank:hgg_fn_hpda",
+        "pointblank:hgg_hk_p30",
+        "pointblank:hgg_hk_usp",
+        "pointblank:hgg_hk_usp_silenced",
+        "pointblank:hgg_mr_deserteagle",
+        "pointblank:hgg_nfm_makarov",
+        "pointblank:hgg_r6_rg15",
+        "pointblank:hgg_taurus_pt145",
+        "pointblank:hgg_walther_ppk",
+        "pointblank:hkusp45",
+        "pointblank:lolife",
+        "pointblank:m1911a1",
+        "pointblank:m9",
+        "pointblank:mk23",
+        "pointblank:p30l",
+        "pointblank:rhino",
+        "pointblank:s_fora",
+        "pointblank:s_kora919",
+        "pointblank:s_pb",
+        "pointblank:s_pm",
+        "pointblank:s_usp",
+        "pointblank:tti_viper"
+      ]
+    },
+    "pointblank_recipe:gunpoint": {
+      "category": "barrel",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftgunpoint.json",
+      "used_in": [
+        "pointblank:colt_m1911x1",
+        "pointblank:cp2077_ca_unity_iconic",
+        "pointblank:deserteagle",
+        "pointblank:dual_glock19x",
+        "pointblank:hgg_beretta_px4storm",
+        "pointblank:hgg_fn_fiveseven",
+        "pointblank:hgg_fn_fnp40",
+        "pointblank:hgg_hk_usp_silenced",
+        "pointblank:hgg_nfm_makarov",
+        "pointblank:lolife",
+        "pointblank:m1911a1",
+        "pointblank:m9",
+        "pointblank:m950",
+        "pointblank:mk23",
+        "pointblank:mp5_classic_sd",
+        "pointblank:p30l",
+        "pointblank:p90",
+        "pointblank:rhino",
+        "pointblank:s_f2000",
+        "pointblank:s_pb",
+        "pointblank:saiga",
+        "pointblank:stallion",
+        "pointblank:tti_viper",
+        "pointblank:vector",
+        "pointblank_recipe:theframeofthegun"
+      ]
+    },
+    "pointblank_recipe:handlerifle": {
+      "category": "grip",
+      "modules": [
+        "base"
+      ],
+      "recipe": "crafthandleforrifle.json",
+      "used_in": [
+        "pointblank:aug",
+        "pointblank:gk57",
+        "pointblank:hk416",
+        "pointblank:javelin",
+        "pointblank:m249x",
+        "pointblank:m32mgl",
+        "pointblank:mk14ebr",
+        "pointblank:s_as_val",
+        "pointblank:s_groza",
+        "pointblank:s_rpg",
+        "pointblank:scar18",
+        "pointblank:smaw",
+        "pointblank:ump45",
+        "pointblank_recipe:frameofm32mgl",
+        "pointblank_recipe:frameofminigun"
+      ]
+    },
+    "pointblank_recipe:handleofsubmachinegun": {
+      "category": "grip",
+      "modules": [
+        "base"
+      ],
+      "recipe": "crafthandleofsubmachinegun.json",
+      "used_in": [
+        "pointblank:cp2077_kang_tao_g58_dian",
+        "pointblank:cp2077_kang_tao_g58_dian_yinglong",
+        "pointblank:kriss_vector45",
+        "pointblank:mp5",
+        "pointblank:mp5_classic",
+        "pointblank:mp7",
+        "pointblank:tmp"
+      ]
+    },
+    "pointblank_recipe:ironbutt": {
+      "category": "stock",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftironbutt.json",
+      "used_in": [
+        "pointblank:ak12",
+        "pointblank:ak15x",
+        "pointblank:ak22",
+        "pointblank:ak74x",
+        "pointblank:an94",
+        "pointblank:cp2077_militech_m251s_ajax",
+        "pointblank:g3",
+        "pointblank:g36c",
+        "pointblank:g36k",
+        "pointblank:g41",
+        "pointblank:kalash",
+        "pointblank:mp5_classic",
+        "pointblank:s_akm",
+        "pointblank:s_svd",
+        "pointblank:svch545_scoped"
+      ]
+    },
+    "pointblank_recipe:muzzleofminigun": {
+      "category": "barrel",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftmuzzleofminigun.json",
+      "used_in": [
+        "pointblank:gatling",
+        "pointblank:helsing",
+        "pointblank:m134minigun"
+      ]
+    },
+    "pointblank_recipe:muzzleofsniperrifle": {
+      "category": "barrel",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftmuzzlofsniperrifle.json",
+      "used_in": [
+        "pointblank:c14",
+        "pointblank:cp2077_techtronika_spt32_grad",
+        "pointblank:cp2077_techtronika_spt32_grad_panam",
+        "pointblank:ewm",
+        "pointblank:gm6lynx",
+        "pointblank:l96a1",
+        "pointblank:lne19",
+        "pointblank:m1903_springfield",
+        "pointblank:s_svd",
+        "pointblank:s_vss",
+        "pointblank:sl8",
+        "pointblank:star15",
+        "pointblank:svch545_scoped",
+        "pointblank:uar10",
+        "pointblank:vsv",
+        "pointblank:xm3",
+        "pointblank_recipe:frameofsniperifle",
+        "pointblank_recipe:frameofventil"
+      ]
+    },
+    "pointblank_recipe:buttofshotggun": {
+      "category": "stock",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftofbuttshotgun.json",
+      "used_in": [
+        "pointblank:axval",
+        "pointblank:gk57",
+        "pointblank:hs12",
+        "pointblank:lne19",
+        "pointblank:m590",
+        "pointblank:modernized_marlin_model1887",
+        "pointblank:rpk16x",
+        "pointblank:s_pkm",
+        "pointblank:s_vss",
+        "pointblank:saiga",
+        "pointblank:spas12",
+        "pointblank:star15",
+        "pointblank_recipe:frameofvsv"
+      ]
+    },
+    "pointblank_recipe:frameofshotgun": {
+      "category": "frame",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftofframeshotgun.json",
+      "used_in": [
+        "pointblank:aa12",
+        "pointblank:benxlli_m4",
+        "pointblank:citoricxs",
+        "pointblank:hs12",
+        "pointblank:m1014",
+        "pointblank:m590",
+        "pointblank:m870",
+        "pointblank:model500",
+        "pointblank:modernized_marlin_model1887",
+        "pointblank:s_protecta",
+        "pointblank:s_win1300",
+        "pointblank:spas12"
+      ]
+    },
+    "pointblank_recipe:magazineformachinegun": {
+      "category": "magazine",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftofmagazineformachinegun.json",
+      "used_in": [
+        "pointblank:abzats",
+        "pointblank:ar57",
+        "pointblank:gatling",
+        "pointblank:lamg",
+        "pointblank:m134minigun",
+        "pointblank:m249",
+        "pointblank:m249x",
+        "pointblank:mgx338",
+        "pointblank:mk14ebr",
+        "pointblank:mk48",
+        "pointblank:pkpx",
+        "pointblank:s_gauss",
+        "pointblank:s_pkm"
+      ]
+    },
+    "pointblank_recipe:magazineofsubmachinegun": {
+      "category": "magazine",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftofmagazinesubmachinegun.json",
+      "used_in": [
+        "pointblank:kriss_vector45",
+        "pointblank:mp5",
+        "pointblank:mp5_classic",
+        "pointblank:mp7",
+        "pointblank:p90",
+        "pointblank:s_f2000",
+        "pointblank:tmp",
+        "pointblank:ump45",
+        "pointblank:vector",
+        "pointblank_recipe:frameofsubmachinegun"
+      ]
+    },
+    "pointblank_recipe:shotgunreloader": {
+      "category": "mechanism",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftofshotgunreloader.json",
+      "used_in": [
+        "pointblank:aa12",
+        "pointblank:benxlli_m4",
+        "pointblank:citoricxs",
+        "pointblank:m1014",
+        "pointblank:m590",
+        "pointblank:m870",
+        "pointblank:s_win1300",
+        "pointblank:spas12"
+      ]
+    },
+    "pointblank_recipe:snipescope": {
+      "category": "sight",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftofsnipescope.json",
+      "used_in": [
+        "pointblank:c14",
+        "pointblank:cp2077_techtronika_spt32_grad",
+        "pointblank:cp2077_techtronika_spt32_grad_panam",
+        "pointblank:cp2077_tsunami_nekomata",
+        "pointblank:cp2077_tsunami_rasetsu",
+        "pointblank:ewm",
+        "pointblank:gm6lynx",
+        "pointblank:l96a1",
+        "pointblank:lne19",
+        "pointblank:m1903_springfield",
+        "pointblank:s_svd",
+        "pointblank:s_vss",
+        "pointblank:sl8",
+        "pointblank:star15",
+        "pointblank:svch545_scoped",
+        "pointblank:svd_dragnaov",
+        "pointblank:uar10",
+        "pointblank:wa2000",
+        "pointblank:xm29",
+        "pointblank:xm3"
+      ]
+    },
+    "pointblank_recipe:triggermechanism": {
+      "category": "mechanism",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftoftriggermechanism.json",
+      "used_in": [
+        "pointblank_recipe:frameofat4",
+        "pointblank_recipe:framerpg"
+      ]
+    },
+    "pointblank_recipe:riflemagazine": {
+      "category": "magazine",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftriflemagazine.json",
+      "used_in": [
+        "pointbank:rpk",
+        "pointblank:2012",
+        "pointblank:ak12",
+        "pointblank:ak12x",
+        "pointblank:ak15x",
+        "pointblank:ak22",
+        "pointblank:ak47",
+        "pointblank:ak47x",
+        "pointblank:ak74",
+        "pointblank:ak74x",
+        "pointblank:aksu",
+        "pointblank:an94",
+        "pointblank:aug",
+        "pointblank:axval",
+        "pointblank:barm1918",
+        "pointblank:cp2077_arasaka_hjke11_yukimura_skippy",
+        "pointblank:cp2077_militech_m251s_ajax",
+        "pointblank:cp2077_militech_m251s_ajax_barghest",
+        "pointblank:g3",
+        "pointblank:g36c",
+        "pointblank:g36k",
+        "pointblank:g41",
+        "pointblank:gk57",
+        "pointblank:hk416",
+        "pointblank:m16a1",
+        "pointblank:m16x4",
+        "pointblank:m4_9mm",
+        "pointblank:m4_rifle",
+        "pointblank:m4a1",
+        "pointblank:m4a1mod1",
+        "pointblank:m4sopmodii",
+        "pointblank:m4x1",
+        "pointblank:madsen",
+        "pointblank:ribeyrolles",
+        "pointblank:ro635",
+        "pointblank:ro635_remake",
+        "pointblank:rocaf_m1_garand",
+        "pointblank:s_abakan",
+        "pointblank:s_akm",
+        "pointblank:s_aksu",
+        "pointblank:s_as_val",
+        "pointblank:s_il86",
+        "pointblank:s_lr300",
+        "pointblank:s_sgi",
+        "pointblank:saiga",
+        "pointblank:scar18",
+        "pointblank:scarl",
+        "pointblank:star15",
+        "pointblank:svch545_scoped",
+        "pointblank:svd_dragnaov",
+        "pointblank:t57",
+        "pointblank:t91",
+        "pointblank:xm7"
+      ]
+    },
+    "pointblank_recipe:scopeforrifle": {
+      "category": "sight",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftscopeforrifle.json",
+      "used_in": [
+        "pointblank:aa12",
+        "pointblank:ak12",
+        "pointblank:ak22",
+        "pointblank:aug",
+        "pointblank:m249",
+        "pointblank:s_gauss"
+      ]
+    },
+    "pointblank_recipe:shotgunbarrel": {
+      "category": "barrel",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftshotgunbarrel.json",
+      "used_in": [
+        "pointblank:citoricxs",
+        "pointblank:duplet",
+        "pointblank:hs12",
+        "pointblank:m1014",
+        "pointblank:m590",
+        "pointblank:m870",
+        "pointblank:model500",
+        "pointblank:modernized_marlin_model1887",
+        "pointblank:s_win1300",
+        "pointblank:spas12",
+        "pointblank_recipe:frameofshotgun"
+      ]
+    },
+    "pointblank_recipe:silencerforrifle": {
+      "category": "muzzle_device",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftsilencerforriflr.json",
+      "used_in": [
+        "pointblank:scarl",
+        "pointblank:ump45",
+        "pointblank:xm7"
+      ]
+    },
+    "pointblank_recipe:thebarreloftherifle": {
+      "category": "barrel",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftthebarreloftherifle.json",
+      "used_in": [
+        "pointblank:aa12",
+        "pointblank:ak12",
+        "pointblank:ak15x",
+        "pointblank:ak22",
+        "pointblank:ak47",
+        "pointblank:ak47x",
+        "pointblank:ak74",
+        "pointblank:ak74x",
+        "pointblank:ar57",
+        "pointblank:aug",
+        "pointblank:axval",
+        "pointblank:carcano1891",
+        "pointblank:cp2077_militech_m251s_ajax_barghest",
+        "pointblank:g3",
+        "pointblank:g41",
+        "pointblank:gewehr98",
+        "pointblank:gk57",
+        "pointblank:hk416",
+        "pointblank:m16x4",
+        "pointblank:m1903",
+        "pointblank:m4_9mm",
+        "pointblank:m4a1",
+        "pointblank:m4a1mod1",
+        "pointblank:m4x1",
+        "pointblank:mannlicherm1895",
+        "pointblank:mgx338",
+        "pointblank:mp18",
+        "pointblank:pkpx",
+        "pointblank:ribeyrolles",
+        "pointblank:ro635_remake",
+        "pointblank:rocaf_m1_garand",
+        "pointblank:rpd762",
+        "pointblank:rpk16x",
+        "pointblank:rpx20",
+        "pointblank:s_abakan",
+        "pointblank:s_aksu",
+        "pointblank:s_groza",
+        "pointblank:s_lr300",
+        "pointblank:s_protecta",
+        "pointblank:scar18",
+        "pointblank:svch545",
+        "pointblank:svd_dragnaov",
+        "pointblank:t57",
+        "pointblank:tikar",
+        "pointblank_recipe:framecyberpunkgun",
+        "pointblank_recipe:framem4a1type",
+        "pointblank_recipe:framemktype",
+        "pointblank_recipe:frameof2012",
+        "pointblank_recipe:frameofabzats",
+        "pointblank_recipe:frameofpreved",
+        "pointblank_recipe:frameoftherifle",
+        "pointblank_recipe:muzzleofminigun",
+        "pointblank_recipe:thebarreloftherifleup"
+      ]
+    },
+    "pointblank_recipe:thebarreloftherifleup": {
+      "category": "barrel",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftthebarreloftherifleup.json",
+      "used_in": [
+        "pointbank:rpk",
+        "pointblank:ak12x",
+        "pointblank:an94",
+        "pointblank:aughbar",
+        "pointblank:barm1918",
+        "pointblank:g36k",
+        "pointblank:kalash",
+        "pointblank:lamg",
+        "pointblank:lebel",
+        "pointblank:m16a1",
+        "pointblank:m249",
+        "pointblank:m4sopmodii",
+        "pointblank:mk14ebr",
+        "pointblank:mk48",
+        "pointblank:ro635",
+        "pointblank:s_akm",
+        "pointblank:s_as_val",
+        "pointblank:s_gauss",
+        "pointblank:s_il86",
+        "pointblank:s_pkm",
+        "pointblank:s_sgi",
+        "pointblank:t91"
+      ]
+    },
+    "pointblank_recipe:theriflebutt": {
+      "category": "stock",
+      "modules": [
+        "base"
+      ],
+      "recipe": "craftthebutt.json",
+      "used_in": [
+        "pointbank:rpk",
+        "pointblank:ak12x",
+        "pointblank:ak47",
+        "pointblank:ak47x",
+        "pointblank:ak74",
+        "pointblank:citoricxs",
+        "pointblank:hellriegel",
+        "pointblank:kar98k",
+        "pointblank:mosin_nagant360",
+        "pointblank:ribeyrolles",
+        "pointblank:s_abakan",
+        "pointblank:t57",
+        "pointblank:uboinik",
+        "pointblank_recipe:sniperriflebillettrauma"
+      ]
+    }
+  }
+}

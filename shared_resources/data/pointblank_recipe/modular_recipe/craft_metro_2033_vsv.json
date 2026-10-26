@@ -1,0 +1,33 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "metro"
+    }
+  ],
+  "template": "pointblank_recipe:unique",
+  "parts": {
+    "barrel": {
+      "item": "pointblank_recipe:muzzleofsniperrifle"
+    },
+    "frame": {
+      "item": "pointblank_recipe:frameofvsv"
+    }
+  },
+  "materials": [
+    {
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "item": "minecraft:iron_block"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:vsv"
+  }
+}

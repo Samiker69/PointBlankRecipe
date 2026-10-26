@@ -1,0 +1,27 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:launcher",
+  "parts": {
+    "grip": {
+      "item": "pointblank_recipe:handlerifle"
+    },
+    "frame": {
+      "item": "pointblank_recipe:frameofat4"
+    }
+  },
+  "materials": [
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:smaw"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "metro"
+    }
+  ],
+  "template": "pointblank_recipe:unique",
+  "parts": {
+    "frame": {
+      "item": "pointblank_recipe:frameofabzats"
+    },
+    "magazine": {
+      "item": "pointblank_recipe:magazineformachinegun"
+    }
+  },
+  "materials": [
+    {
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:abzats"
+  }
+}

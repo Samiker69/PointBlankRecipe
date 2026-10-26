@@ -1,0 +1,29 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "trauma"
+    }
+  ],
+  "template": "pointblank_recipe:sniper",
+  "parts": {
+    "frame": {
+      "item": "pointblank_recipe:sniperriflebillettrauma"
+    }
+  },
+  "materials": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 2
+    },
+    {
+      "tag": "minecraft:planks",
+      "count": 2
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:henrymartini"
+  }
+}

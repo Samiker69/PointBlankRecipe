@@ -1,0 +1,33 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:machinegun",
+  "parts": {
+    "frame": {
+      "item": "pointblank_recipe:framemktype"
+    },
+    "grip": {
+      "item": "pointblank_recipe:handlerifle"
+    },
+    "magazine": {
+      "item": "pointblank_recipe:magazineformachinegun"
+    }
+  },
+  "materials": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_nugget"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:m249x"
+  }
+}

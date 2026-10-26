@@ -1,0 +1,29 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:component",
+  "parts": {},
+  "materials": [
+    {
+      "item": "pointblank_recipe:muzzleofsniperrifle"
+    },
+    {
+      "item": "minecraft:iron_block"
+    },
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "item": "minecraft:iron_nugget"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank_recipe:frameofventil"
+  }
+}

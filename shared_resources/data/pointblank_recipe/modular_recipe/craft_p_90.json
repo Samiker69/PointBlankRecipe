@@ -1,0 +1,30 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:smg",
+  "parts": {
+    "barrel": {
+      "item": "pointblank_recipe:gunpoint"
+    },
+    "magazine": {
+      "item": "pointblank_recipe:magazineofsubmachinegun"
+    },
+    "frame": {
+      "item": "pointblank_recipe:framep90"
+    }
+  },
+  "materials": [
+    {
+      "item": "minecraft:iron_nugget"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank:p90"
+  }
+}

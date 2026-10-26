@@ -1,0 +1,24 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:component",
+  "parts": {},
+  "materials": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "tag": "minecraft:planks",
+      "count": 3
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "pointblank_recipe:theriflebutt"
+  }
+}
