@@ -6,37 +6,42 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.Slot;
+import xyz.samiker.pointblank_recipe.modular.ModularLayout;
+import xyz.samiker.pointblank_recipe.modular.ModularTemplate;
 import xyz.samiker.pointblank_recipe.screen.ModularWorkbenchMenu;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static xyz.samiker.pointblank_recipe.screen.ModularWorkbenchMenu.*;
 
-// Drawn with plain fills for now; a proper texture belongs to the cosmetic part of the roadmap.
+// Drawn with plain fills: the slots sit on a gun silhouette built from the parts of the selected template.
 public class ModularWorkbenchScreen extends AbstractContainerScreen<ModularWorkbenchMenu> {
-    private static final int WIDTH = 176;
-    private static final int HEIGHT = 190;
     private static final int PANEL = 0xFFC6C6C6;
     private static final int SHADOW = 0xFF373737;
     private static final int LIGHT = 0xFFFFFFFF;
     private static final int SLOT = 0xFF8B8B8B;
-    private static final int UNUSED_SLOT = 0xFF6B6B6B;
     private static final int TEXT = 0xFF404040;
 
+    private final List<Button> resultButtons = new ArrayList<>();
+
     public ModularWorkbenchScreen(ModularWorkbenchMenu menu, Inventory inventory, Component title) {
-        super(menu, inventory, title, WIDTH, HEIGHT);
-        inventoryLabelY = HEIGHT - 94;
+        super(menu, inventory, title, ModularLayout.WIDTH, ModularLayout.HEIGHT);
+        inventoryLabelY = ModularLayout.INVENTORY_Y - 11;
     }
 
     @Override
     protected void init() {
         super.init();
-        addButton("<", BUTTON_PREVIOUS_TEMPLATE, PARTS_X - 1, 15);
-        addButton(">", BUTTON_NEXT_TEMPLATE, MATERIALS_X + 43, 15);
-        addButton("<", BUTTON_PREVIOUS_PAGE, RESULTS_X - 1, GRID_Y + 56);
-        addButton(">", BUTTON_NEXT_PAGE, RESULTS_X + 23, GRID_Y + 56);
+        addButton("<", BUTTON_PREVIOUS_TEMPLATE, 6, 4);
+        addButton(">", BUTTON_NEXT_TEMPLATE, ModularLayout.WIDTH - 18, 4);
+        resultButtons.clear();
+        resultButtons.add(addButton("<", BUTTON_PREVIOUS_RESULT, ModularLayout.RESULT_X - 5, ModularLayout.RESULT_Y + 22));
+        resultButtons.add(addButton(">", BUTTON_NEXT_RESULT, ModularLayout.RESULT_X + 9, ModularLayout.RESULT_Y + 22));
     }
 
-    private void addButton(String label, int id, int left, int top) {
-        addRenderableWidget(Button.builder(Component.literal(label), button -> {
+    private Button addButton(String label, int id, int left, int top) {
+        return addRenderableWidget(Button.builder(Component.literal(label), button -> {
             if (minecraft.gameMode != null) {
                 minecraft.gameMode.handleInventoryButtonClick(menu.containerId, id);
             }
@@ -44,42 +49,58 @@ public class ModularWorkbenchScreen extends AbstractContainerScreen<ModularWorkb
     }
 
     @Override
+    public void extractRenderState(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float partialTick) {
+        // Arrows only make sense when several guns use the same parts.
+        resultButtons.forEach(button -> button.visible = menu.matches() > 1);
+        super.extractRenderState(graphics, mouseX, mouseY, partialTick);
+    }
+
+    @Override
     public void extractBackground(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float partialTick) {
         super.extractBackground(graphics, mouseX, mouseY, partialTick);
-        graphics.fill(leftPos, topPos, leftPos + WIDTH, topPos + HEIGHT, SHADOW);
-        graphics.fill(leftPos + 1, topPos + 1, leftPos + WIDTH - 1, topPos + HEIGHT - 1, PANEL);
+        int width = ModularLayout.WIDTH;
+        int height = ModularLayout.HEIGHT;
+        graphics.fill(leftPos, topPos, leftPos + width, topPos + height, SHADOW);
+        graphics.fill(leftPos + 1, topPos + 1, leftPos + width - 1, topPos + height - 1, PANEL);
 
-        int used = menu.template().slots().size();
-        for (int i = 0; i < GRID_SIZE; i++) {
-            drawSlot(graphics, PARTS_X + i % 3 * 18, GRID_Y + i / 3 * 18, i < used ? SLOT : UNUSED_SLOT);
-            drawSlot(graphics, MATERIALS_X + i % 3 * 18, GRID_Y + i / 3 * 18, SLOT);
+        ModularTemplate template = menu.template();
+        for (ModularLayout.Rect rect : ModularLayout.silhouette(template)) {
+            graphics.fill(leftPos + rect.x1() - 1, topPos + rect.y1() - 1, leftPos + rect.x2() + 1, topPos + rect.y2() + 1, ModularLayout.SILHOUETTE_OUTLINE);
         }
-        for (int i = 0; i < RESULTS_PER_PAGE; i++) {
-            drawSlot(graphics, RESULTS_X + i % 2 * 18, GRID_Y + i / 2 * 18, SLOT);
+        for (ModularLayout.Rect rect : ModularLayout.silhouette(template)) {
+            graphics.fill(leftPos + rect.x1(), topPos + rect.y1(), leftPos + rect.x2(), topPos + rect.y2(), ModularLayout.SILHOUETTE_FILL);
         }
+        for (String slot : template.slots()) {
+            int[] position = ModularLayout.slotPosition(slot);
+            drawSlot(graphics, position[0], position[1], 18);
+        }
+        drawSlot(graphics, ModularLayout.RESULT_X - 4, ModularLayout.RESULT_Y - 4, 26);
         for (int i = 0; i < 36; i++) {
             int row = i / 9;
-            drawSlot(graphics, 8 + i % 9 * 18, row < 3 ? INVENTORY_Y + row * 18 : INVENTORY_Y + 58, SLOT);
+            drawSlot(graphics, 8 + i % 9 * 18, row < 3 ? ModularLayout.INVENTORY_Y + row * 18 : ModularLayout.INVENTORY_Y + 58, 18);
         }
     }
 
-    private void drawSlot(GuiGraphicsExtractor graphics, int slotX, int slotY, int color) {
+    // A vanilla-style sunken slot whose item area starts at slotX, slotY.
+    private void drawSlot(GuiGraphicsExtractor graphics, int slotX, int slotY, int size) {
         int left = leftPos + slotX - 1;
         int top = topPos + slotY - 1;
-        graphics.fill(left, top, left + 18, top + 18, SHADOW);
-        graphics.fill(left + 1, top + 1, left + 18, top + 18, LIGHT);
-        graphics.fill(left + 1, top + 1, left + 17, top + 17, color);
+        graphics.fill(left, top, left + size, top + size, SHADOW);
+        graphics.fill(left + 1, top + 1, left + size, top + size, LIGHT);
+        graphics.fill(left + 1, top + 1, left + size - 1, top + size - 1, SLOT);
     }
 
     @Override
     protected void extractLabels(GuiGraphicsExtractor graphics, int mouseX, int mouseY) {
-        super.extractLabels(graphics, mouseX, mouseY);
-        Component template = Component.translatable("template.pointblank_recipe." + menu.template().name());
-        int center = (PARTS_X + MATERIALS_X + 54) / 2;
-        graphics.text(font, template, center - font.width(template) / 2, 17, TEXT, false);
+        graphics.text(font, playerInventoryTitle, inventoryLabelX, inventoryLabelY, TEXT, false);
 
-        String page = (menu.page() + 1) + "/" + menu.pageCount();
-        graphics.text(font, page, RESULTS_X + 18 - font.width(page) / 2, 17, TEXT, false);
+        Component template = Component.translatable("template.pointblank_recipe." + menu.template().name());
+        graphics.text(font, template, (ModularLayout.WIDTH - font.width(template)) / 2, 6, TEXT, false);
+
+        if (menu.matches() > 1) {
+            String counter = (menu.selected() + 1) + "/" + menu.matches();
+            graphics.text(font, counter, ModularLayout.RESULT_X + 8 - font.width(counter) / 2, ModularLayout.RESULT_Y - 15, TEXT, false);
+        }
     }
 
     @Override

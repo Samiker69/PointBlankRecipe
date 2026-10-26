@@ -12,18 +12,6 @@
       "item": "pointblank_recipe:sniperriflebillettrauma"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_nugget"
-    },
-    {
-      "item": "minecraft:iron_ingot"
-    },
-    {
-      "tag": "minecraft:planks",
-      "count": 2
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:vetterlivitalim187087"

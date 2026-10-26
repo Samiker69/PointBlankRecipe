@@ -16,52 +16,42 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import xyz.samiker.pointblank_recipe.PointblankRecipe;
 import xyz.samiker.pointblank_recipe.block.ModBlocks;
+import xyz.samiker.pointblank_recipe.modular.ModularLayout;
 import xyz.samiker.pointblank_recipe.modular.ModularRecipe;
 import xyz.samiker.pointblank_recipe.modular.ModularTemplate;
 import xyz.samiker.pointblank_recipe.resource.ModularRecipeLoader;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
- * Parts grid (slots of the selected template) + materials grid; every recipe the contents match is listed in the
- * result slots, the player takes the one they want. Matching only runs on the server, results reach the client
- * through normal slot sync.
+ * One slot per part of the selected template, placed like on a gun, and one result slot. When several guns use the
+ * same parts the player flips through them with arrows. Matching only runs on the server, the result reaches the
+ * client through normal slot sync.
  */
 public class ModularWorkbenchMenu extends AbstractContainerMenu {
-    public static final int GRID_SIZE = 9;
-    public static final int RESULTS_PER_PAGE = 6;
-
-    public static final int PARTS_X = 8;
-    public static final int MATERIALS_X = 70;
-    public static final int RESULTS_X = 134;
-    public static final int GRID_Y = 30;
-    public static final int INVENTORY_Y = 108;
-
     public static final int BUTTON_PREVIOUS_TEMPLATE = 0;
     public static final int BUTTON_NEXT_TEMPLATE = 1;
-    public static final int BUTTON_PREVIOUS_PAGE = 2;
-    public static final int BUTTON_NEXT_PAGE = 3;
+    public static final int BUTTON_PREVIOUS_RESULT = 2;
+    public static final int BUTTON_NEXT_RESULT = 3;
 
     private static final int DATA_TEMPLATE = 0;
-    private static final int DATA_PAGE = 1;
-    private static final int DATA_PAGE_COUNT = 2;
+    private static final int DATA_SELECTED = 1;
+    private static final int DATA_MATCHES = 2;
 
-    private static final int MATERIALS_START = GRID_SIZE;
-    private static final int RESULTS_START = MATERIALS_START + GRID_SIZE;
-    private static final int INVENTORY_START = RESULTS_START + RESULTS_PER_PAGE;
+    private static final int PART_COUNT = ModularLayout.SLOTS.size();
+    private static final int RESULT_INDEX = PART_COUNT;
+    private static final int INVENTORY_START = RESULT_INDEX + 1;
     private static final int INVENTORY_END = INVENTORY_START + 36;
 
     private final ContainerLevelAccess access;
     private final Player player;
-    private final SimpleContainer parts = new SimpleContainer(GRID_SIZE);
-    private final SimpleContainer materials = new SimpleContainer(GRID_SIZE);
-    private final SimpleContainer results = new SimpleContainer(RESULTS_PER_PAGE);
+    private final SimpleContainer parts = new SimpleContainer(PART_COUNT);
+    private final SimpleContainer result = new SimpleContainer(1);
     private final ContainerData data = new SimpleContainerData(3);
-    private final List<ModularRecipe> shownRecipes = new ArrayList<>();
+    private ModularRecipe shownRecipe;
 
     public ModularWorkbenchMenu(int containerId, Inventory playerInventory) {
         this(containerId, playerInventory, ContainerLevelAccess.NULL);
@@ -71,41 +61,37 @@ public class ModularWorkbenchMenu extends AbstractContainerMenu {
         super(ModBlocks.MODULAR_WORKBENCH_MENU, containerId);
         this.access = access;
         this.player = playerInventory.player;
-        data.set(DATA_PAGE_COUNT, 1);
 
-        for (int i = 0; i < GRID_SIZE; i++) {
-            addSlot(new PartSlot(i, PARTS_X + i % 3 * 18, GRID_Y + i / 3 * 18));
+        for (int i = 0; i < PART_COUNT; i++) {
+            int[] position = ModularLayout.slotPosition(ModularLayout.SLOTS.get(i));
+            addSlot(new PartSlot(i, position[0], position[1]));
         }
-        for (int i = 0; i < GRID_SIZE; i++) {
-            addSlot(new Slot(materials, i, MATERIALS_X + i % 3 * 18, GRID_Y + i / 3 * 18));
-        }
-        for (int i = 0; i < RESULTS_PER_PAGE; i++) {
-            addSlot(new ResultSlot(i, RESULTS_X + i % 2 * 18, GRID_Y + i / 2 * 18));
-        }
+        addSlot(new ResultSlot(ModularLayout.RESULT_X, ModularLayout.RESULT_Y));
         for (int row = 0; row < 3; row++) {
             for (int column = 0; column < 9; column++) {
-                addSlot(new Slot(playerInventory, column + row * 9 + 9, 8 + column * 18, INVENTORY_Y + row * 18));
+                addSlot(new Slot(playerInventory, column + row * 9 + 9, 8 + column * 18, ModularLayout.INVENTORY_Y + row * 18));
             }
         }
         for (int column = 0; column < 9; column++) {
-            addSlot(new Slot(playerInventory, column, 8 + column * 18, INVENTORY_Y + 58));
+            addSlot(new Slot(playerInventory, column, 8 + column * 18, ModularLayout.INVENTORY_Y + 58));
         }
 
         addDataSlots(data);
         parts.addListener(this::slotsChanged);
-        materials.addListener(this::slotsChanged);
     }
 
     public ModularTemplate template() {
         return ModularTemplate.byIndex(data.get(DATA_TEMPLATE));
     }
 
-    public int page() {
-        return data.get(DATA_PAGE);
+    /** Which of the matching guns is shown, 0-based. */
+    public int selected() {
+        return data.get(DATA_SELECTED);
     }
 
-    public int pageCount() {
-        return data.get(DATA_PAGE_COUNT);
+    /** How many guns the parts in the slots can make. */
+    public int matches() {
+        return data.get(DATA_MATCHES);
     }
 
     @Override
@@ -116,7 +102,7 @@ public class ModularWorkbenchMenu extends AbstractContainerMenu {
     @Override
     public void slotsChanged(Container container) {
         if (!player.level().isClientSide()) {
-            updateResults();
+            updateResult();
         }
         super.slotsChanged(container);
     }
@@ -129,89 +115,67 @@ public class ModularWorkbenchMenu extends AbstractContainerMenu {
                 clearContainer(player, parts);
                 int step = id == BUTTON_NEXT_TEMPLATE ? 1 : -1;
                 data.set(DATA_TEMPLATE, Math.floorMod(data.get(DATA_TEMPLATE) + step, ModularTemplate.ALL.size()));
-                data.set(DATA_PAGE, 0);
+                data.set(DATA_SELECTED, 0);
             }
-            case BUTTON_PREVIOUS_PAGE -> data.set(DATA_PAGE, Math.max(0, page() - 1));
-            case BUTTON_NEXT_PAGE -> data.set(DATA_PAGE, Math.min(pageCount() - 1, page() + 1));
+            case BUTTON_PREVIOUS_RESULT, BUTTON_NEXT_RESULT -> {
+                if (matches() > 0) {
+                    int step = id == BUTTON_NEXT_RESULT ? 1 : -1;
+                    data.set(DATA_SELECTED, Math.floorMod(selected() + step, matches()));
+                }
+            }
             default -> {
                 return false;
             }
         }
-        updateResults();
+        updateResult();
         return true;
     }
 
-    private void updateResults() {
+    private List<ModularRecipe> matchingRecipes() {
         ModularTemplate template = template();
         Map<String, ModularRecipe.Stack> slots = slotStacks(template);
-        List<ModularRecipe.Stack> grid = gridStacks();
-
-        List<ModularRecipe> matching = ModularRecipeLoader.recipes().stream()
-                .filter(recipe -> recipe.template().equals(template.name()) && recipe.match(slots, grid) != null)
+        return ModularRecipeLoader.recipes().stream()
+                .filter(recipe -> recipe.template().equals(template.name()) && recipe.match(slots, List.of()) != null)
                 .sorted(Comparator.comparing(ModularRecipe::resultItem))
                 .toList();
+    }
 
-        int pageCount = Math.max(1, (matching.size() + RESULTS_PER_PAGE - 1) / RESULTS_PER_PAGE);
-        int page = Math.min(page(), pageCount - 1);
-        data.set(DATA_PAGE_COUNT, pageCount);
-        data.set(DATA_PAGE, page);
+    private void updateResult() {
+        List<ModularRecipe> matching = matchingRecipes();
+        int selected = matching.isEmpty() ? 0 : Math.min(selected(), matching.size() - 1);
+        data.set(DATA_MATCHES, matching.size());
+        data.set(DATA_SELECTED, selected);
 
-        shownRecipes.clear();
-        for (int i = 0; i < RESULTS_PER_PAGE; i++) {
-            int index = page * RESULTS_PER_PAGE + i;
-            if (index < matching.size()) {
-                ModularRecipe recipe = matching.get(index);
-                shownRecipes.add(recipe);
-                results.setItem(i, new ItemStack(BuiltInRegistries.ITEM.getValue(Identifier.parse(recipe.resultItem())), recipe.resultCount()));
-            } else {
-                shownRecipes.add(null);
-                results.setItem(i, ItemStack.EMPTY);
-            }
-        }
+        shownRecipe = matching.isEmpty() ? null : matching.get(selected);
+        result.setItem(0, shownRecipe == null
+                ? ItemStack.EMPTY
+                : new ItemStack(BuiltInRegistries.ITEM.getValue(Identifier.parse(shownRecipe.resultItem())), shownRecipe.resultCount()));
     }
 
     private Map<String, ModularRecipe.Stack> slotStacks(ModularTemplate template) {
         Map<String, ModularRecipe.Stack> slots = new LinkedHashMap<>();
-        for (int i = 0; i < template.slots().size(); i++) {
-            slots.put(template.slotAt(i), new StackView(parts.getItem(i)));
+        for (String slot : template.slots()) {
+            slots.put(slot, new StackView(parts.getItem(ModularLayout.SLOTS.indexOf(slot))));
         }
         return slots;
     }
 
-    private List<ModularRecipe.Stack> gridStacks() {
-        List<ModularRecipe.Stack> grid = new ArrayList<>();
-        for (int i = 0; i < GRID_SIZE; i++) {
-            grid.add(new StackView(materials.getItem(i)));
-        }
-        return grid;
+    private boolean resultStillMatches() {
+        return shownRecipe != null && shownRecipe.match(slotStacks(template()), List.of()) != null;
     }
 
-    private boolean matches(int resultIndex) {
-        ModularRecipe recipe = resultIndex < shownRecipes.size() ? shownRecipes.get(resultIndex) : null;
-        return recipe != null && recipe.match(slotStacks(template()), gridStacks()) != null;
-    }
-
-    /** Takes the ingredients of the recipe shown in a result slot; false if the contents no longer match. */
-    private boolean consume(int resultIndex) {
-        ModularRecipe recipe = resultIndex < shownRecipes.size() ? shownRecipes.get(resultIndex) : null;
-        if (recipe == null) {
+    /** Takes the parts of the shown recipe; false if the slots no longer match it. */
+    private boolean consume() {
+        if (!resultStillMatches()) {
             return false;
         }
-        ModularTemplate template = template();
-        Map<String, ModularRecipe.Stack> slots = slotStacks(template);
-        int[] taken = recipe.match(slots, gridStacks());
-        if (taken == null) {
-            return false;
-        }
-        for (int i = 0; i < template.slots().size(); i++) {
-            int count = recipe.partCount(template.slotAt(i), slots.get(template.slotAt(i)));
+        // Taking parts re-runs the matching and replaces shownRecipe, so keep the recipe being crafted.
+        ModularRecipe recipe = shownRecipe;
+        Map<String, ModularRecipe.Stack> slots = slotStacks(template());
+        for (Map.Entry<String, ModularRecipe.Stack> slot : slots.entrySet()) {
+            int count = recipe.partCount(slot.getKey(), slot.getValue());
             if (count > 0) {
-                parts.removeItem(i, count);
-            }
-        }
-        for (int i = 0; i < GRID_SIZE; i++) {
-            if (taken[i] > 0) {
-                materials.removeItem(i, taken[i]);
+                parts.removeItem(ModularLayout.SLOTS.indexOf(slot.getKey()), count);
             }
         }
         return true;
@@ -226,16 +190,16 @@ public class ModularWorkbenchMenu extends AbstractContainerMenu {
         ItemStack stack = slot.getItem();
         ItemStack original = stack.copy();
 
-        if (index >= RESULTS_START && index < INVENTORY_START) {
+        if (index == RESULT_INDEX) {
             if (!moveItemStackTo(stack, INVENTORY_START, INVENTORY_END, true)) {
                 return ItemStack.EMPTY;
             }
             slot.onQuickCraft(stack, original);
-        } else if (index < RESULTS_START) {
+        } else if (index < RESULT_INDEX) {
             if (!moveItemStackTo(stack, INVENTORY_START, INVENTORY_END, false)) {
                 return ItemStack.EMPTY;
             }
-        } else if (!moveItemStackTo(stack, 0, MATERIALS_START, false) && !moveItemStackTo(stack, MATERIALS_START, RESULTS_START, false)) {
+        } else if (!moveItemStackTo(stack, 0, RESULT_INDEX, false)) {
             return ItemStack.EMPTY;
         }
 
@@ -254,10 +218,7 @@ public class ModularWorkbenchMenu extends AbstractContainerMenu {
     @Override
     public void removed(Player player) {
         super.removed(player);
-        access.execute((level, pos) -> {
-            clearContainer(player, parts);
-            clearContainer(player, materials);
-        });
+        access.execute((level, pos) -> clearContainer(player, parts));
     }
 
     private class PartSlot extends Slot {
@@ -266,30 +227,29 @@ public class ModularWorkbenchMenu extends AbstractContainerMenu {
         }
 
         public String slotName() {
-            return template().slotAt(getContainerSlot());
+            return ModularLayout.SLOTS.get(getContainerSlot());
         }
 
         @Override
         public boolean isActive() {
-            return slotName() != null;
+            return template().has(slotName());
         }
 
         @Override
         public boolean mayPlace(ItemStack stack) {
-            String name = slotName();
-            if (name == null) {
+            if (!isActive()) {
                 return false;
             }
-            if (name.equals(ModularTemplate.BASE_SLOT)) {
+            if (slotName().equals(ModularTemplate.BASE_SLOT)) {
                 return true;
             }
-            return stack.is(TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(PointblankRecipe.MOD_ID, "parts/" + name)));
+            return stack.is(TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(PointblankRecipe.MOD_ID, "parts/" + slotName())));
         }
     }
 
     private class ResultSlot extends Slot {
-        ResultSlot(int index, int x, int y) {
-            super(results, index, x, y);
+        ResultSlot(int x, int y) {
+            super(result, 0, x, y);
         }
 
         @Override
@@ -300,13 +260,13 @@ public class ModularWorkbenchMenu extends AbstractContainerMenu {
         // The server re-checks the recipe, so a stale result can never be taken for free.
         @Override
         public boolean mayPickup(Player player) {
-            return player.level().isClientSide() || matches(getContainerSlot());
+            return player.level().isClientSide() || resultStillMatches();
         }
 
         @Override
         public void onTake(Player player, ItemStack stack) {
             if (!player.level().isClientSide()) {
-                consume(getContainerSlot());
+                consume();
             }
             super.onTake(player, stack);
         }

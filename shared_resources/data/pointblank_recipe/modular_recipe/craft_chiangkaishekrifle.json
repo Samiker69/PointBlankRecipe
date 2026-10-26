@@ -12,20 +12,6 @@
       "item": "pointblank_recipe:frameofsniperifle"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_ingot"
-    },
-    {
-      "item": "minecraft:iron_nugget"
-    },
-    {
-      "tag": "minecraft:planks"
-    },
-    {
-      "tag": "minecraft:logs"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:chiangkaishekrifle"

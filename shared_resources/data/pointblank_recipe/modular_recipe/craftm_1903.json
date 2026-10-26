@@ -15,14 +15,6 @@
       "item": "pointblank_recipe:sniperriflebillettrauma"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_ingot"
-    },
-    {
-      "tag": "minecraft:planks"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:m1903"

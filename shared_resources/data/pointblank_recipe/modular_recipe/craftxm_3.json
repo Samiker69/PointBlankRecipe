@@ -18,12 +18,6 @@
       "item": "pointblank_recipe:frameofsniperifle"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_ingot",
-      "count": 2
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:xm3"

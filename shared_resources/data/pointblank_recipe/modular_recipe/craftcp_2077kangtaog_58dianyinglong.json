@@ -21,11 +21,6 @@
       "item": "pointblank_recipe:handleofsubmachinegun"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_nugget"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:cp2077_kang_tao_g58_dian_yinglong"

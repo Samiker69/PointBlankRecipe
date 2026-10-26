@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Prototype: convert every weapon and component recipe into the draft modular format and check nothing is lost.
+"""Convert every weapon recipe into a modular recipe: the parts go into the slots of a weapon template.
 
 Usage: python3 tools/recipe_index.py && python3 tools/modular_draft.py
-Writes docs/modular-crafting/draft-preview.json and one file per weapon into
-shared_resources/data/pointblank_recipe/modular_recipe/ (same file name as the source recipe).
-Copper nugget recipes are skipped: they turn ingots into a raw material, not a weapon part.
+Writes docs/modular-crafting/draft-preview.json, one file per weapon into
+shared_resources/data/pointblank_recipe/modular_recipe/ (same file name as the source recipe) and the list of those
+files into shared_resources/assets/pointblank_recipe/modular_recipe_index.json.
+Raw materials (iron, planks, ...) are left out: the workbench only takes finished parts, and parts themselves
+are still crafted from blanks and materials in the regular crafting table.
 """
 import json
 from collections import Counter, defaultdict
@@ -13,6 +15,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "docs/modular-crafting"
 MODULAR_RECIPES = ROOT / "shared_resources/data/pointblank_recipe/modular_recipe"
+# Clients on a dedicated server read the recipes bundled in the jar (for JEI), listed here.
+RECIPE_INDEX = ROOT / "shared_resources/assets/pointblank_recipe/modular_recipe_index.json"
 
 FRAME_TEMPLATES = {
     "theframeofthegun": "pistol",
@@ -39,8 +43,7 @@ NO_FRAME_TEMPLATES = {"pointblank:gatling": "unique", "pointblank:hellriegel": "
 def convert(recipe, components):
     parts, materials, base = defaultdict(list), [], None
     for ingredient, count in recipe["ingredients"].items():
-        # Components have no slots: everything they are made of, including other components, is a material.
-        category = None if recipe["kind"] == "component" else components.get(ingredient, {}).get("category")
+        category = components.get(ingredient, {}).get("category")
         entry = {"tag": ingredient[1:]} if ingredient.startswith("#") else {"item": ingredient}
         if count > 1:
             entry["count"] = count
@@ -51,9 +54,7 @@ def convert(recipe, components):
         else:
             materials.append(entry)
 
-    if recipe["kind"] == "component":
-        template = "component"
-    elif base:
+    if base:
         template = "upgrade"
     elif "frame" in parts:
         frame = parts["frame"][0]["item"].split(":", 1)[1]
@@ -75,14 +76,13 @@ def convert(recipe, components):
         if len(entries) > 1:
             raise SystemExit(f"{recipe['file']}: several different {category} parts, they do not fit one slot")
     draft["parts"] = {category: entries[0] for category, entries in parts.items()}
-    draft["materials"] = materials
     draft["result"] = {"count": recipe["count"], "id": recipe["result"]}
-    return draft
+    return draft, materials
 
 
 def flatten(draft):
-    """Back to {ingredient: count}, to prove the conversion is lossless."""
-    entries = list(draft["materials"]) + ([draft["base"]] if "base" in draft else [])
+    """Back to {ingredient: count}, to prove only the materials were left out."""
+    entries = [draft["base"]] if "base" in draft else []
     for value in draft["parts"].values():
         entries += value if isinstance(value, list) else [value]
     return {("#" + e["tag"]) if "tag" in e else e["item"]: e.get("count", 1) for e in entries}
@@ -94,15 +94,17 @@ def main():
     # Used by four recipes but has no recipe of its own, so recipe_index.py does not list it.
     components["pointblank_recipe:rifleflamearrester"] = {"category": "muzzle_device"}
 
-    weapons = [
-        r for r in index["recipes"]
-        if r["kind"] == "weapon" or (r["kind"] == "component" and components[r["result"]]["category"] != "material")
-    ]
-    drafts, lossy = {}, []
+    weapons = [r for r in index["recipes"] if r["kind"] == "weapon"]
+    drafts, lossy, empty = {}, [], []
     slots = defaultdict(lambda: {"count": 0, "seen": Counter()})
     for recipe in weapons:
-        draft = convert(recipe, components)
-        if flatten(draft) != recipe["ingredients"]:
+        draft, materials = convert(recipe, components)
+        if not draft["parts"]:
+            # Nothing left to put into the workbench (ventil only has a misspelled frame id).
+            empty.append(recipe["file"])
+            continue
+        dropped = {("#" + e["tag"]) if "tag" in e else e["item"] for e in materials}
+        if flatten(draft) != {k: v for k, v in recipe["ingredients"].items() if k not in dropped}:
             lossy.append(recipe["file"])
         drafts[recipe["file"]] = draft
         stats = slots[draft["template"]]
@@ -119,9 +121,12 @@ def main():
     }
     (OUT / "draft-preview.json").write_text(json.dumps({"templates": templates, "recipes": drafts}, indent=2) + "\n")
     MODULAR_RECIPES.mkdir(parents=True, exist_ok=True)
+    for old in MODULAR_RECIPES.glob("*.json"):
+        old.unlink()
     for name, draft in drafts.items():
         (MODULAR_RECIPES / name).write_text(json.dumps(draft, indent=2) + "\n")
-    print(f"converted {len(drafts)}/{len(weapons)} recipes, lossy: {lossy or 'none'}")
+    RECIPE_INDEX.write_text(json.dumps(sorted(drafts), indent=2) + "\n")
+    print(f"converted {len(drafts)}/{len(weapons)} weapon recipes, lossy: {lossy or 'none'}, skipped without parts: {empty or 'none'}")
     for name, t in templates.items():
         print(f"  {name:<28} {t['recipes']:>3}  required={t['required']}  optional={t['optional']}")
 

@@ -18,11 +18,6 @@
       "item": "pointblank_recipe:gunmagazine"
     }
   },
-  "materials": [
-    {
-      "tag": "minecraft:logs"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:cp2077_malorian_arms_3516"

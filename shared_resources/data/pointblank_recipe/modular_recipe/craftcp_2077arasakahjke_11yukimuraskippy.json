@@ -18,14 +18,6 @@
       "item": "pointblank_recipe:riflemagazine"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_ingot"
-    },
-    {
-      "item": "minecraft:yellow_dye"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:cp2077_arasaka_hjke11_yukimura_skippy"

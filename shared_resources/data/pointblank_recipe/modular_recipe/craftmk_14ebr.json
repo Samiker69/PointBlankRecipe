@@ -21,11 +21,6 @@
       "item": "pointblank_recipe:magazineformachinegun"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_ingot"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:mk14ebr"

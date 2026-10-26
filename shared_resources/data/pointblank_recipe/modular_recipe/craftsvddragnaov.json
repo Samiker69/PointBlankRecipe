@@ -21,11 +21,6 @@
       "item": "pointblank_recipe:riflemagazine"
     }
   },
-  "materials": [
-    {
-      "tag": "minecraft:logs"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:svd_dragnaov"

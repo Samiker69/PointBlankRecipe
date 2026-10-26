@@ -21,14 +21,6 @@
       "item": "pointblank_recipe:shotgunreloader"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_nugget"
-    },
-    {
-      "item": "minecraft:iron_ingot"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:aa12"

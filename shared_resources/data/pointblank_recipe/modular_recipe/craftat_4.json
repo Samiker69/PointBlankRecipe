@@ -12,16 +12,6 @@
       "item": "pointblank_recipe:frameofat4"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:diamond",
-      "count": 2
-    },
-    {
-      "item": "minecraft:iron_nugget",
-      "count": 2
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:at4"

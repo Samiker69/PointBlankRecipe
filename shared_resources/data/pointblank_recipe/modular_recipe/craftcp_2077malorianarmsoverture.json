@@ -15,11 +15,6 @@
       "item": "pointblank_recipe:theframeofthegun"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_ingot"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:cp2077_malorian_arms_overture"

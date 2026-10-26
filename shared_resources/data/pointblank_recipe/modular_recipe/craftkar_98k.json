@@ -15,14 +15,6 @@
       "item": "pointblank_recipe:theriflebutt"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_ingot"
-    },
-    {
-      "item": "minecraft:iron_nugget"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:kar98k"

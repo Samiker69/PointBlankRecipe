@@ -21,11 +21,6 @@
       "item": "pointblank_recipe:ironbutt"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:lime_dye"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:ak15x"

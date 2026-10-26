@@ -12,18 +12,6 @@
       "item": "pointblank_recipe:frameofashot"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_ingot"
-    },
-    {
-      "item": "minecraft:iron_nugget",
-      "count": 2
-    },
-    {
-      "tag": "minecraft:logs"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:revolver"

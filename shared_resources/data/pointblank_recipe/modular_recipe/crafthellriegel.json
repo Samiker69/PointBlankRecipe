@@ -18,14 +18,6 @@
       "item": "pointblank_recipe:theriflebutt"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "item": "minecraft:oak_wood"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:hellriegel"

@@ -21,11 +21,6 @@
       "item": "pointblank_recipe:shotgunreloader"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:oak_planks"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:citoricxs"

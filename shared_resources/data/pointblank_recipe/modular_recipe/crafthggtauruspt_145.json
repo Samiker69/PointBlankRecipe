@@ -15,11 +15,6 @@
       "item": "pointblank_recipe:gunmagazine"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_nugget"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:hgg_taurus_pt145"

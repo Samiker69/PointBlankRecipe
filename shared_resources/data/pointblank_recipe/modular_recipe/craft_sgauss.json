@@ -24,12 +24,6 @@
       "item": "pointblank_recipe:magazineformachinegun"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:redstone_block",
-      "count": 2
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:s_gauss"

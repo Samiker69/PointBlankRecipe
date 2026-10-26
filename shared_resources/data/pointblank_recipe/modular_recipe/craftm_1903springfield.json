@@ -18,14 +18,6 @@
       "item": "pointblank_recipe:frameofsniperifle"
     }
   },
-  "materials": [
-    {
-      "tag": "minecraft:planks"
-    },
-    {
-      "tag": "minecraft:logs"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:m1903_springfield"

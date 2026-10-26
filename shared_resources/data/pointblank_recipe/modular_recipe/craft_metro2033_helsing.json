@@ -15,15 +15,6 @@
       "item": "pointblank_recipe:frameofhelsing"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_nugget",
-      "count": 2
-    },
-    {
-      "item": "minecraft:iron_block"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:helsing"

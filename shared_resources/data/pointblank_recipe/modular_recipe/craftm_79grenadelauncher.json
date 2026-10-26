@@ -12,17 +12,6 @@
       "item": "pointblank_recipe:m79"
     }
   },
-  "materials": [
-    {
-      "tag": "minecraft:planks"
-    },
-    {
-      "item": "minecraft:iron_nugget"
-    },
-    {
-      "item": "minecraft:iron_ingot"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:m79_grenade_launcher"

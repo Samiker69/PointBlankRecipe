@@ -21,11 +21,6 @@
       "item": "pointblank_recipe:buttofshotggun"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_block"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:rpk16x"

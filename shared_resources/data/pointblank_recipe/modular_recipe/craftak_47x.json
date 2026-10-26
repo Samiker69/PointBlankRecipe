@@ -21,11 +21,6 @@
       "item": "pointblank_recipe:theriflebutt"
     }
   },
-  "materials": [
-    {
-      "tag": "minecraft:logs"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:ak47x"

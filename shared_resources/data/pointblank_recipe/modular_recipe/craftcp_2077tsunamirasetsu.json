@@ -19,12 +19,6 @@
       "item": "pointblank_recipe:framecyberpunkenergygun"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_block",
-      "count": 2
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:cp2077_tsunami_rasetsu"

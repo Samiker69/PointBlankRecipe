@@ -21,14 +21,6 @@
       "item": "pointblank_recipe:ironbutt"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_nugget"
-    },
-    {
-      "item": "minecraft:iron_ingot"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:s_svd"

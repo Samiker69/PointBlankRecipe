@@ -21,11 +21,6 @@
       "item": "pointblank_recipe:ironbutt"
     }
   },
-  "materials": [
-    {
-      "tag": "minecraft:planks"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:ak74x"

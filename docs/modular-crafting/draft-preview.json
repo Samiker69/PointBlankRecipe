@@ -1,10 +1,5 @@
 {
   "templates": {
-    "pointblank_recipe:component": {
-      "recipes": 61,
-      "required": [],
-      "optional": []
-    },
     "pointblank_recipe:cyberpunk": {
       "recipes": 8,
       "required": [
@@ -111,7 +106,7 @@
       ]
     },
     "pointblank_recipe:unique": {
-      "recipes": 14,
+      "recipes": 13,
       "required": [],
       "optional": [
         "barrel",
@@ -148,11 +143,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:hkusp45"
@@ -178,14 +168,6 @@
           "item": "pointblank_recipe:magazineformachinegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_block"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:ar57"
@@ -205,77 +187,9 @@
           "item": "pointblank_recipe:frameofsniperifle"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "tag": "minecraft:planks"
-        },
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:chiangkaishekrifle"
-      }
-    },
-    "craft_collimator_scope.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "handguns_galore"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 4
-        },
-        {
-          "item": "minecraft:glass"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:collimatorscope"
-      }
-    },
-    "craft_cp_eg.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_block"
-        },
-        {
-          "item": "pointblank_recipe:energycube"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:diamond_block",
-          "count": 2
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:framecyberpunkenergygun"
       }
     },
     "craft_deserteagle.json": {
@@ -298,389 +212,9 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:deserteagle"
-      }
-    },
-    "craft_energycube.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "cyberpunk"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:diamond",
-          "count": 4
-        },
-        {
-          "item": "minecraft:redstone",
-          "count": 2
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        },
-        {
-          "item": "minecraft:comparator"
-        }
-      ],
-      "result": {
-        "count": 2,
-        "id": "pointblank_recipe:energycube"
-      }
-    },
-    "craft_frame_of_abzats.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "metro"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "pointblank_recipe:thebarreloftherifle"
-        },
-        {
-          "tag": "minecraft:planks"
-        },
-        {
-          "tag": "minecraft:logs"
-        },
-        {
-          "item": "minecraft:iron_block",
-          "count": 3
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameofabzats"
-      }
-    },
-    "craft_frame_of_ashot.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "metro"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        },
-        {
-          "item": "minecraft:iron_block"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameofashot"
-      }
-    },
-    "craft_frame_of_bigun.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "metro"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 5
-        },
-        {
-          "item": "minecraft:iron_block"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameofbigun"
-      }
-    },
-    "craft_frame_of_helsing.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "metro"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_block"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameofhelsing"
-      }
-    },
-    "craft_frame_of_medved.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "metro"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 3
-        },
-        {
-          "item": "minecraft:iron_block"
-        },
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameofmedved"
-      }
-    },
-    "craft_frame_of_preved.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "metro"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "pointblank_recipe:thebarreloftherifle"
-        },
-        {
-          "item": "minecraft:iron_block"
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameofpreved"
-      }
-    },
-    "craft_frame_of_tikar.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "metro"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_block"
-        },
-        {
-          "tag": "minecraft:planks"
-        },
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameoftikar"
-      }
-    },
-    "craft_frame_of_uboinik.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "metro"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_block"
-        },
-        {
-          "item": "pointblank_recipe:sniperrifleloadingmechanism"
-        },
-        {
-          "item": "pointblank_recipe:theframeofthegun"
-        },
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameofuboinik"
-      }
-    },
-    "craft_frame_of_ventil.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "pointblank_recipe:muzzleofsniperrifle"
-        },
-        {
-          "item": "minecraft:iron_block"
-        },
-        {
-          "tag": "minecraft:logs"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameofventil"
-      }
-    },
-    "craft_frame_of_vsv.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "metro"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "tag": "minecraft:logs"
-        },
-        {
-          "item": "minecraft:iron_block"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "pointblank_recipe:buttofshotggun"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameofvsv"
-      }
-    },
-    "craft_frame_p_90.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        },
-        {
-          "tag": "minecraft:planks"
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 3
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:framep90"
-      }
-    },
-    "craft_frame_rpg.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "stalker"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_block",
-          "count": 2
-        },
-        {
-          "tag": "minecraft:logs"
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        },
-        {
-          "item": "pointblank_recipe:triggermechanism"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:framerpg"
       }
     },
     "craft_g3.json": {
@@ -706,11 +240,6 @@
           "item": "pointblank_recipe:ironbutt"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:g3"
@@ -730,18 +259,6 @@
           "item": "pointblank_recipe:frameofsniperifle"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "tag": "minecraft:planks",
-          "count": 2
-        },
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:generalliurifle"
@@ -764,66 +281,9 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:glock18"
-      }
-    },
-    "craft_horizontal_gun_magazine.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "metro"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 6
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:horizontalgunmagazine"
-      }
-    },
-    "craft_m_79.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "taiwan"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "tag": "minecraft:logs",
-          "count": 3
-        },
-        {
-          "tag": "minecraft:planks"
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 3
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:m79"
       }
     },
     "craft_metro2033_2012.json": {
@@ -843,14 +303,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_block"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:2012"
@@ -876,12 +328,6 @@
           "item": "pointblank_recipe:buttump"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:aksu"
@@ -904,11 +350,6 @@
           "item": "pointblank_recipe:frameofashot"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:ashot"
@@ -931,12 +372,6 @@
           "item": "pointblank_recipe:buttofsubmachinegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:bigun"
@@ -959,11 +394,6 @@
           "item": "pointblank_recipe:theframeofthegun"
         }
       },
-      "materials": [
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:duplet"
@@ -986,15 +416,6 @@
           "item": "pointblank_recipe:frameofhelsing"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        },
-        {
-          "item": "minecraft:iron_block"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:helsing"
@@ -1020,15 +441,6 @@
           "item": "pointblank_recipe:ironbutt"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:kalash"
@@ -1054,11 +466,6 @@
           "item": "pointblank_recipe:frameofashot"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:lolife"
@@ -1078,15 +485,6 @@
           "item": "pointblank_recipe:frameofpreved"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        },
-        {
-          "item": "minecraft:iron_block"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:preved"
@@ -1106,18 +504,6 @@
           "item": "pointblank_recipe:frameofashot"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        },
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:revolver"
@@ -1146,14 +532,6 @@
           "item": "pointblank_recipe:theriflebutt"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "tag": "minecraft:planks"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointbank:rpk"
@@ -1182,14 +560,6 @@
           "item": "pointblank_recipe:buttofshotggun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:saiga"
@@ -1212,45 +582,9 @@
           "item": "pointblank_recipe:frameoftikar"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_block"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:tikar"
-      }
-    },
-    "craft_metro2033_ventil.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "metro"
-        }
-      ],
-      "template": "pointblank_recipe:unique",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        },
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        },
-        {
-          "item": "pointblank_recipe:frame_of_ventil"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank:ventil"
       }
     },
     "craft_metro_2033_abzats.json": {
@@ -1270,14 +604,6 @@
           "item": "pointblank_recipe:magazineformachinegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:abzats"
@@ -1303,11 +629,6 @@
           "item": "pointblank_recipe:magazineformachinegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_block"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:gatling"
@@ -1327,18 +648,6 @@
           "item": "pointblank_recipe:frameofmedved"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        },
-        {
-          "tag": "minecraft:planks"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:medved"
@@ -1361,12 +670,6 @@
           "item": "pointblank_recipe:theframeofthegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:stallion"
@@ -1389,15 +692,6 @@
           "item": "pointblank_recipe:theriflebutt"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:uboinik"
@@ -1420,50 +714,9 @@
           "item": "pointblank_recipe:frameofvsv"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_block"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:vsv"
-      }
-    },
-    "craft_metro_2033frame_of_2012.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "metro"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "pointblank_recipe:thebarreloftherifle"
-        },
-        {
-          "item": "minecraft:iron_block",
-          "count": 2
-        },
-        {
-          "tag": "minecraft:planks"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameof2012"
       }
     },
     "craft_p_90.json": {
@@ -1486,11 +739,6 @@
           "item": "pointblank_recipe:framep90"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:p90"
@@ -1519,11 +767,6 @@
           "item": "pointblank_recipe:buttform4a1type"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:ro635"
@@ -1546,12 +789,6 @@
           "item": "pointblank_recipe:handlerifle"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_rpg"
@@ -1580,11 +817,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_abakan"
@@ -1613,11 +845,6 @@
           "item": "pointblank_recipe:ironbutt"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_akm"
@@ -1646,12 +873,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_aksu"
@@ -1683,7 +904,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [],
       "result": {
         "count": 1,
         "id": "pointblank:s_as_val"
@@ -1709,12 +929,6 @@
           "item": "pointblank_recipe:magazineofsubmachinegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_f2000"
@@ -1737,11 +951,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_fora"
@@ -1773,12 +982,6 @@
           "item": "pointblank_recipe:magazineformachinegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:redstone_block",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_gauss"
@@ -1804,41 +1007,9 @@
           "item": "pointblank_recipe:frameoftherifle"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_groza"
-      }
-    },
-    "craft_shotgun_reloaderup.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "stalker"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 4
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:shotgunreloaderbrum"
       }
     },
     "craft_sil_86.json": {
@@ -1861,14 +1032,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_il86"
@@ -1891,73 +1054,9 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_kora919"
-      }
-    },
-    "craft_sniper_rifle_billet.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "trauma"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "tag": "minecraft:planks",
-          "count": 2
-        },
-        {
-          "item": "minecraft:iron_block"
-        },
-        {
-          "tag": "minecraft:logs",
-          "count": 2
-        },
-        {
-          "item": "pointblank_recipe:theriflebutt"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:sniperriflebillettrauma"
-      }
-    },
-    "craft_sniper_rifle_loading_mechanism.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "trauma"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 4
-        },
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        }
-      ],
-      "result": {
-        "count": 2,
-        "id": "pointblank_recipe:sniperrifleloadingmechanism"
       }
     },
     "craft_sobrez.json": {
@@ -1974,14 +1073,6 @@
           "item": "pointblank_recipe:frameofobrez"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_obrez"
@@ -2007,11 +1098,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_pb"
@@ -2040,11 +1126,6 @@
           "item": "pointblank_recipe:magazineformachinegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_pkm"
@@ -2067,11 +1148,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_pm"
@@ -2100,7 +1176,6 @@
           "item": "pointblank_recipe:buttofsubmachinegun"
         }
       },
-      "materials": [],
       "result": {
         "count": 1,
         "id": "pointblank:s_protecta"
@@ -2129,11 +1204,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_sgi"
@@ -2162,14 +1232,6 @@
           "item": "pointblank_recipe:ironbutt"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_svd"
@@ -2192,11 +1254,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_usp"
@@ -2225,11 +1282,6 @@
           "item": "pointblank_recipe:buttofshotggun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_vss"
@@ -2255,38 +1307,9 @@
           "item": "pointblank_recipe:shotgunreloader"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_win1300"
-      }
-    },
-    "craft_thebasisforrocket.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 4
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:basisfortherocket"
       }
     },
     "craft_tpc.json": {
@@ -2312,11 +1335,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:s_lr300"
@@ -2345,38 +1363,9 @@
           "item": "pointblank_recipe:buttforvector"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:vector"
-      }
-    },
-    "craft_vector_butt.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 3
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:buttforvector"
       }
     },
     "craft_vetterlivitalim_187087.json": {
@@ -2393,18 +1382,6 @@
           "item": "pointblank_recipe:sniperriflebillettrauma"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "tag": "minecraft:planks",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:vetterlivitalim187087"
@@ -2424,17 +1401,6 @@
           "item": "pointblank_recipe:sniperriflebillettrauma"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "tag": "minecraft:planks"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:werdl"
@@ -2463,14 +1429,6 @@
           "item": "pointblank_recipe:shotgunreloader"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:aa12"
@@ -2502,7 +1460,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [],
       "result": {
         "count": 1,
         "id": "pointblank:ak12"
@@ -2534,11 +1491,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "tag": "minecraft:planks"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:ak12x"
@@ -2567,11 +1519,6 @@
           "item": "pointblank_recipe:ironbutt"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:lime_dye"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:ak15x"
@@ -2603,11 +1550,6 @@
           "item": "pointblank_recipe:ironbutt"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:ak22"
@@ -2636,11 +1578,6 @@
           "item": "pointblank_recipe:theriflebutt"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:ak47"
@@ -2669,11 +1606,6 @@
           "item": "pointblank_recipe:theriflebutt"
         }
       },
-      "materials": [
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:ak47x"
@@ -2702,11 +1634,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:ak74"
@@ -2735,11 +1662,6 @@
           "item": "pointblank_recipe:ironbutt"
         }
       },
-      "materials": [
-        {
-          "tag": "minecraft:planks"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:ak74x"
@@ -2768,12 +1690,6 @@
           "item": "pointblank_recipe:ironbutt"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:an94"
@@ -2793,16 +1709,6 @@
           "item": "pointblank_recipe:frameofat4"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:diamond",
-          "count": 2
-        },
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:at4"
@@ -2837,7 +1743,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [],
       "result": {
         "count": 1,
         "id": "pointblank:aug"
@@ -2860,47 +1765,9 @@
           "item": "pointblank_recipe:thebarreloftherifleup"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:aughbar"
-      }
-    },
-    "craftautoguidancemodule.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 3
-        },
-        {
-          "item": "minecraft:gold_ingot"
-        },
-        {
-          "item": "minecraft:comparator"
-        },
-        {
-          "item": "minecraft:copper_ingot"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:autoguidancemodule"
       }
     },
     "craftaxval.json": {
@@ -2926,11 +1793,6 @@
           "item": "pointblank_recipe:buttofshotggun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:axval"
@@ -2956,14 +1818,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "tag": "minecraft:planks"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:barm1918"
@@ -2986,86 +1840,9 @@
           "item": "pointblank_recipe:shotgunreloader"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:benxlli_m4"
-      }
-    },
-    "craftbuttform_4a_1type.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        },
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:buttform4a1type"
-      }
-    },
-    "craftbuttofsubmachinegun.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 4
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:buttofsubmachinegun"
-      }
-    },
-    "craftbuttump.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "pointblank_recipe:buttofsubmachinegun"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:buttump"
       }
     },
     "craftc_14.json": {
@@ -3088,14 +1865,6 @@
           "item": "pointblank_recipe:frameofsniperifle"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:c14"
@@ -3118,17 +1887,6 @@
           "item": "pointblank_recipe:sniperriflebillettrauma"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:carcano1891"
@@ -3157,11 +1915,6 @@
           "item": "pointblank_recipe:shotgunreloader"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:oak_planks"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:citoricxs"
@@ -3187,11 +1940,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:colt_m1911x1"
@@ -3217,11 +1965,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_arasaka_hjke11_yukimura"
@@ -3247,14 +1990,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:yellow_dye"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_arasaka_hjke11_yukimura_skippy"
@@ -3274,12 +2009,6 @@
           "item": "pointblank_recipe:framecyberpunkgun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 4
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_arasaka_hjsh18_masamune"
@@ -3302,12 +2031,6 @@
           "item": "pointblank_recipe:framecyberpunkgun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 3
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_arasaka_nowaki"
@@ -3327,12 +2050,6 @@
           "item": "pointblank_recipe:framecyberpunkenergygun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 3
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_budget_arms_carnage"
@@ -3352,15 +2069,6 @@
           "item": "pointblank_recipe:framecyberpunkenergygun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 3
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_budget_arms_carnage_guts"
@@ -3386,7 +2094,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_ca_liberty"
@@ -3412,11 +2119,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_ca_unity"
@@ -3442,11 +2144,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_ca_unity_iconic"
@@ -3475,11 +2172,6 @@
           "item": "pointblank_recipe:energycube"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_kang_tao_g58_dian"
@@ -3508,11 +2200,6 @@
           "item": "pointblank_recipe:handleofsubmachinegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_kang_tao_g58_dian_yinglong"
@@ -3538,11 +2225,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_malorian_arms_3516"
@@ -3565,11 +2247,6 @@
           "item": "pointblank_recipe:theframeofthegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_malorian_arms_overture"
@@ -3595,7 +2272,6 @@
           "item": "pointblank_recipe:energycube"
         }
       },
-      "materials": [],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_malorian_arms_overture_cassidy"
@@ -3621,11 +2297,6 @@
           "item": "pointblank_recipe:energycube"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_malorian_arms_overture_dante"
@@ -3648,14 +2319,6 @@
           "item": "pointblank_recipe:theframeofthegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_malorian_arms_overture_kerry"
@@ -3681,11 +2344,6 @@
           "item": "pointblank_recipe:energycube"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_militech_ar_lexington"
@@ -3711,11 +2369,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_militech_m10af_lexington"
@@ -3735,18 +2388,6 @@
           "item": "pointblank_recipe:framecyberpunkgun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:redstone"
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 3
-        },
-        {
-          "item": "minecraft:iron_block"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_militech_m179_achilles"
@@ -3772,12 +2413,6 @@
           "item": "pointblank_recipe:energycube"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_militech_m179_achilles_xmod2"
@@ -3809,7 +2444,6 @@
           "item": "pointblank_recipe:ironbutt"
         }
       },
-      "materials": [],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_militech_m251s_ajax"
@@ -3841,11 +2475,6 @@
           "item": "pointblank_recipe:buttform4a1type"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:lime_dye"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_militech_m251s_ajax_barghest"
@@ -3872,11 +2501,6 @@
           "item": "pointblank_recipe:framecyberpunkgun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_block"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_project_cynosure_erebus"
@@ -3905,11 +2529,6 @@
           "item": "pointblank_recipe:frameofsniperifle"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_techtronika_spt32_grad"
@@ -3938,11 +2557,6 @@
           "item": "pointblank_recipe:frameofsniperifle"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_techtronika_spt32_grad_panam"
@@ -3968,11 +2582,6 @@
           "item": "pointblank_recipe:energycube"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_tsunami_nekomata"
@@ -3999,12 +2608,6 @@
           "item": "pointblank_recipe:framecyberpunkenergygun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_block",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:cp2077_tsunami_rasetsu"
@@ -4027,14 +2630,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:deagle36"
@@ -4061,11 +2656,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:dual_glock19x"
@@ -4091,377 +2681,9 @@
           "item": "pointblank_recipe:frameofsniperifle"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:ewm"
-      }
-    },
-    "craftframe_c_pg.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "cyberpunk"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_block"
-        },
-        {
-          "item": "pointblank_recipe:energycube"
-        },
-        {
-          "item": "pointblank_recipe:thebarreloftherifle"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:framecyberpunkgun"
-      }
-    },
-    "craftframeform_4a_1type.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "pointblank_recipe:thebarreloftherifle"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "pointblank_recipe:frameoftheriflemagazine"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:framem4a1type"
-      }
-    },
-    "craftframeforobrez.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "stalker"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 3
-        },
-        {
-          "item": "minecraft:iron_block"
-        },
-        {
-          "tag": "minecraft:planks"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameofobrez"
-      }
-    },
-    "craftframegunagazine.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 6
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:framegunmagazine"
-      }
-    },
-    "craftframemktype.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "pointblank_recipe:thebarreloftherifle"
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        },
-        {
-          "item": "minecraft:iron_block",
-          "count": 2
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:framemktype"
-      }
-    },
-    "craftframeofat_4.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        },
-        {
-          "item": "minecraft:iron_block",
-          "count": 4
-        },
-        {
-          "item": "pointblank_recipe:triggermechanism"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameofat4"
-      }
-    },
-    "craftframeofm_32mgl.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "pointblank_recipe:handlerifle"
-        },
-        {
-          "item": "minecraft:iron_block"
-        },
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameofm32mgl"
-      }
-    },
-    "craftframeofminigun.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        },
-        {
-          "item": "pointblank_recipe:handlerifle"
-        },
-        {
-          "item": "minecraft:iron_block",
-          "count": 2
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameofminigun"
-      }
-    },
-    "craftframeofsniperifle.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "pointblank_recipe:muzzleofsniperrifle"
-        },
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 3
-        },
-        {
-          "item": "minecraft:iron_block"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameofsniperifle"
-      }
-    },
-    "craftframeofsubmachinegun.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "pointblank_recipe:magazineofsubmachinegun"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameofsubmachinegun"
-      }
-    },
-    "craftframeoftherifle.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "pointblank_recipe:thebarreloftherifle"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "pointblank_recipe:frameoftheriflemagazine"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameoftherifle"
-      }
-    },
-    "craftframeoftheriflemagazine.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 5
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameoftheriflemagazine"
-      }
-    },
-    "craftframeoftheun.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "pointblank_recipe:gunpoint"
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 4
-        },
-        {
-          "item": "pointblank_recipe:framegunmagazine"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:theframeofthegun"
       }
     },
     "craftg_36c.json": {
@@ -4484,11 +2706,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:g36c"
@@ -4517,11 +2734,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:g36k"
@@ -4550,11 +2762,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:g41"
@@ -4580,14 +2787,6 @@
           "item": "pointblank_recipe:sniperriflebillettrauma"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "tag": "minecraft:planks"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:gewehr98"
@@ -4622,7 +2821,6 @@
           "item": "pointblank_recipe:buttofshotggun"
         }
       },
-      "materials": [],
       "result": {
         "count": 1,
         "id": "pointblank:gk57"
@@ -4645,11 +2843,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:glock17"
@@ -4672,11 +2865,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:glock19x"
@@ -4702,115 +2890,9 @@
           "item": "pointblank_recipe:frameofsniperifle"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_block"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:gm6lynx"
-      }
-    },
-    "craftgunmagazine.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 4
-        },
-        {
-          "item": "pointblank_recipe:framegunmagazine"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:gunmagazine"
-      }
-    },
-    "craftgunpoint.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 4
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:gunpoint"
-      }
-    },
-    "crafthandleforrifle.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 4
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:handlerifle"
-      }
-    },
-    "crafthandleofsubmachinegun.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 3
-        },
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:handleofsubmachinegun"
       }
     },
     "crafthellriegel.json": {
@@ -4833,14 +2915,6 @@
           "item": "pointblank_recipe:theriflebutt"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_block"
-        },
-        {
-          "item": "minecraft:oak_wood"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:hellriegel"
@@ -4860,16 +2934,6 @@
           "item": "pointblank_recipe:sniperriflebillettrauma"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        },
-        {
-          "tag": "minecraft:planks",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:henrymartini"
@@ -4895,11 +2959,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:hgg_beretta_px4storm"
@@ -4925,11 +2984,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:hgg_fn_fiveseven"
@@ -4955,11 +3009,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:hgg_fn_fnp40"
@@ -4982,14 +3031,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:hgg_fn_hpda"
@@ -5012,14 +3053,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:hgg_hk_p30"
@@ -5042,14 +3075,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:hgg_hk_usp"
@@ -5075,11 +3100,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:hgg_hk_usp_silenced"
@@ -5102,14 +3122,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:hgg_mr_deserteagle"
@@ -5135,11 +3147,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:hgg_nfm_makarov"
@@ -5165,14 +3172,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:hgg_r6_rg15"
@@ -5195,11 +3194,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:hgg_taurus_pt145"
@@ -5222,12 +3216,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:hgg_walther_ppk"
@@ -5259,7 +3247,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [],
       "result": {
         "count": 1,
         "id": "pointblank:hk416"
@@ -5285,38 +3272,9 @@
           "item": "pointblank_recipe:buttofshotggun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:hs12"
-      }
-    },
-    "craftironbutt.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 3
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:ironbutt"
       }
     },
     "craftjavelin.json": {
@@ -5339,11 +3297,6 @@
           "item": "pointblank_recipe:handlerifle"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:diamond"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:javelin"
@@ -5366,14 +3319,6 @@
           "item": "pointblank_recipe:theriflebutt"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:kar98k"
@@ -5402,7 +3347,6 @@
           "item": "pointblank_recipe:buttforvector"
         }
       },
-      "materials": [],
       "result": {
         "count": 1,
         "id": "pointblank:kriss_vector45"
@@ -5428,12 +3372,6 @@
           "item": "pointblank_recipe:frameofsniperifle"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 3
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:l96a1"
@@ -5462,11 +3400,6 @@
           "item": "pointblank_recipe:magazineformachinegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:lamg"
@@ -5489,20 +3422,6 @@
           "item": "pointblank_recipe:sniperriflebillettrauma"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "tag": "minecraft:planks"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:lebel"
@@ -5525,17 +3444,6 @@
           "item": "pointblank_recipe:sniperriflebillettrauma"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "tag": "minecraft:planks"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:lee_enfield"
@@ -5564,11 +3472,6 @@
           "item": "pointblank_recipe:buttofshotggun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:lne19"
@@ -5594,11 +3497,6 @@
           "item": "pointblank_recipe:shotgunreloader"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m1014"
@@ -5627,11 +3525,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m16a1"
@@ -5660,11 +3553,6 @@
           "item": "pointblank_recipe:buttform4a1type"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m16x4"
@@ -5687,14 +3575,6 @@
           "item": "pointblank_recipe:sniperriflebillettrauma"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "tag": "minecraft:planks"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m1903"
@@ -5720,14 +3600,6 @@
           "item": "pointblank_recipe:frameofsniperifle"
         }
       },
-      "materials": [
-        {
-          "tag": "minecraft:planks"
-        },
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m1903_springfield"
@@ -5753,11 +3625,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m1911a1"
@@ -5777,18 +3644,6 @@
           "item": "pointblank_recipe:frameofsniperifle"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        },
-        {
-          "tag": "minecraft:planks"
-        },
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m1_garand"
@@ -5808,17 +3663,6 @@
           "item": "pointblank_recipe:sniperriflebillettrauma"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m1_gxrand"
@@ -5847,11 +3691,6 @@
           "item": "pointblank_recipe:magazineformachinegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m249"
@@ -5877,14 +3716,6 @@
           "item": "pointblank_recipe:magazineformachinegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m249x"
@@ -5910,14 +3741,6 @@
           "item": "pointblank_recipe:buttform4a1type"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m32mgl"
@@ -5946,11 +3769,6 @@
           "item": "pointblank_recipe:buttform4a1type"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m4_9mm"
@@ -5979,11 +3797,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m4a1"
@@ -6012,11 +3825,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m4a1mod1"
@@ -6042,14 +3850,6 @@
           "item": "pointblank_recipe:buttform4a1type"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m4_rifle"
@@ -6078,11 +3878,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m4sopmodii"
@@ -6111,11 +3906,6 @@
           "item": "pointblank_recipe:buttform4a1type"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m4x1"
@@ -6144,11 +3934,6 @@
           "item": "pointblank_recipe:shotgunreloader"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m590"
@@ -6168,17 +3953,6 @@
           "item": "pointblank_recipe:m79"
         }
       },
-      "materials": [
-        {
-          "tag": "minecraft:planks"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m79_grenade_launcher"
@@ -6204,11 +3978,6 @@
           "item": "pointblank_recipe:shotgunreloader"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m870"
@@ -6234,11 +4003,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m9"
@@ -6261,14 +4025,6 @@
           "item": "pointblank_recipe:theframeofthegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m950"
@@ -6294,12 +4050,6 @@
           "item": "pointblank_recipe:sniperriflebillettrauma"
         }
       },
-      "materials": [
-        {
-          "tag": "minecraft:planks",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:madsen"
@@ -6322,11 +4072,6 @@
           "item": "pointblank_recipe:sniperrifleloadingmechanism"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:magnum500"
@@ -6349,17 +4094,6 @@
           "item": "pointblank_recipe:sniperriflebillettrauma"
         }
       },
-      "materials": [
-        {
-          "tag": "minecraft:logs"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:mannlicherm1895"
@@ -6385,14 +4119,6 @@
           "item": "pointblank_recipe:framemktype"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_block"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:mgx338"
@@ -6421,11 +4147,6 @@
           "item": "pointblank_recipe:magazineformachinegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:mk14ebr"
@@ -6451,11 +4172,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:mk23"
@@ -6481,11 +4197,6 @@
           "item": "pointblank_recipe:magazineformachinegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:mk48"
@@ -6508,11 +4219,6 @@
           "item": "pointblank_recipe:frameofshotgun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:model500"
@@ -6538,11 +4244,6 @@
           "item": "pointblank_recipe:buttofshotggun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:modernized_marlin_model1887"
@@ -6565,14 +4266,6 @@
           "item": "pointblank_recipe:theriflebutt"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "tag": "minecraft:planks"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:mosin_nagant360"
@@ -6598,14 +4291,6 @@
           "item": "pointblank_recipe:sniperriflebillettrauma"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:mp18"
@@ -6634,11 +4319,6 @@
           "item": "pointblank_recipe:magazineofsubmachinegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:mp5"
@@ -6667,11 +4347,6 @@
           "item": "pointblank_recipe:magazineofsubmachinegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:mp5_classic"
@@ -6694,7 +4369,6 @@
           "item": "pointblank_recipe:gunpoint"
         }
       },
-      "materials": [],
       "result": {
         "count": 1,
         "id": "pointblank:mp5_classic_sd"
@@ -6723,168 +4397,9 @@
           "item": "pointblank_recipe:magazineofsubmachinegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:mp7"
-      }
-    },
-    "craftmuzzleofminigun.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "pointblank_recipe:thebarreloftherifle",
-          "count": 3
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:muzzleofminigun"
-      }
-    },
-    "craftmuzzlofsniperrifle.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 3
-        },
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:muzzleofsniperrifle"
-      }
-    },
-    "craftofbuttshotgun.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 4
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:buttofshotggun"
-      }
-    },
-    "craftofframeshotgun.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "pointblank_recipe:shotgunbarrel"
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 3
-        },
-        {
-          "item": "minecraft:iron_block"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:frameofshotgun"
-      }
-    },
-    "craftofmagazineformachinegun.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        },
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        },
-        {
-          "item": "minecraft:iron_block"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:magazineformachinegun"
-      }
-    },
-    "craftofmagazinesubmachinegun.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 3
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:magazineofsubmachinegun"
       }
     },
     "craftofminigun.json": {
@@ -6907,96 +4422,9 @@
           "item": "pointblank_recipe:frameofminigun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:m134minigun"
-      }
-    },
-    "craftofshotgunreloader.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 4
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:shotgunreloader"
-      }
-    },
-    "craftofsnipescope.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:glass"
-        },
-        {
-          "item": "minecraft:diamond"
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 3
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:snipescope"
-      }
-    },
-    "craftoftriggermechanism.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_block",
-          "count": 2
-        },
-        {
-          "item": "minecraft:coal_block"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:triggermechanism"
       }
     },
     "craftp_30l.json": {
@@ -7019,11 +4447,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:p30l"
@@ -7049,14 +4472,6 @@
           "item": "pointblank_recipe:magazineformachinegun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:pkpx"
@@ -7082,11 +4497,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:rhino"
@@ -7115,41 +4525,9 @@
           "item": "pointblank_recipe:theriflebutt"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:ribeyrolles"
-      }
-    },
-    "craftriflemagazine.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 3
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "pointblank_recipe:frameoftheriflemagazine"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:riflemagazine"
       }
     },
     "craftro_635remake.json": {
@@ -7175,14 +4553,6 @@
           "item": "pointblank_recipe:buttform4a1type"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:ro635_remake"
@@ -7208,14 +4578,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:rocaf_m1_garand"
@@ -7238,12 +4600,6 @@
           "item": "pointblank_recipe:framemktype"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:rpd762"
@@ -7272,11 +4628,6 @@
           "item": "pointblank_recipe:buttofshotggun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_block"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:rpk16x"
@@ -7302,14 +4653,6 @@
           "item": "pointblank_recipe:buttump"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_block"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:rpx20"
@@ -7341,38 +4684,9 @@
           "item": "pointblank_recipe:buttform4a1type"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:scar18"
-      }
-    },
-    "craftscopeforrifle.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        },
-        {
-          "item": "minecraft:glass"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:scopeforrifle"
       }
     },
     "craftscrarl.json": {
@@ -7398,62 +4712,9 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:scarl"
-      }
-    },
-    "craftshotgunbarrel.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget",
-          "count": 2
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:shotgunbarrel"
-      }
-    },
-    "craftsilencerforriflr.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:silencerforrifle"
       }
     },
     "craftsl_8.json": {
@@ -7476,14 +4737,6 @@
           "item": "pointblank_recipe:frameofsniperifle"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:sl8"
@@ -7506,11 +4759,6 @@
           "item": "pointblank_recipe:frameofat4"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:diamond"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:smaw"
@@ -7539,11 +4787,6 @@
           "item": "pointblank_recipe:buttofshotggun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:spas12"
@@ -7575,11 +4818,6 @@
           "item": "pointblank_recipe:buttofshotggun"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:star15"
@@ -7605,14 +4843,6 @@
           "item": "pointblank_recipe:buttform4a1type"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_block"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:svch545"
@@ -7644,7 +4874,6 @@
           "item": "pointblank_recipe:ironbutt"
         }
       },
-      "materials": [],
       "result": {
         "count": 1,
         "id": "pointblank:svch545_scoped"
@@ -7673,11 +4902,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "tag": "minecraft:logs"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:svd_dragnaov"
@@ -7706,14 +4930,6 @@
           "item": "pointblank_recipe:theriflebutt"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "tag": "minecraft:planks"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:t57"
@@ -7742,85 +4958,9 @@
           "item": "pointblank_recipe:buttform4a1type"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:t91"
-      }
-    },
-    "craftthebarreloftherifle.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:thebarreloftherifle"
-      }
-    },
-    "craftthebarreloftherifleup.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "pointblank_recipe:thebarreloftherifle"
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:thebarreloftherifleup"
-      }
-    },
-    "craftthebutt.json": {
-      "type": "pointblank_recipe:modular",
-      "fabric:load_conditions": [
-        {
-          "condition": "pointblank_recipe:module_enabled",
-          "module": "base"
-        }
-      ],
-      "template": "pointblank_recipe:component",
-      "parts": {},
-      "materials": [
-        {
-          "tag": "minecraft:logs"
-        },
-        {
-          "tag": "minecraft:planks",
-          "count": 3
-        }
-      ],
-      "result": {
-        "count": 1,
-        "id": "pointblank_recipe:theriflebutt"
       }
     },
     "crafttiviper.json": {
@@ -7843,11 +4983,6 @@
           "item": "pointblank_recipe:gunmagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:tti_viper"
@@ -7873,7 +5008,6 @@
           "item": "pointblank_recipe:magazineofsubmachinegun"
         }
       },
-      "materials": [],
       "result": {
         "count": 1,
         "id": "pointblank:tmp"
@@ -7899,12 +5033,6 @@
           "item": "pointblank_recipe:frameofsniperifle"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:uar10"
@@ -7936,7 +5064,6 @@
           "item": "pointblank_recipe:magazineofsubmachinegun"
         }
       },
-      "materials": [],
       "result": {
         "count": 1,
         "id": "pointblank:ump45"
@@ -7959,14 +5086,6 @@
           "item": "pointblank_recipe:frameofsniperifle"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        },
-        {
-          "item": "minecraft:iron_ingot"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:wa2000"
@@ -7992,12 +5111,6 @@
           "item": "pointblank_recipe:frameofm32mgl"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:xm29"
@@ -8023,12 +5136,6 @@
           "item": "pointblank_recipe:frameofm32mgl"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:xm29"
@@ -8054,12 +5161,6 @@
           "item": "pointblank_recipe:frameofsniperifle"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 2
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:xm3"
@@ -8088,11 +5189,6 @@
           "item": "pointblank_recipe:riflemagazine"
         }
       },
-      "materials": [
-        {
-          "item": "minecraft:iron_nugget"
-        }
-      ],
       "result": {
         "count": 1,
         "id": "pointblank:xm7"

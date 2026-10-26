@@ -18,11 +18,6 @@
       "item": "pointblank_recipe:gunmagazine"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_ingot"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:cp2077_militech_m10af_lexington"

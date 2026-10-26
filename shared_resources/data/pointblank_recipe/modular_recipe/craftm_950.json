@@ -15,14 +15,6 @@
       "item": "pointblank_recipe:theframeofthegun"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_nugget"
-    },
-    {
-      "item": "minecraft:iron_ingot"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:m950"

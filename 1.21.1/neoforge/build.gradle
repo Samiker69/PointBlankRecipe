@@ -10,6 +10,11 @@ base {
 
 repositories {
     mavenCentral()
+    // JEI, compile-only: the plugin is only loaded when JEI is installed.
+    maven {
+        name = 'BlameJared'
+        url = 'https://maven.blamejared.com/'
+    }
 }
 
 def convertedResources = layout.buildDirectory.dir("converted_resources").get().asFile
@@ -128,4 +133,9 @@ jar {
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
+}
+
+dependencies {
+    compileOnly "mezz.jei:jei-${project.minecraft_version}-common-api:${project.jei_version}"
+    compileOnly "mezz.jei:jei-${project.minecraft_version}-neoforge-api:${project.jei_version}"
 }

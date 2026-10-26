@@ -21,11 +21,6 @@
       "item": "pointblank_recipe:buttform4a1type"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_nugget"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:m4x1"

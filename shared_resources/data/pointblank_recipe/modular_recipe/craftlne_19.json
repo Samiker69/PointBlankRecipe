@@ -21,11 +21,6 @@
       "item": "pointblank_recipe:buttofshotggun"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_ingot"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:lne19"

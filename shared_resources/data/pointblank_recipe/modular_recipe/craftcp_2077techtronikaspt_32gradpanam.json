@@ -21,11 +21,6 @@
       "item": "pointblank_recipe:frameofsniperifle"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_ingot"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:cp2077_techtronika_spt32_grad_panam"

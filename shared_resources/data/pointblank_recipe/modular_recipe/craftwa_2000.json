@@ -15,14 +15,6 @@
       "item": "pointblank_recipe:frameofsniperifle"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_nugget"
-    },
-    {
-      "item": "minecraft:iron_ingot"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:wa2000"

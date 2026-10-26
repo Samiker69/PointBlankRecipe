@@ -21,11 +21,6 @@
       "item": "pointblank_recipe:shotgunreloader"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_ingot"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:m590"

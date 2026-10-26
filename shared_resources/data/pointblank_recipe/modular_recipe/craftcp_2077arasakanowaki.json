@@ -15,12 +15,6 @@
       "item": "pointblank_recipe:framecyberpunkgun"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_ingot",
-      "count": 3
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:cp2077_arasaka_nowaki"

@@ -18,12 +18,6 @@
       "item": "pointblank_recipe:sniperriflebillettrauma"
     }
   },
-  "materials": [
-    {
-      "tag": "minecraft:planks",
-      "count": 2
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:madsen"

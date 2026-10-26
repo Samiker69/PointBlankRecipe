@@ -24,11 +24,6 @@
       "item": "pointblank_recipe:riflemagazine"
     }
   },
-  "materials": [
-    {
-      "tag": "minecraft:planks"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:ak12x"

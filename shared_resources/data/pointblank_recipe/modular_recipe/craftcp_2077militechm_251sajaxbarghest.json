@@ -24,11 +24,6 @@
       "item": "pointblank_recipe:buttform4a1type"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:lime_dye"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:cp2077_militech_m251s_ajax_barghest"

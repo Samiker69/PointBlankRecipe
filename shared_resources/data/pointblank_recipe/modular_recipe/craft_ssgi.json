@@ -21,11 +21,6 @@
       "item": "pointblank_recipe:riflemagazine"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_nugget"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:s_sgi"

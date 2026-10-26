@@ -12,15 +12,6 @@
       "item": "pointblank_recipe:framecyberpunkenergygun"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_ingot",
-      "count": 3
-    },
-    {
-      "item": "minecraft:iron_nugget"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:cp2077_budget_arms_carnage_guts"

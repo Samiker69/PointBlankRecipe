@@ -21,14 +21,6 @@
       "item": "pointblank_recipe:theriflebutt"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_ingot"
-    },
-    {
-      "tag": "minecraft:planks"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:t57"

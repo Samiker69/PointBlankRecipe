@@ -12,14 +12,6 @@
       "item": "pointblank_recipe:frameofobrez"
     }
   },
-  "materials": [
-    {
-      "item": "minecraft:iron_ingot"
-    },
-    {
-      "tag": "minecraft:logs"
-    }
-  ],
   "result": {
     "count": 1,
     "id": "pointblank:s_obrez"
