@@ -10,6 +10,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import xyz.samiker.pointblank_recipe.PointblankRecipe;
+import xyz.samiker.pointblank_recipe.block.ModBlocks;
 
 public class Tab {
     public static final RegistryKey<ItemGroup> CUSTOM_ITEM_GROUP_KEY = RegistryKey.of(
@@ -27,6 +28,7 @@ public class Tab {
 
         ItemGroupEvents.modifyEntriesEvent(CUSTOM_ITEM_GROUP_KEY).register(itemGroup -> {
 
+            itemGroup.add(ModBlocks.MODULAR_WORKBENCH_ITEM);
             for (var item : PlatformItems.getItems()) {
                 itemGroup.add(item);
             }

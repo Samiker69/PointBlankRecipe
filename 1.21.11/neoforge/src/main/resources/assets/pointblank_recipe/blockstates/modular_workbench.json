@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "pointblank_recipe:block/modular_workbench" }
+  }
+}
