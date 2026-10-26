@@ -119,6 +119,18 @@ processResources {
                 }
                 project.delete(recipesDir)
             }
+
+            // 1.20 reads item tags from tags/items, 1.21+ from tags/item
+            new File(destinationDir, "data").eachDir { namespace ->
+                def tagsDir = new File(namespace, "tags/item")
+                if (tagsDir.exists()) {
+                    project.copy {
+                        from tagsDir
+                        into new File(namespace, "tags/items")
+                    }
+                    project.delete(tagsDir)
+                }
+            }
         }
     }
 }
