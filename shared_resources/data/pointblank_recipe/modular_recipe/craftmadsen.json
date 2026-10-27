@@ -1,0 +1,25 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "trauma"
+    }
+  ],
+  "template": "pointblank_recipe:sniper",
+  "parts": {
+    "muzzle_device": {
+      "item": "pointblank_recipe:rifleflamearrester"
+    },
+    "magazine": {
+      "item": "pointblank_recipe:riflemagazine"
+    },
+    "frame": {
+      "item": "pointblank_recipe:sniperriflebillettrauma"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:madsen"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "pointblank_recipe:autoguidancemodule",
+    "pointblank_recipe:shotgunreloader",
+    "pointblank_recipe:shotgunreloaderbrum",
+    "pointblank_recipe:sniperrifleloadingmechanism",
+    "pointblank_recipe:triggermechanism"
+  ]
+}

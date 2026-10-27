@@ -18,11 +18,24 @@ loom {
     }
 }
 
+repositories {
+    // JEI, compile-only: the plugin is only loaded when JEI is installed. The Modrinth jar is in intermediary
+    // names, so Loom can remap it to Yarn (the API jars on JEI's maven are in Mojang names).
+    maven {
+        name = 'Modrinth'
+        url = 'https://api.modrinth.com/maven'
+        content {
+            includeGroup 'maven.modrinth'
+        }
+    }
+}
+
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+    modCompileOnly "maven.modrinth:jei:${project.jei_version}"
 }
 
 def convertedResources = layout.buildDirectory.dir("converted_resources").get().asFile

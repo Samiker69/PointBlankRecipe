@@ -1,0 +1,25 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:launcher",
+  "parts": {
+    "sight": {
+      "item": "pointblank_recipe:snipescope"
+    },
+    "mechanism": {
+      "item": "pointblank_recipe:shotgunreloaderbrum"
+    },
+    "frame": {
+      "item": "pointblank_recipe:frameofm32mgl"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:xm29"
+  }
+}

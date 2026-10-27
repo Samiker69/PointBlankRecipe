@@ -1,0 +1,25 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:pistol",
+  "parts": {
+    "frame": {
+      "item": "pointblank_recipe:theframeofthegun"
+    },
+    "special": {
+      "item": "pointblank_recipe:energycube"
+    },
+    "magazine": {
+      "item": "pointblank_recipe:gunmagazine"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:cp2077_ca_unity"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:smg",
+  "parts": {
+    "muzzle_device": {
+      "item": "pointblank_recipe:silencerforrifle"
+    },
+    "frame": {
+      "item": "pointblank_recipe:frameofsubmachinegun"
+    },
+    "stock": {
+      "item": "pointblank_recipe:buttump"
+    },
+    "grip": {
+      "item": "pointblank_recipe:handlerifle"
+    },
+    "magazine": {
+      "item": "pointblank_recipe:magazineofsubmachinegun"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:ump45"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:smg",
+  "parts": {
+    "grip": {
+      "item": "pointblank_recipe:handleofsubmachinegun"
+    },
+    "frame": {
+      "item": "pointblank_recipe:frameofsubmachinegun"
+    },
+    "magazine": {
+      "item": "pointblank_recipe:magazineofsubmachinegun"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:tmp"
+  }
+}

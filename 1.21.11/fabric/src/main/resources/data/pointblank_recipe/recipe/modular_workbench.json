@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "aba",
+    " a "
+  ],
+  "key": {
+    "a": "minecraft:iron_ingot",
+    "b": "minecraft:crafting_table"
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank_recipe:modular_workbench"
+  }
+}

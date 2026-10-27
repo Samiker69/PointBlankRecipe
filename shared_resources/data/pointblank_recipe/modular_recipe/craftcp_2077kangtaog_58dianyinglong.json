@@ -1,0 +1,28 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:smg",
+  "parts": {
+    "special": {
+      "item": "pointblank_recipe:energycube"
+    },
+    "frame": {
+      "item": "pointblank_recipe:frameofsubmachinegun"
+    },
+    "stock": {
+      "item": "pointblank_recipe:buttofsubmachinegun"
+    },
+    "grip": {
+      "item": "pointblank_recipe:handleofsubmachinegun"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:cp2077_kang_tao_g58_dian_yinglong"
+  }
+}

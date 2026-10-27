@@ -1,0 +1,25 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:sniper",
+  "parts": {
+    "barrel": {
+      "item": "pointblank_recipe:muzzleofsniperrifle"
+    },
+    "sight": {
+      "item": "pointblank_recipe:snipescope"
+    },
+    "frame": {
+      "item": "pointblank_recipe:frameofsniperifle"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:m1903_springfield"
+  }
+}

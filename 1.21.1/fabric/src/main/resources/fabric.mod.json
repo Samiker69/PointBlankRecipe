@@ -16,6 +16,9 @@
     ],
     "main": [
       "xyz.samiker.pointblank_recipe.PointblankRecipe"
+    ],
+    "jei_mod_plugin": [
+      "xyz.samiker.pointblank_recipe.client.jei.ModularJeiPlugin"
     ]
   },
   "depends": {

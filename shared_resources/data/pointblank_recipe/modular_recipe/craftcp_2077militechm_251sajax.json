@@ -1,0 +1,31 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:rifle",
+  "parts": {
+    "sight": {
+      "item": "pointblank_recipe:collimatorscope"
+    },
+    "frame": {
+      "item": "pointblank_recipe:frameoftherifle"
+    },
+    "special": {
+      "item": "pointblank_recipe:energycube"
+    },
+    "magazine": {
+      "item": "pointblank_recipe:riflemagazine"
+    },
+    "stock": {
+      "item": "pointblank_recipe:ironbutt"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:cp2077_militech_m251s_ajax"
+  }
+}

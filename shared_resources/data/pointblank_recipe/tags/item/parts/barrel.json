@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "pointblank_recipe:gunpoint",
+    "pointblank_recipe:muzzleofminigun",
+    "pointblank_recipe:muzzleofsniperrifle",
+    "pointblank_recipe:shotgunbarrel",
+    "pointblank_recipe:thebarreloftherifle",
+    "pointblank_recipe:thebarreloftherifleup"
+  ]
+}

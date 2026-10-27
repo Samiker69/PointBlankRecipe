@@ -1,0 +1,19 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "base"
+    }
+  ],
+  "template": "pointblank_recipe:unique",
+  "parts": {
+    "frame": {
+      "item": "pointblank_recipe:frameofobrez"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:s_obrez"
+  }
+}

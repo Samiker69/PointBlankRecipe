@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import xyz.samiker.pointblank_recipe.PointblankRecipe;
+import xyz.samiker.pointblank_recipe.block.ModBlocks;
 
 public class Tab {
     public static final ResourceKey<CreativeModeTab> CUSTOM_ITEM_GROUP_KEY = ResourceKey.create(
@@ -21,6 +22,7 @@ public class Tab {
             .icon(() -> new ItemStack(PlatformItems.get(ModItems.FRAME_M4_TYPE)))
             .title(Component.translatable("item_group.pointblank_recipe"))
             .displayItems((context, output) -> {
+                output.accept(ModBlocks.MODULAR_WORKBENCH_ITEM);
                 for (var item : PlatformItems.getItems()) {
                     output.accept(item);
                 }

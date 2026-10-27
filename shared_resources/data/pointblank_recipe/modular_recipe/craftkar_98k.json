@@ -1,0 +1,22 @@
+{
+  "type": "pointblank_recipe:modular",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:module_enabled",
+      "module": "trauma"
+    }
+  ],
+  "template": "pointblank_recipe:sniper",
+  "parts": {
+    "frame": {
+      "item": "pointblank_recipe:sniperriflebillettrauma"
+    },
+    "stock": {
+      "item": "pointblank_recipe:theriflebutt"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "pointblank:kar98k"
+  }
+}

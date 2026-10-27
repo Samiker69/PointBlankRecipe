@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "pointblank_recipe:collimatorscope",
+    "pointblank_recipe:scopeforrifle",
+    "pointblank_recipe:snipescope"
+  ]
+}

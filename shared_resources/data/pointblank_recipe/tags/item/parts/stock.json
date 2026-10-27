@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "pointblank_recipe:buttform4a1type",
+    "pointblank_recipe:buttforvector",
+    "pointblank_recipe:buttofshotggun",
+    "pointblank_recipe:buttofsubmachinegun",
+    "pointblank_recipe:buttump",
+    "pointblank_recipe:ironbutt",
+    "pointblank_recipe:theriflebutt"
+  ]
+}
