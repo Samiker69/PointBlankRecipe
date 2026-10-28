@@ -1,5 +1,8 @@
 {
   "variants": {
-    "": { "model": "pointblank_recipe:block/modular_workbench" }
+    "facing=north": { "model": "pointblank_recipe:block/modular_workbench" },
+    "facing=east":  { "model": "pointblank_recipe:block/modular_workbench", "y": 90 },
+    "facing=south": { "model": "pointblank_recipe:block/modular_workbench", "y": 180 },
+    "facing=west":  { "model": "pointblank_recipe:block/modular_workbench", "y": 270 }
   }
 }
