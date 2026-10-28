@@ -8,14 +8,14 @@ import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.DrawContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.ItemStack;
 import xyz.samiker.pointblank_recipe.PointblankRecipe;
 import xyz.samiker.pointblank_recipe.block.ModBlocks;
 import xyz.samiker.pointblank_recipe.modular.ModularLayout;
@@ -46,8 +46,8 @@ public class ModularWorkbenchCategory implements IRecipeCategory<ModularRecipe> 
     }
 
     @Override
-    public Text getTitle() {
-        return Text.translatable("container.pointblank_recipe.modular_workbench");
+    public Component getTitle() {
+        return Component.translatable("container.pointblank_recipe.modular_workbench");
     }
 
     @Override
@@ -75,30 +75,30 @@ public class ModularWorkbenchCategory implements IRecipeCategory<ModularRecipe> 
         }
         builder.addSlot(RecipeIngredientRole.OUTPUT, ModularLayout.RESULT_X, ModularLayout.RESULT_Y - TOP)
                 .setOutputSlotBackground()
-                .addItemStack(new ItemStack(Registries.ITEM.get(new Identifier(recipe.resultItem())), recipe.resultCount()));
+                .addItemStack(new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.tryParse(recipe.resultItem())), recipe.resultCount()));
     }
 
     @Override
-    public void draw(ModularRecipe recipe, IRecipeSlotsView recipeSlotsView, DrawContext context, double mouseX, double mouseY) {
+    public void draw(ModularRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics graphics, double mouseX, double mouseY) {
         ModularTemplate template = ModularTemplate.byIndex(ModularTemplate.indexOf(recipe.template()));
         for (ModularLayout.Rect rect : ModularLayout.silhouette(template)) {
-            context.fill(rect.x1() - 1, rect.y1() - 1 - TOP, rect.x2() + 1, rect.y2() + 1 - TOP, ModularLayout.SILHOUETTE_OUTLINE);
+            graphics.fill(rect.x1() - 1, rect.y1() - 1 - TOP, rect.x2() + 1, rect.y2() + 1 - TOP, ModularLayout.SILHOUETTE_OUTLINE);
         }
         for (ModularLayout.Rect rect : ModularLayout.silhouette(template)) {
-            context.fill(rect.x1(), rect.y1() - TOP, rect.x2(), rect.y2() - TOP, ModularLayout.SILHOUETTE_FILL);
+            graphics.fill(rect.x1(), rect.y1() - TOP, rect.x2(), rect.y2() - TOP, ModularLayout.SILHOUETTE_FILL);
         }
-        Text name = Text.translatable("template.pointblank_recipe." + template.name());
-        context.drawText(MinecraftClient.getInstance().textRenderer, name, 0, 0, TEXT, false);
+        Component name = Component.translatable("template.pointblank_recipe." + template.name());
+        graphics.drawString(Minecraft.getInstance().font, name, 0, 0, TEXT, false);
     }
 
     private static List<ItemStack> stacks(List<ModularRecipe.Ingredient> ingredients) {
         List<ItemStack> stacks = new ArrayList<>();
         for (ModularRecipe.Ingredient ingredient : ingredients) {
             if (ingredient.item() != null) {
-                stacks.add(new ItemStack(Registries.ITEM.get(new Identifier(ingredient.item())), ingredient.count()));
+                stacks.add(new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.tryParse(ingredient.item())), ingredient.count()));
             } else {
-                Registries.ITEM.iterateEntries(TagKey.of(RegistryKeys.ITEM, new Identifier(ingredient.tag())))
-                        .forEach(entry -> stacks.add(new ItemStack(entry, ingredient.count())));
+                BuiltInRegistries.ITEM.getTagOrEmpty(TagKey.create(Registries.ITEM, ResourceLocation.tryParse(ingredient.tag())))
+                        .forEach(holder -> stacks.add(new ItemStack(holder, ingredient.count())));
             }
         }
         return stacks;

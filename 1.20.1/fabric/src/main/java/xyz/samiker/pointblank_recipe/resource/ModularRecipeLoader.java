@@ -2,10 +2,10 @@ package xyz.samiker.pointblank_recipe.resource;
 
 import com.google.gson.JsonParser;
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
-import net.minecraft.registry.Registries;
-import net.minecraft.resource.Resource;
-import net.minecraft.resource.ResourceManager;
-import net.minecraft.util.Identifier;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.server.packs.resources.Resource;
+import net.minecraft.server.packs.resources.ResourceManager;
 import xyz.samiker.pointblank_recipe.PointblankRecipe;
 import xyz.samiker.pointblank_recipe.modular.ModularRecipe;
 
@@ -23,29 +23,29 @@ public class ModularRecipeLoader implements SimpleSynchronousResourceReloadListe
     }
 
     @Override
-    public Identifier getFabricId() {
-        return Identifier.of(PointblankRecipe.MOD_ID, "modular_recipe_loader");
+    public ResourceLocation getFabricId() {
+        return ResourceLocation.tryBuild(PointblankRecipe.MOD_ID, "modular_recipe_loader");
     }
 
     // Module states come from ModuleLoader, so it has to run first.
     @Override
-    public Collection<Identifier> getFabricDependencies() {
-        return List.of(Identifier.of(PointblankRecipe.MOD_ID, "module_loader"));
+    public Collection<ResourceLocation> getFabricDependencies() {
+        return List.of(ResourceLocation.tryBuild(PointblankRecipe.MOD_ID, "module_loader"));
     }
 
     @Override
-    public void reload(ResourceManager manager) {
+    public void onResourceManagerReload(ResourceManager manager) {
         List<ModularRecipe> loaded = new ArrayList<>();
         int disabled = 0;
         int missingItems = 0;
 
-        Map<Identifier, Resource> resources = manager.findResources("modular_recipe", path -> path.getPath().endsWith(".json"));
-        for (Map.Entry<Identifier, Resource> entry : resources.entrySet()) {
-            try (var reader = new InputStreamReader(entry.getValue().getInputStream())) {
+        Map<ResourceLocation, Resource> resources = manager.listResources("modular_recipe", path -> path.getPath().endsWith(".json"));
+        for (Map.Entry<ResourceLocation, Resource> entry : resources.entrySet()) {
+            try (var reader = new InputStreamReader(entry.getValue().open())) {
                 ModularRecipe recipe = ModularRecipe.parse(entry.getKey().toString(), JsonParser.parseReader(reader).getAsJsonObject());
                 if (!recipe.isEnabled(ModuleLoader::isModuleEnabled)) {
                     disabled++;
-                } else if (!recipe.itemIds().stream().allMatch(id -> Registries.ITEM.containsId(Identifier.tryParse(id)))) {
+                } else if (!recipe.itemIds().stream().allMatch(id -> BuiltInRegistries.ITEM.containsKey(ResourceLocation.tryParse(id)))) {
                     // Recipes for weapon packs that are not installed.
                     missingItems++;
                 } else {

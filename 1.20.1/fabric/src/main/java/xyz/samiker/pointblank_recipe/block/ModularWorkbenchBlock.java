@@ -1,38 +1,38 @@
 package xyz.samiker.pointblank_recipe.block;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.screen.NamedScreenHandlerFactory;
-import net.minecraft.screen.ScreenHandlerContext;
-import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
-import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.SimpleMenuProvider;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.ContainerLevelAccess;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.BlockHitResult;
 import xyz.samiker.pointblank_recipe.screen.ModularWorkbenchScreenHandler;
 
 public class ModularWorkbenchBlock extends Block {
-    private static final Text TITLE = Text.translatable("container.pointblank_recipe.modular_workbench");
+    private static final Component TITLE = Component.translatable("container.pointblank_recipe.modular_workbench");
 
-    public ModularWorkbenchBlock(Settings settings) {
+    public ModularWorkbenchBlock(Properties settings) {
         super(settings);
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (!world.isClient) {
-            player.openHandledScreen(state.createScreenHandlerFactory(world, pos));
+    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        if (!world.isClientSide) {
+            player.openMenu(state.getMenuProvider(world, pos));
         }
-        return ActionResult.success(world.isClient);
+        return InteractionResult.sidedSuccess(world.isClientSide);
     }
 
     @Override
-    public NamedScreenHandlerFactory createScreenHandlerFactory(BlockState state, World world, BlockPos pos) {
-        return new SimpleNamedScreenHandlerFactory(
-                (syncId, inventory, player) -> new ModularWorkbenchScreenHandler(syncId, inventory, ScreenHandlerContext.create(world, pos)),
+    public MenuProvider getMenuProvider(BlockState state, Level world, BlockPos pos) {
+        return new SimpleMenuProvider(
+                (syncId, inventory, player) -> new ModularWorkbenchScreenHandler(syncId, inventory, ContainerLevelAccess.create(world, pos)),
                 TITLE
         );
     }

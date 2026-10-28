@@ -3,24 +3,24 @@ package xyz.samiker.pointblank_recipe.resource;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import net.minecraft.resource.Resource;
-import net.minecraft.resource.ResourceManager;
-import net.minecraft.resource.SynchronousResourceReloader;
-import net.minecraft.util.Identifier;
 import xyz.samiker.pointblank_recipe.PointblankRecipe;
 
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
+import net.minecraft.resources.Identifier;
+import net.minecraft.server.packs.resources.Resource;
+import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.server.packs.resources.ResourceManagerReloadListener;
 
-public class ModuleLoader implements SynchronousResourceReloader {
+public class ModuleLoader implements ResourceManagerReloadListener {
     private static final Map<String, Boolean> DATAPACK_MODULE_STATES = new HashMap<>();
 
     @Override
-    public void reload(ResourceManager manager) {
+    public void onResourceManagerReload(ResourceManager manager) {
         DATAPACK_MODULE_STATES.clear();
 
-        Map<Identifier, Resource> resources = manager.findResources(
+        Map<Identifier, Resource> resources = manager.listResources(
                 "pointblank_modules",
                 path -> path.getPath().endsWith(".json")
         );
@@ -32,7 +32,7 @@ public class ModuleLoader implements SynchronousResourceReloader {
             String path = id.getPath();
             String moduleName = path.substring(path.lastIndexOf('/') + 1, path.lastIndexOf('.')).toLowerCase();
 
-            try (var reader = new InputStreamReader(resource.getInputStream())) {
+            try (var reader = new InputStreamReader(resource.open())) {
                 JsonElement json = JsonParser.parseReader(reader);
                 if (json.isJsonObject()) {
                     JsonObject obj = json.getAsJsonObject();

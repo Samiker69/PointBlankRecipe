@@ -1,19 +1,5 @@
 package xyz.samiker.pointblank_recipe.screen;
 
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.Inventory;
-import net.minecraft.inventory.SimpleInventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.screen.ArrayPropertyDelegate;
-import net.minecraft.screen.PropertyDelegate;
-import net.minecraft.screen.ScreenHandler;
-import net.minecraft.screen.ScreenHandlerContext;
-import net.minecraft.screen.slot.Slot;
-import net.minecraft.util.Identifier;
 import xyz.samiker.pointblank_recipe.PointblankRecipe;
 import xyz.samiker.pointblank_recipe.block.ModBlocks;
 import xyz.samiker.pointblank_recipe.modular.ModularLayout;
@@ -26,13 +12,27 @@ import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.Container;
+import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.inventory.ContainerLevelAccess;
+import net.minecraft.world.inventory.SimpleContainerData;
+import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.item.ItemStack;
 
 /**
  * One slot per part of the selected template, placed like on a gun, and one result slot. When several guns use the
  * same parts the player flips through them with arrows. Matching only runs on the server, the result reaches the
  * client through normal slot sync.
  */
-public class ModularWorkbenchScreenHandler extends ScreenHandler {
+public class ModularWorkbenchScreenHandler extends AbstractContainerMenu {
     public static final int BUTTON_PREVIOUS_TEMPLATE = 0;
     public static final int BUTTON_NEXT_TEMPLATE = 1;
     public static final int BUTTON_PREVIOUS_RESULT = 2;
@@ -47,18 +47,18 @@ public class ModularWorkbenchScreenHandler extends ScreenHandler {
     private static final int INVENTORY_START = RESULT_INDEX + 1;
     private static final int INVENTORY_END = INVENTORY_START + 36;
 
-    private final ScreenHandlerContext context;
-    private final PlayerEntity player;
-    private final SimpleInventory parts = new SimpleInventory(PART_COUNT);
-    private final SimpleInventory result = new SimpleInventory(1);
-    private final PropertyDelegate properties = new ArrayPropertyDelegate(3);
+    private final ContainerLevelAccess context;
+    private final Player player;
+    private final SimpleContainer parts = new SimpleContainer(PART_COUNT);
+    private final SimpleContainer result = new SimpleContainer(1);
+    private final ContainerData properties = new SimpleContainerData(3);
     private ModularRecipe shownRecipe;
 
-    public ModularWorkbenchScreenHandler(int syncId, PlayerInventory playerInventory) {
-        this(syncId, playerInventory, ScreenHandlerContext.EMPTY);
+    public ModularWorkbenchScreenHandler(int syncId, Inventory playerInventory) {
+        this(syncId, playerInventory, ContainerLevelAccess.NULL);
     }
 
-    public ModularWorkbenchScreenHandler(int syncId, PlayerInventory playerInventory, ScreenHandlerContext context) {
+    public ModularWorkbenchScreenHandler(int syncId, Inventory playerInventory, ContainerLevelAccess context) {
         super(ModBlocks.MODULAR_WORKBENCH_SCREEN, syncId);
         this.context = context;
         this.player = playerInventory.player;
@@ -77,8 +77,8 @@ public class ModularWorkbenchScreenHandler extends ScreenHandler {
             addSlot(new Slot(playerInventory, column, 8 + column * 18, ModularLayout.INVENTORY_Y + 58));
         }
 
-        addProperties(properties);
-        parts.addListener(this::onContentChanged);
+        addDataSlots(properties);
+        parts.addListener(this::slotsChanged);
     }
 
     public ModularTemplate template() {
@@ -96,24 +96,24 @@ public class ModularWorkbenchScreenHandler extends ScreenHandler {
     }
 
     @Override
-    public boolean canUse(PlayerEntity player) {
-        return canUse(context, player, ModBlocks.MODULAR_WORKBENCH);
+    public boolean stillValid(Player player) {
+        return stillValid(context, player, ModBlocks.MODULAR_WORKBENCH);
     }
 
     @Override
-    public void onContentChanged(Inventory inventory) {
-        if (!player.getWorld().isClient) {
+    public void slotsChanged(Container inventory) {
+        if (!player.level().isClientSide) {
             updateResult();
         }
-        super.onContentChanged(inventory);
+        super.slotsChanged(inventory);
     }
 
     @Override
-    public boolean onButtonClick(PlayerEntity player, int id) {
+    public boolean clickMenuButton(Player player, int id) {
         switch (id) {
             case BUTTON_PREVIOUS_TEMPLATE, BUTTON_NEXT_TEMPLATE -> {
                 // Parts only fit the slots of their template, so hand them back before switching.
-                dropInventory(player, parts);
+                clearContainer(player, parts);
                 int step = id == BUTTON_NEXT_TEMPLATE ? 1 : -1;
                 properties.set(PROPERTY_TEMPLATE, Math.floorMod(properties.get(PROPERTY_TEMPLATE) + step, ModularTemplate.ALL.size()));
                 properties.set(PROPERTY_SELECTED, 0);
@@ -148,15 +148,15 @@ public class ModularWorkbenchScreenHandler extends ScreenHandler {
         properties.set(PROPERTY_SELECTED, selected);
 
         shownRecipe = matching.isEmpty() ? null : matching.get(selected);
-        result.setStack(0, shownRecipe == null
+        result.setItem(0, shownRecipe == null
                 ? ItemStack.EMPTY
-                : new ItemStack(Registries.ITEM.get(Identifier.of(shownRecipe.resultItem())), shownRecipe.resultCount()));
+                : new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse(shownRecipe.resultItem())), shownRecipe.resultCount()));
     }
 
     private Map<String, ModularRecipe.Stack> slotStacks(ModularTemplate template) {
         Map<String, ModularRecipe.Stack> slots = new LinkedHashMap<>();
         for (String slot : template.slots()) {
-            slots.put(slot, new StackView(parts.getStack(ModularLayout.SLOTS.indexOf(slot))));
+            slots.put(slot, new StackView(parts.getItem(ModularLayout.SLOTS.indexOf(slot))));
         }
         return slots;
     }
@@ -176,50 +176,50 @@ public class ModularWorkbenchScreenHandler extends ScreenHandler {
         for (Map.Entry<String, ModularRecipe.Stack> slot : slots.entrySet()) {
             int count = recipe.partCount(slot.getKey(), slot.getValue());
             if (count > 0) {
-                parts.removeStack(ModularLayout.SLOTS.indexOf(slot.getKey()), count);
+                parts.removeItem(ModularLayout.SLOTS.indexOf(slot.getKey()), count);
             }
         }
         return true;
     }
 
     @Override
-    public ItemStack quickMove(PlayerEntity player, int index) {
+    public ItemStack quickMoveStack(Player player, int index) {
         Slot slot = slots.get(index);
-        if (!slot.hasStack()) {
+        if (!slot.hasItem()) {
             return ItemStack.EMPTY;
         }
-        ItemStack stack = slot.getStack();
+        ItemStack stack = slot.getItem();
         ItemStack original = stack.copy();
 
         if (index == RESULT_INDEX) {
-            if (!insertItem(stack, INVENTORY_START, INVENTORY_END, true)) {
+            if (!moveItemStackTo(stack, INVENTORY_START, INVENTORY_END, true)) {
                 return ItemStack.EMPTY;
             }
-            slot.onQuickTransfer(stack, original);
+            slot.onQuickCraft(stack, original);
         } else if (index < RESULT_INDEX) {
-            if (!insertItem(stack, INVENTORY_START, INVENTORY_END, false)) {
+            if (!moveItemStackTo(stack, INVENTORY_START, INVENTORY_END, false)) {
                 return ItemStack.EMPTY;
             }
-        } else if (!insertItem(stack, 0, RESULT_INDEX, false)) {
+        } else if (!moveItemStackTo(stack, 0, RESULT_INDEX, false)) {
             return ItemStack.EMPTY;
         }
 
         if (stack.isEmpty()) {
-            slot.setStack(ItemStack.EMPTY);
+            slot.setByPlayer(ItemStack.EMPTY);
         } else {
-            slot.markDirty();
+            slot.setChanged();
         }
         if (stack.getCount() == original.getCount()) {
             return ItemStack.EMPTY;
         }
-        slot.onTakeItem(player, stack);
+        slot.onTake(player, stack);
         return original;
     }
 
     @Override
-    public void onClosed(PlayerEntity player) {
-        super.onClosed(player);
-        context.run((world, pos) -> dropInventory(player, parts));
+    public void removed(Player player) {
+        super.removed(player);
+        context.execute((world, pos) -> clearContainer(player, parts));
     }
 
     private class PartSlot extends Slot {
@@ -228,23 +228,23 @@ public class ModularWorkbenchScreenHandler extends ScreenHandler {
         }
 
         public String slotName() {
-            return ModularLayout.SLOTS.get(getIndex());
+            return ModularLayout.SLOTS.get(getContainerSlot());
         }
 
         @Override
-        public boolean isEnabled() {
+        public boolean isActive() {
             return template().has(slotName());
         }
 
         @Override
-        public boolean canInsert(ItemStack stack) {
-            if (!isEnabled()) {
+        public boolean mayPlace(ItemStack stack) {
+            if (!isActive()) {
                 return false;
             }
             if (slotName().equals(ModularTemplate.BASE_SLOT)) {
                 return true;
             }
-            return stack.isIn(TagKey.of(RegistryKeys.ITEM, Identifier.of(PointblankRecipe.MOD_ID, "parts/" + slotName())));
+            return stack.is(TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(PointblankRecipe.MOD_ID, "parts/" + slotName())));
         }
     }
 
@@ -254,22 +254,22 @@ public class ModularWorkbenchScreenHandler extends ScreenHandler {
         }
 
         @Override
-        public boolean canInsert(ItemStack stack) {
+        public boolean mayPlace(ItemStack stack) {
             return false;
         }
 
         // The server re-checks the recipe, so a stale result can never be taken for free.
         @Override
-        public boolean canTakeItems(PlayerEntity player) {
-            return player.getWorld().isClient || resultStillMatches();
+        public boolean mayPickup(Player player) {
+            return player.level().isClientSide || resultStillMatches();
         }
 
         @Override
-        public void onTakeItem(PlayerEntity player, ItemStack stack) {
-            if (!player.getWorld().isClient) {
+        public void onTake(Player player, ItemStack stack) {
+            if (!player.level().isClientSide) {
                 consume();
             }
-            super.onTakeItem(player, stack);
+            super.onTake(player, stack);
         }
     }
 
@@ -285,12 +285,12 @@ public class ModularWorkbenchScreenHandler extends ScreenHandler {
 
         @Override
         public String itemId() {
-            return Registries.ITEM.getId(stack.getItem()).toString();
+            return BuiltInRegistries.ITEM.getKey(stack.getItem()).toString();
         }
 
         @Override
         public boolean isIn(String tagId) {
-            return stack.isIn(TagKey.of(RegistryKeys.ITEM, Identifier.of(tagId)));
+            return stack.is(TagKey.create(Registries.ITEM, ResourceLocation.parse(tagId)));
         }
 
         @Override

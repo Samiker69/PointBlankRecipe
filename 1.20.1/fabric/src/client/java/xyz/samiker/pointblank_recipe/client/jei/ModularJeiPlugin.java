@@ -4,9 +4,9 @@ import mezz.jei.api.IModPlugin;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.registry.Registries;
-import net.minecraft.util.Identifier;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import xyz.samiker.pointblank_recipe.PointblankRecipe;
 import xyz.samiker.pointblank_recipe.block.ModBlocks;
 import xyz.samiker.pointblank_recipe.modular.BundledModularRecipes;
@@ -16,11 +16,10 @@ import xyz.samiker.pointblank_recipe.resource.ModuleLoader;
 
 import java.util.List;
 
-// Loaded through the "jei_mod_plugin" entrypoint, so only when JEI is installed.
 public class ModularJeiPlugin implements IModPlugin {
     @Override
-    public Identifier getPluginUid() {
-        return Identifier.of(PointblankRecipe.MOD_ID, "jei_plugin");
+    public ResourceLocation getPluginUid() {
+        return ResourceLocation.tryBuild(PointblankRecipe.MOD_ID, "jei_plugin");
     }
 
     @Override
@@ -41,11 +40,11 @@ public class ModularJeiPlugin implements IModPlugin {
     // In single player the integrated server has the real (datapack-aware) list; on a dedicated server the client
     // only has the recipes bundled in the jar.
     private static List<ModularRecipe> recipes() {
-        List<ModularRecipe> recipes = MinecraftClient.getInstance().getServer() != null
+        List<ModularRecipe> recipes = Minecraft.getInstance().getSingleplayerServer() != null
                 ? ModularRecipeLoader.recipes()
                 : BundledModularRecipes.load().stream().filter(recipe -> recipe.isEnabled(ModuleLoader::isModuleEnabled)).toList();
         return recipes.stream()
-                .filter(recipe -> recipe.itemIds().stream().allMatch(id -> Registries.ITEM.containsId(Identifier.tryParse(id))))
+                .filter(recipe -> recipe.itemIds().stream().allMatch(id -> BuiltInRegistries.ITEM.containsKey(ResourceLocation.tryParse(id))))
                 .toList();
     }
 }

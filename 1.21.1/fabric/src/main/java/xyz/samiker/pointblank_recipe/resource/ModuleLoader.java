@@ -4,10 +4,10 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import net.fabricmc.fabric.api.resource.IdentifiableResourceReloadListener;
-import net.minecraft.resource.Resource;
-import net.minecraft.resource.ResourceManager;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.profiler.Profiler;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.resources.Resource;
+import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.util.profiling.ProfilerFiller;
 import xyz.samiker.pointblank_recipe.PointblankRecipe;
 
 import java.io.InputStreamReader;
@@ -22,33 +22,33 @@ public class ModuleLoader implements IdentifiableResourceReloadListener {
     private static final Map<String, Boolean> DATAPACK_MODULE_STATES = new HashMap<>();
 
     @Override
-    public Identifier getFabricId() {
-        return Identifier.of(PointblankRecipe.MOD_ID, "module_loader");
+    public ResourceLocation getFabricId() {
+        return ResourceLocation.fromNamespaceAndPath(PointblankRecipe.MOD_ID, "module_loader");
     }
 
     @Override
-    public Collection<Identifier> getFabricDependencies() {
+    public Collection<ResourceLocation> getFabricDependencies() {
         return Collections.emptyList();
     }
 
     @Override
-    public CompletableFuture<Void> reload(Synchronizer synchronizer, ResourceManager manager, Profiler prepareProfiler, Profiler applyProfiler, Executor prepareExecutor, Executor applyExecutor) {
+    public CompletableFuture<Void> reload(PreparationBarrier synchronizer, ResourceManager manager, ProfilerFiller prepareProfiler, ProfilerFiller applyProfiler, Executor prepareExecutor, Executor applyExecutor) {
         return CompletableFuture.runAsync(() -> {
             DATAPACK_MODULE_STATES.clear();
 
-            Map<Identifier, Resource> resources = manager.findResources(
+            Map<ResourceLocation, Resource> resources = manager.listResources(
                     "pointblank_modules",
                     path -> path.getPath().endsWith(".json")
             );
 
-            for (Map.Entry<Identifier, Resource> entry : resources.entrySet()) {
-                Identifier id = entry.getKey();
+            for (Map.Entry<ResourceLocation, Resource> entry : resources.entrySet()) {
+                ResourceLocation id = entry.getKey();
                 Resource resource = entry.getValue();
 
                 String path = id.getPath();
                 String moduleName = path.substring(path.lastIndexOf('/') + 1, path.lastIndexOf('.')).toLowerCase();
 
-                try (var reader = new InputStreamReader(resource.getInputStream())) {
+                try (var reader = new InputStreamReader(resource.open())) {
                     JsonElement json = JsonParser.parseReader(reader);
                     if (json.isJsonObject()) {
                         JsonObject obj = json.getAsJsonObject();
@@ -62,7 +62,7 @@ public class ModuleLoader implements IdentifiableResourceReloadListener {
                 }
             }
             PointblankRecipe.LOGGER.info("ModuleLoader reloaded!");
-        }, prepareExecutor).thenCompose(synchronizer::whenPrepared);
+        }, prepareExecutor).thenCompose(synchronizer::wait);
     }
 
     public static boolean isModuleEnabled(String moduleName) {

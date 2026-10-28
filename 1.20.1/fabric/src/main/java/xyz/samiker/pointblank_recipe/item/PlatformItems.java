@@ -1,9 +1,9 @@
 package xyz.samiker.pointblank_recipe.item;
 
-import net.minecraft.item.Item;
 import xyz.samiker.pointblank_recipe.utils.ItemRegistry;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import net.minecraft.world.item.Item;
 import java.util.Collection;
 
 public final class PlatformItems {

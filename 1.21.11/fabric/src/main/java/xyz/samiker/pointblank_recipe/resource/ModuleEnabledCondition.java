@@ -5,8 +5,8 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition;
 import net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType;
-import net.minecraft.registry.RegistryOps;
-import net.minecraft.util.Identifier;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.RegistryOps;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import xyz.samiker.pointblank_recipe.PointblankRecipe;
@@ -19,12 +19,12 @@ public record ModuleEnabledCondition(String moduleName) implements ResourceCondi
     );
 
     public static final ResourceConditionType<@NotNull ModuleEnabledCondition> TYPE = ResourceConditionType.create(
-            Identifier.of(PointblankRecipe.MOD_ID, "module_enabled"),
+            Identifier.fromNamespaceAndPath(PointblankRecipe.MOD_ID, "module_enabled"),
             CODEC
     );
 
     @Override
-    public boolean test(@Nullable RegistryOps.RegistryInfoGetter registryInfoGetter) {
+    public boolean test(@Nullable RegistryOps.RegistryInfoLookup registryInfoGetter) {
         return ModuleLoader.isModuleEnabled(moduleName);
     }
 
