@@ -22,6 +22,7 @@ import xyz.samiker.pointblank_recipe.item.PlatformItems;
 import xyz.samiker.pointblank_recipe.resource.ModularRecipeLoader;
 import xyz.samiker.pointblank_recipe.resource.ModuleEnabledCondition;
 import xyz.samiker.pointblank_recipe.resource.ModuleLoader;
+import xyz.samiker.pointblank_recipe.resource.WorkbenchEnabledCondition;
 import xyz.samiker.pointblank_recipe.utils.ItemRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -52,6 +53,7 @@ public class PointblankRecipe {
         } else if (event.getRegistryKey().equals(NeoForgeRegistries.Keys.CONDITION_CODECS)) {
             event.register(NeoForgeRegistries.Keys.CONDITION_CODECS, helper -> {
                 helper.register(ResourceLocation.fromNamespaceAndPath(MOD_ID, "module_enabled"), ModuleEnabledCondition.CODEC);
+                helper.register(ResourceLocation.fromNamespaceAndPath(MOD_ID, "workbench_enabled"), WorkbenchEnabledCondition.CODEC);
             });
         } else if (event.getRegistryKey().equals(Registries.CREATIVE_MODE_TAB)) {
             event.register(Registries.CREATIVE_MODE_TAB, helper -> {
@@ -59,7 +61,9 @@ public class PointblankRecipe {
                         .icon(() -> new ItemStack(PlatformItems.get(ModItems.FRAME_M4_TYPE)))
                         .title(Component.translatable("item_group.pointblank_recipe"))
                         .displayItems((parameters, output) -> {
-                            output.accept(ModBlocks.MODULAR_WORKBENCH_ITEM);
+                            if (config.modularWorkbench) {
+                                output.accept(ModBlocks.MODULAR_WORKBENCH_ITEM);
+                            }
                             for (var item : PlatformItems.getItems()) {
                                 output.accept(item);
                             }

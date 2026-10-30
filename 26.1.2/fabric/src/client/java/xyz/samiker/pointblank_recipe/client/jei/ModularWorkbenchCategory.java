@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/** Shows a modular recipe the way the workbench does: parts on the gun silhouette, the gun on the right. */
+/** Shows a modular recipe the way the workbench does: parts placed like on a gun, the gun on the right. */
 public class ModularWorkbenchCategory implements IRecipeCategory<ModularRecipe> {
     public static final IRecipeType<ModularRecipe> TYPE = IRecipeType.create(PointblankRecipe.MOD_ID, "modular_workbench", ModularRecipe.class);
 
@@ -81,12 +81,6 @@ public class ModularWorkbenchCategory implements IRecipeCategory<ModularRecipe> 
     @Override
     public void draw(ModularRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphicsExtractor graphics, double mouseX, double mouseY) {
         ModularTemplate template = ModularTemplate.byIndex(ModularTemplate.indexOf(recipe.template()));
-        for (ModularLayout.Rect rect : ModularLayout.silhouette(template)) {
-            graphics.fill(rect.x1() - 1, rect.y1() - 1 - TOP, rect.x2() + 1, rect.y2() + 1 - TOP, ModularLayout.SILHOUETTE_OUTLINE);
-        }
-        for (ModularLayout.Rect rect : ModularLayout.silhouette(template)) {
-            graphics.fill(rect.x1(), rect.y1() - TOP, rect.x2(), rect.y2() - TOP, ModularLayout.SILHOUETTE_FILL);
-        }
         Component name = Component.translatable("template.pointblank_recipe." + template.name());
         graphics.text(Minecraft.getInstance().font, name, 0, 0, TEXT, false);
     }

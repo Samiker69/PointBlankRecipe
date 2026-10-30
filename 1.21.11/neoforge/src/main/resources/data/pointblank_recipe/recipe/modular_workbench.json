@@ -1,5 +1,10 @@
 {
   "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "pointblank_recipe:workbench_enabled"
+    }
+  ],
   "category": "misc",
   "pattern": [
     " a ",

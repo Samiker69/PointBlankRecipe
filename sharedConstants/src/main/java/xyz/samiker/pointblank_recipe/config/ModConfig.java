@@ -14,6 +14,9 @@ public class ModConfig {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static final File CONFIG_FILE = new File("config", "pointblank_recipe.json");
     public List<String> disabledModules = new ArrayList<>(List.of("e.g: base, trauma, metro, stalker, handguns_galore, cyberpunk"));
+    /** Turns the modular workbench off: its crafting recipe is not loaded and the block no longer opens. */
+    public boolean modularWorkbench = true;
+    public List<String> disabledTemplates = new ArrayList<>(List.of("e.g: pistol, rifle, sniper, shotgun, machinegun, smg, launcher, cyberpunk, unique, upgrade"));
 
     public static ModConfig load() {
         File parent = CONFIG_FILE.getParentFile();
@@ -23,7 +26,10 @@ public class ModConfig {
 
         if (CONFIG_FILE.exists()) {
             try (FileReader reader = new FileReader(CONFIG_FILE)) {
-                return GSON.fromJson(reader, ModConfig.class);
+                ModConfig config = GSON.fromJson(reader, ModConfig.class);
+                // Writes back options added since the file was created.
+                config.save();
+                return config;
             } catch (IOException e) {
                 System.err.println("[PB:Recipe] Failed to load config, using defaults.");
             }
@@ -31,6 +37,10 @@ public class ModConfig {
         ModConfig config = new ModConfig();
         config.save();
         return config;
+    }
+
+    public boolean isTemplateEnabled(String template) {
+        return modularWorkbench && disabledTemplates.stream().noneMatch(template::equalsIgnoreCase);
     }
 
     public void save() {

@@ -1,5 +1,7 @@
 package xyz.samiker.pointblank_recipe.modular;
 
+import xyz.samiker.pointblank_recipe.config.ModConfig;
+
 import java.util.List;
 
 /**
@@ -33,6 +35,14 @@ public record ModularTemplate(String name, List<String> slots) {
             }
         }
         return -1;
+    }
+
+    /** Templates the workbench offers: enabled in the config and with at least one recipe it can show. */
+    public static List<ModularTemplate> available(List<ModularRecipe> recipes, ModConfig config) {
+        return ALL.stream()
+                .filter(template -> config == null || config.isTemplateEnabled(template.name))
+                .filter(template -> recipes.stream().anyMatch(recipe -> recipe.template().equals(template.name) && recipe.isAvailable()))
+                .toList();
     }
 
     public boolean has(String slot) {

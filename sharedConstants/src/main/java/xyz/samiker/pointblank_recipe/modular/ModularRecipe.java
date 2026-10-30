@@ -5,6 +5,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -105,6 +106,35 @@ public record ModularRecipe(
 
     public boolean isEnabled(Predicate<String> moduleEnabled) {
         return modules.stream().allMatch(moduleEnabled);
+    }
+
+    /** Whether the workbench shows this recipe: every module it needs is loaded. */
+    public boolean isAvailable() {
+        return modules.stream().allMatch(ModularModules::isLoaded);
+    }
+
+    /**
+     * Recipes of a template the parts in the slots can still become, complete ones first, then by result. These are
+     * what the workbench flips through, so an empty workbench lists every gun of the template.
+     */
+    public static List<ModularRecipe> candidates(List<ModularRecipe> recipes, String template, Map<String, Stack> slots) {
+        return recipes.stream()
+                .filter(recipe -> recipe.template.equals(template) && recipe.isAvailable() && recipe.fits(slots))
+                .sorted(Comparator.comparing((ModularRecipe recipe) -> recipe.match(slots, List.of()) == null)
+                        .thenComparing(ModularRecipe::resultItem))
+                .toList();
+    }
+
+    /** Every filled slot holds one of the parts of this recipe; empty slots and short stacks are still fine. */
+    public boolean fits(Map<String, Stack> slots) {
+        for (Map.Entry<String, Stack> slot : slots.entrySet()) {
+            Stack stack = slot.getValue();
+            List<Ingredient> wanted = parts.get(slot.getKey());
+            if (!stack.isEmpty() && (wanted == null || wanted.stream().noneMatch(ingredient -> ingredient.test(stack)))) {
+                return false;
+            }
+        }
+        return slots.keySet().containsAll(parts.keySet());
     }
 
     /** Every item id this recipe references, to drop recipes for add-ons that are not installed. */

@@ -47,6 +47,7 @@ public class ModularJeiPlugin implements IModPlugin {
                 ? ModularRecipeLoader.recipes()
                 : BundledModularRecipes.load().stream().filter(recipe -> recipe.isEnabled(ModuleLoader::isModuleEnabled)).toList();
         return recipes.stream()
+                .filter(recipe -> recipe.isAvailable() && PointblankRecipe.config.isTemplateEnabled(recipe.template()))
                 .filter(recipe -> recipe.itemIds().stream().allMatch(id -> BuiltInRegistries.ITEM.containsKey(Identifier.tryParse(id))))
                 .toList();
     }

@@ -7,7 +7,12 @@
         { "type": "minecraft:item", "name": "pointblank_recipe:modular_workbench" }
       ],
       "conditions": [
-        { "condition": "minecraft:survives_explosion" }
+        { "condition": "minecraft:survives_explosion" },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "pointblank_recipe:modular_workbench",
+          "properties": { "part": "center" }
+        }
       ]
     }
   ]

@@ -14,6 +14,7 @@ import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.SimpleContainerData;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.Nullable;
 import xyz.samiker.pointblank_recipe.PointblankRecipe;
 import xyz.samiker.pointblank_recipe.block.ModBlocks;
 import xyz.samiker.pointblank_recipe.modular.ModularLayout;
@@ -21,15 +22,14 @@ import xyz.samiker.pointblank_recipe.modular.ModularRecipe;
 import xyz.samiker.pointblank_recipe.modular.ModularTemplate;
 import xyz.samiker.pointblank_recipe.resource.ModularRecipeLoader;
 
-import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
- * One slot per part of the selected template, placed like on a gun, and one result slot. When several guns use the
- * same parts the player flips through them with arrows. Matching only runs on the server, the result reaches the
- * client through normal slot sync.
+ * One slot per part of the selected template, placed like on a gun, and one result slot. The arrows flip through the
+ * guns the parts in the slots can still become; for an unfinished one the missing parts and the gun are shown as
+ * ghosts. Matching only runs on the server, the result and the ghosts reach the client through normal slot sync.
  */
 public class ModularWorkbenchMenu extends AbstractContainerMenu {
     public static final int BUTTON_PREVIOUS_TEMPLATE = 0;
@@ -50,6 +50,8 @@ public class ModularWorkbenchMenu extends AbstractContainerMenu {
     private final Player player;
     private final SimpleContainer parts = new SimpleContainer(PART_COUNT);
     private final SimpleContainer result = new SimpleContainer(1);
+    // What the shown gun still needs, one per part slot and the gun itself last. Never holds real items.
+    private final SimpleContainer ghosts = new SimpleContainer(PART_COUNT + 1);
     private final ContainerData data = new SimpleContainerData(3);
     private ModularRecipe shownRecipe;
 
@@ -75,23 +77,42 @@ public class ModularWorkbenchMenu extends AbstractContainerMenu {
         for (int column = 0; column < 9; column++) {
             addSlot(new Slot(playerInventory, column, 8 + column * 18, ModularLayout.INVENTORY_Y + 58));
         }
+        for (int i = 0; i <= PART_COUNT; i++) {
+            addSlot(new GhostSlot(i));
+        }
 
         addDataSlots(data);
         parts.addListener(this::slotsChanged);
+        if (!player.level().isClientSide()) {
+            List<ModularTemplate> available = availableTemplates();
+            data.set(DATA_TEMPLATE, available.isEmpty() ? -1 : ModularTemplate.ALL.indexOf(available.get(0)));
+            updateResult(false);
+        }
     }
 
+    /** The selected template, or null when the config or the loaded modules leave none. */
+    @Nullable
     public ModularTemplate template() {
-        return ModularTemplate.byIndex(data.get(DATA_TEMPLATE));
+        int index = data.get(DATA_TEMPLATE);
+        return index < 0 ? null : ModularTemplate.byIndex(index);
     }
 
-    /** Which of the matching guns is shown, 0-based. */
+    /** Which of the guns is shown, 0-based. */
     public int selected() {
         return data.get(DATA_SELECTED);
     }
 
-    /** How many guns the parts in the slots can make. */
+    /** How many guns the parts in the slots can still become. */
     public int matches() {
         return data.get(DATA_MATCHES);
+    }
+
+    /** What a part slot still needs for the shown gun, or the gun itself for the result slot; empty if nothing. */
+    public ItemStack ghost(Slot slot) {
+        if (slot instanceof PartSlot part) {
+            return ghosts.getItem(part.getContainerSlot());
+        }
+        return slot instanceof ResultSlot ? ghosts.getItem(PART_COUNT) : ItemStack.EMPTY;
     }
 
     @Override
@@ -102,7 +123,7 @@ public class ModularWorkbenchMenu extends AbstractContainerMenu {
     @Override
     public void slotsChanged(Container container) {
         if (!player.level().isClientSide()) {
-            updateResult();
+            updateResult(true);
         }
         super.slotsChanged(container);
     }
@@ -111,10 +132,16 @@ public class ModularWorkbenchMenu extends AbstractContainerMenu {
     public boolean clickMenuButton(Player player, int id) {
         switch (id) {
             case BUTTON_PREVIOUS_TEMPLATE, BUTTON_NEXT_TEMPLATE -> {
+                List<ModularTemplate> available = availableTemplates();
+                if (available.isEmpty()) {
+                    return false;
+                }
                 // Parts only fit the slots of their template, so hand them back before switching.
                 clearContainer(player, parts);
                 int step = id == BUTTON_NEXT_TEMPLATE ? 1 : -1;
-                data.set(DATA_TEMPLATE, Math.floorMod(data.get(DATA_TEMPLATE) + step, ModularTemplate.ALL.size()));
+                int current = template() == null ? -1 : available.indexOf(template());
+                ModularTemplate next = available.get(Math.floorMod(current + step, available.size()));
+                data.set(DATA_TEMPLATE, ModularTemplate.ALL.indexOf(next));
                 data.set(DATA_SELECTED, 0);
             }
             case BUTTON_PREVIOUS_RESULT, BUTTON_NEXT_RESULT -> {
@@ -127,33 +154,65 @@ public class ModularWorkbenchMenu extends AbstractContainerMenu {
                 return false;
             }
         }
-        updateResult();
+        updateResult(false);
         return true;
     }
 
-    private List<ModularRecipe> matchingRecipes() {
+    private static List<ModularTemplate> availableTemplates() {
+        return ModularTemplate.available(ModularRecipeLoader.recipes(), PointblankRecipe.config);
+    }
+
+    // keepShown: the parts changed, so stay on the shown gun while the parts can still become it.
+    private void updateResult(boolean keepShown) {
         ModularTemplate template = template();
         Map<String, ModularRecipe.Stack> slots = slotStacks(template);
-        return ModularRecipeLoader.recipes().stream()
-                .filter(recipe -> recipe.template().equals(template.name()) && recipe.match(slots, List.of()) != null)
-                .sorted(Comparator.comparing(ModularRecipe::resultItem))
-                .toList();
-    }
-
-    private void updateResult() {
-        List<ModularRecipe> matching = matchingRecipes();
-        int selected = matching.isEmpty() ? 0 : Math.min(selected(), matching.size() - 1);
-        data.set(DATA_MATCHES, matching.size());
+        List<ModularRecipe> candidates = template == null
+                ? List.of()
+                : ModularRecipe.candidates(ModularRecipeLoader.recipes(), template.name(), slots);
+        int kept = keepShown && shownRecipe != null ? candidates.indexOf(shownRecipe) : -1;
+        int selected = kept >= 0 ? kept : candidates.isEmpty() ? 0 : Math.min(selected(), candidates.size() - 1);
+        data.set(DATA_MATCHES, candidates.size());
         data.set(DATA_SELECTED, selected);
 
-        shownRecipe = matching.isEmpty() ? null : matching.get(selected);
-        result.setItem(0, shownRecipe == null
-                ? ItemStack.EMPTY
-                : new ItemStack(BuiltInRegistries.ITEM.getValue(Identifier.parse(shownRecipe.resultItem())), shownRecipe.resultCount()));
+        shownRecipe = candidates.isEmpty() ? null : candidates.get(selected);
+        ItemStack gun = shownRecipe == null ? ItemStack.EMPTY : stack(shownRecipe.resultItem(), shownRecipe.resultCount());
+        boolean complete = resultStillMatches();
+        result.setItem(0, complete ? gun : ItemStack.EMPTY);
+
+        for (int i = 0; i < PART_COUNT; i++) {
+            ghosts.setItem(i, ItemStack.EMPTY);
+        }
+        ghosts.setItem(PART_COUNT, complete ? ItemStack.EMPTY : gun);
+        if (shownRecipe != null && !complete) {
+            for (Map.Entry<String, List<ModularRecipe.Ingredient>> part : shownRecipe.parts().entrySet()) {
+                int index = ModularLayout.SLOTS.indexOf(part.getKey());
+                if (parts.getItem(index).isEmpty()) {
+                    ghosts.setItem(index, ghostStack(part.getValue().get(0)));
+                }
+            }
+        }
     }
 
-    private Map<String, ModularRecipe.Stack> slotStacks(ModularTemplate template) {
+    private static ItemStack stack(String itemId, int count) {
+        return new ItemStack(BuiltInRegistries.ITEM.getValue(Identifier.parse(itemId)), count);
+    }
+
+    // A tag shows its first item.
+    private static ItemStack ghostStack(ModularRecipe.Ingredient ingredient) {
+        if (ingredient.item() != null) {
+            return stack(ingredient.item(), ingredient.count());
+        }
+        return BuiltInRegistries.ITEM.get(TagKey.create(Registries.ITEM, Identifier.parse(ingredient.tag())))
+                .flatMap(tag -> tag.stream().findFirst())
+                .map(item -> new ItemStack(item, ingredient.count()))
+                .orElse(ItemStack.EMPTY);
+    }
+
+    private Map<String, ModularRecipe.Stack> slotStacks(@Nullable ModularTemplate template) {
         Map<String, ModularRecipe.Stack> slots = new LinkedHashMap<>();
+        if (template == null) {
+            return slots;
+        }
         for (String slot : template.slots()) {
             slots.put(slot, new StackView(parts.getItem(ModularLayout.SLOTS.indexOf(slot))));
         }
@@ -161,7 +220,7 @@ public class ModularWorkbenchMenu extends AbstractContainerMenu {
     }
 
     private boolean resultStillMatches() {
-        return shownRecipe != null && shownRecipe.match(slotStacks(template()), List.of()) != null;
+        return shownRecipe != null && template() != null && shownRecipe.match(slotStacks(template()), List.of()) != null;
     }
 
     /** Takes the parts of the shown recipe; false if the slots no longer match it. */
@@ -232,7 +291,7 @@ public class ModularWorkbenchMenu extends AbstractContainerMenu {
 
         @Override
         public boolean isActive() {
-            return template().has(slotName());
+            return template() != null && template().has(slotName());
         }
 
         @Override
@@ -269,6 +328,28 @@ public class ModularWorkbenchMenu extends AbstractContainerMenu {
                 consume();
             }
             super.onTake(player, stack);
+        }
+    }
+
+    // Only carries ghost items to the client: never drawn as a slot, never takes or gives items.
+    private class GhostSlot extends Slot {
+        GhostSlot(int index) {
+            super(ghosts, index, -10000, -10000);
+        }
+
+        @Override
+        public boolean isActive() {
+            return false;
+        }
+
+        @Override
+        public boolean mayPlace(ItemStack stack) {
+            return false;
+        }
+
+        @Override
+        public boolean mayPickup(Player player) {
+            return false;
         }
     }
 

@@ -3,25 +3,30 @@ package xyz.samiker.pointblank_recipe.client;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.item.ItemStack;
 import xyz.samiker.pointblank_recipe.modular.ModularLayout;
 import xyz.samiker.pointblank_recipe.modular.ModularTemplate;
 import xyz.samiker.pointblank_recipe.screen.ModularWorkbenchScreenHandler;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static xyz.samiker.pointblank_recipe.screen.ModularWorkbenchScreenHandler.*;
 
-// Drawn with plain fills: the slots sit on a gun silhouette built from the parts of the selected template.
+// Drawn with plain fills. Empty slots show the parts the shown gun still needs as faded ghost items.
 public class ModularWorkbenchScreen extends AbstractContainerScreen<ModularWorkbenchScreenHandler> {
     private static final int PANEL = 0xFFC6C6C6;
     private static final int SHADOW = 0xFF373737;
     private static final int LIGHT = 0xFFFFFFFF;
     private static final int SLOT = 0xFF8B8B8B;
     private static final int TEXT = 0xFF404040;
+    // Slot color drawn over a ghost item so it reads as a hint, not as a real item.
+    private static final int GHOST_FADE = 0xA08B8B8B;
 
     private final List<Button> resultButtons = new ArrayList<>();
 
@@ -52,7 +57,7 @@ public class ModularWorkbenchScreen extends AbstractContainerScreen<ModularWorkb
 
     @Override
     public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
-        // Arrows only make sense when several guns use the same parts.
+        // Arrows only make sense when the parts can become more than one gun.
         resultButtons.forEach(button -> button.visible = menu.matches() > 1);
         super.render(graphics, mouseX, mouseY, partialTick);
         renderTooltip(graphics, mouseX, mouseY);
@@ -64,20 +69,27 @@ public class ModularWorkbenchScreen extends AbstractContainerScreen<ModularWorkb
         graphics.fill(leftPos + 1, topPos + 1, leftPos + imageWidth - 1, topPos + imageHeight - 1, PANEL);
 
         ModularTemplate template = menu.template();
-        for (ModularLayout.Rect rect : ModularLayout.silhouette(template)) {
-            graphics.fill(leftPos + rect.x1() - 1, topPos + rect.y1() - 1, leftPos + rect.x2() + 1, topPos + rect.y2() + 1, ModularLayout.SILHOUETTE_OUTLINE);
-        }
-        for (ModularLayout.Rect rect : ModularLayout.silhouette(template)) {
-            graphics.fill(leftPos + rect.x1(), topPos + rect.y1(), leftPos + rect.x2(), topPos + rect.y2(), ModularLayout.SILHOUETTE_FILL);
-        }
-        for (String slot : template.slots()) {
-            int[] position = ModularLayout.slotPosition(slot);
-            drawSlot(graphics, position[0], position[1], 18);
+        if (template != null) {
+            for (String slot : template.slots()) {
+                int[] position = ModularLayout.slotPosition(slot);
+                drawSlot(graphics, position[0], position[1], 18);
+            }
         }
         drawSlot(graphics, ModularLayout.RESULT_X - 4, ModularLayout.RESULT_Y - 4, 26);
         for (int i = 0; i < 36; i++) {
             int row = i / 9;
             drawSlot(graphics, 8 + i % 9 * 18, row < 3 ? ModularLayout.INVENTORY_Y + row * 18 : ModularLayout.INVENTORY_Y + 58, 18);
+        }
+
+        for (Slot slot : menu.slots) {
+            ItemStack ghost = menu.ghost(slot);
+            if (slot.isActive() && !slot.hasItem() && !ghost.isEmpty()) {
+                int x = leftPos + slot.x;
+                int y = topPos + slot.y;
+                graphics.renderFakeItem(ghost, x, y);
+                graphics.renderItemDecorations(font, ghost, x, y);
+                graphics.fill(RenderType.guiGhostRecipeOverlay(), x, y, x + 16, y + 16, GHOST_FADE);
+            }
         }
     }
 
@@ -94,7 +106,7 @@ public class ModularWorkbenchScreen extends AbstractContainerScreen<ModularWorkb
     protected void renderLabels(GuiGraphics graphics, int mouseX, int mouseY) {
         graphics.drawString(font, playerInventoryTitle, inventoryLabelX, inventoryLabelY, TEXT, false);
 
-        Component template = Component.translatable("template.pointblank_recipe." + menu.template().name());
+        Component template = Component.translatable("template.pointblank_recipe." + (menu.template() == null ? "none" : menu.template().name()));
         graphics.drawString(font, template, (imageWidth - font.width(template)) / 2, 6, TEXT, false);
 
         if (menu.matches() > 1) {
@@ -107,10 +119,20 @@ public class ModularWorkbenchScreen extends AbstractContainerScreen<ModularWorkb
     @Override
     protected void renderTooltip(GuiGraphics graphics, int mouseX, int mouseY) {
         Slot slot = hoveredSlot;
-        String name = slot == null ? null : ModularWorkbenchScreenHandler.slotName(slot);
-        if (name != null && !slot.hasItem() && menu.getCarried().isEmpty()) {
-            graphics.renderTooltip(font, Component.translatable("slot.pointblank_recipe." + name), mouseX, mouseY);
-            return;
+        if (slot != null && !slot.hasItem() && menu.getCarried().isEmpty()) {
+            List<Component> lines = new ArrayList<>();
+            String name = ModularWorkbenchScreenHandler.slotName(slot);
+            if (name != null) {
+                lines.add(Component.translatable("slot.pointblank_recipe." + name));
+            }
+            ItemStack ghost = menu.ghost(slot);
+            if (!ghost.isEmpty()) {
+                lines.addAll(getTooltipFromItem(minecraft, ghost));
+            }
+            if (!lines.isEmpty()) {
+                graphics.renderTooltip(font, lines, Optional.empty(), mouseX, mouseY);
+                return;
+            }
         }
         super.renderTooltip(graphics, mouseX, mouseY);
     }

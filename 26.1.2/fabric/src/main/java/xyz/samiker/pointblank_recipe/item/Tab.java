@@ -22,7 +22,9 @@ public class Tab {
             .icon(() -> new ItemStack(PlatformItems.get(ModItems.FRAME_M4_TYPE)))
             .title(Component.translatable("item_group.pointblank_recipe"))
             .displayItems((context, output) -> {
-                output.accept(ModBlocks.MODULAR_WORKBENCH_ITEM);
+                if (PointblankRecipe.config.modularWorkbench) {
+                    output.accept(ModBlocks.MODULAR_WORKBENCH_ITEM);
+                }
                 for (var item : PlatformItems.getItems()) {
                     output.accept(item);
                 }

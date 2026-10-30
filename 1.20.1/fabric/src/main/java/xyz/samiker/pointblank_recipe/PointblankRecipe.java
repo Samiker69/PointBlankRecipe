@@ -34,6 +34,8 @@ public class PointblankRecipe implements ModInitializer {
             }
             return true;
         });
+        // Drops the recipe of the modular workbench when the workbench is turned off in the config.
+        ResourceConditions.register(ResourceLocation.tryBuild(MOD_ID, "workbench_enabled"), json -> config.modularWorkbench);
 
         PlatformItems.registerAll();
         ModBlocks.registerAll();

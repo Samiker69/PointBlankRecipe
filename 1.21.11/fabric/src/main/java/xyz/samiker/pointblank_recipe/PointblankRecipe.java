@@ -15,6 +15,7 @@ import xyz.samiker.pointblank_recipe.item.Tab;
 import xyz.samiker.pointblank_recipe.resource.ModularRecipeLoader;
 import xyz.samiker.pointblank_recipe.resource.ModuleEnabledCondition;
 import xyz.samiker.pointblank_recipe.resource.ModuleLoader;
+import xyz.samiker.pointblank_recipe.resource.WorkbenchEnabledCondition;
 
 public class PointblankRecipe implements ModInitializer {
     public static final String MOD_ID = "pointblank_recipe";
@@ -31,6 +32,7 @@ public class PointblankRecipe implements ModInitializer {
         // Module states come from ModuleLoader, so it has to run first.
         ResourceLoader.get(PackType.SERVER_DATA).addReloaderOrdering(loaderId, ModularRecipeLoader.ID);
         ResourceConditions.register(ModuleEnabledCondition.TYPE);
+        ResourceConditions.register(WorkbenchEnabledCondition.TYPE);
 
         PlatformItems.registerAll();
         ModBlocks.registerAll();
