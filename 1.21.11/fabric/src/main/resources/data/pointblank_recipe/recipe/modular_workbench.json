@@ -1,5 +1,10 @@
 {
   "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "pointblank_recipe:workbench_enabled"
+    }
+  ],
   "category": "misc",
   "pattern": [
     " a ",

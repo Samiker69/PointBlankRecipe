@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.RegisterEvent;
 import xyz.samiker.pointblank_recipe.PointblankRecipe;
 import xyz.samiker.pointblank_recipe.screen.ModularWorkbenchMenu;
@@ -25,7 +26,10 @@ public final class ModBlocks {
 
     public static void register(RegisterEvent event) {
         event.register(Registries.BLOCK, helper -> {
-            MODULAR_WORKBENCH = new ModularWorkbenchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE));
+            MODULAR_WORKBENCH = new ModularWorkbenchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)
+                    // The model is not a full cube, so it must not hide the faces of blocks next to it.
+                    .noOcclusion()
+                    .pushReaction(PushReaction.BLOCK));
             helper.register(MODULAR_WORKBENCH_ID, MODULAR_WORKBENCH);
         });
         event.register(Registries.ITEM, helper -> {

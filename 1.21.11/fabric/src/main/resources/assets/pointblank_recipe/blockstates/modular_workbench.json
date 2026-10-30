@@ -1,8 +1,16 @@
 {
   "variants": {
-    "facing=north": { "model": "pointblank_recipe:block/modular_workbench" },
-    "facing=east":  { "model": "pointblank_recipe:block/modular_workbench", "y": 90 },
-    "facing=south": { "model": "pointblank_recipe:block/modular_workbench", "y": 180 },
-    "facing=west":  { "model": "pointblank_recipe:block/modular_workbench", "y": 270 }
+    "facing=north,part=center": { "model": "pointblank_recipe:block/modular_workbench" },
+    "facing=north,part=left": { "model": "pointblank_recipe:block/modular_workbench_side" },
+    "facing=north,part=right": { "model": "pointblank_recipe:block/modular_workbench_side" },
+    "facing=east,part=center": { "model": "pointblank_recipe:block/modular_workbench", "y": 90 },
+    "facing=east,part=left": { "model": "pointblank_recipe:block/modular_workbench_side", "y": 90 },
+    "facing=east,part=right": { "model": "pointblank_recipe:block/modular_workbench_side", "y": 90 },
+    "facing=south,part=center": { "model": "pointblank_recipe:block/modular_workbench", "y": 180 },
+    "facing=south,part=left": { "model": "pointblank_recipe:block/modular_workbench_side", "y": 180 },
+    "facing=south,part=right": { "model": "pointblank_recipe:block/modular_workbench_side", "y": 180 },
+    "facing=west,part=center": { "model": "pointblank_recipe:block/modular_workbench", "y": 270 },
+    "facing=west,part=left": { "model": "pointblank_recipe:block/modular_workbench_side", "y": 270 },
+    "facing=west,part=right": { "model": "pointblank_recipe:block/modular_workbench_side", "y": 270 }
   }
 }

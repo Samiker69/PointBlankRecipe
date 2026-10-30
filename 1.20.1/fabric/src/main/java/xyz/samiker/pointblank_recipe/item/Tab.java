@@ -27,7 +27,9 @@ public class Tab {
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, CUSTOM_ITEM_GROUP_KEY, CUSTOM_ITEM_GROUP);
 
         ItemGroupEvents.modifyEntriesEvent(CUSTOM_ITEM_GROUP_KEY).register(itemGroup -> {
-            itemGroup.accept(ModBlocks.MODULAR_WORKBENCH_ITEM);
+            if (PointblankRecipe.config.modularWorkbench) {
+                itemGroup.accept(ModBlocks.MODULAR_WORKBENCH_ITEM);
+            }
             for (var item : PlatformItems.getItems()) {
                 itemGroup.accept(item);
             }

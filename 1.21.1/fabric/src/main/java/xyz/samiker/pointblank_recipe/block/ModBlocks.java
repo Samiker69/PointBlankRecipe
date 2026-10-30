@@ -10,6 +10,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.PushReaction;
 import xyz.samiker.pointblank_recipe.PointblankRecipe;
 import xyz.samiker.pointblank_recipe.screen.ModularWorkbenchScreenHandler;
 
@@ -25,7 +26,10 @@ public final class ModBlocks {
 
     public static void registerAll() {
         MODULAR_WORKBENCH = Registry.register(BuiltInRegistries.BLOCK, MODULAR_WORKBENCH_ID,
-                new ModularWorkbenchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
+                new ModularWorkbenchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)
+                        // The model is not a full cube, so it must not hide the faces of blocks next to it.
+                        .noOcclusion()
+                        .pushReaction(PushReaction.BLOCK)));
         MODULAR_WORKBENCH_ITEM = Registry.register(BuiltInRegistries.ITEM, MODULAR_WORKBENCH_ID,
                 new BlockItem(MODULAR_WORKBENCH, new Item.Properties()));
         MODULAR_WORKBENCH_SCREEN = Registry.register(BuiltInRegistries.MENU, MODULAR_WORKBENCH_ID,
